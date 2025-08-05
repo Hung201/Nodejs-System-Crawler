@@ -108,7 +108,9 @@ const createActor = async (req, res) => {
             code,
             status = 'active',
             version = '1.0.0',
-            tags = []
+            tags = [],
+            inputSchema,
+            apifyMetadata
         } = req.body;
 
         // Check if actor name already exists
@@ -120,15 +122,48 @@ const createActor = async (req, res) => {
             });
         }
 
+        // Xử lý file upload nếu có
+        let fileInfo = null;
+        if (req.file) {
+            fileInfo = {
+                filename: req.file.originalname,
+                path: req.file.path,
+                size: req.file.size,
+                mimetype: req.file.mimetype
+            };
+        }
+
+        // Parse inputSchema if it's a string
+        let parsedInputSchema = inputSchema;
+        if (typeof inputSchema === 'string') {
+            try {
+                parsedInputSchema = JSON.parse(inputSchema);
+            } catch (error) {
+                return res.status(400).json({
+                    success: false,
+                    error: 'Input schema không đúng định dạng JSON'
+                });
+            }
+        }
+
         const actor = new Actor({
             name,
             description,
             type,
             config: config || {},
             code,
+            file: fileInfo,
             status,
             version,
             tags,
+            inputSchema: parsedInputSchema || {
+                title: 'Input Schema',
+                type: 'object',
+                schemaVersion: 1,
+                properties: {},
+                required: []
+            },
+            apifyMetadata: apifyMetadata || {},
             createdBy: req.user.id
         });
 
@@ -318,11 +353,174 @@ const getActorStats = async (req, res) => {
     }
 };
 
+// @desc    Download actor file
+// @route   GET /api/actors/:id/download
+// @access  Private
+const downloadActorFile = async (req, res) => {
+    try {
+        const actor = await Actor.findById(req.params.id);
+
+        if (!actor) {
+            return res.status(404).json({
+                success: false,
+                error: 'Không tìm thấy actor'
+            });
+        }
+
+        if (!actor.file || !actor.file.path) {
+            return res.status(404).json({
+                success: false,
+                error: 'Actor không có file đính kèm'
+            });
+        }
+
+        const fs = require('fs');
+        const path = require('path');
+
+        // Kiểm tra file có tồn tại không
+        if (!fs.existsSync(actor.file.path)) {
+            return res.status(404).json({
+                success: false,
+                error: 'File không tồn tại trên server'
+            });
+        }
+
+        // Set headers cho download
+        res.setHeader('Content-Type', actor.file.mimetype);
+        res.setHeader('Content-Disposition', `attachment; filename="${actor.file.filename}"`);
+        res.setHeader('Content-Length', actor.file.size);
+
+        // Stream file
+        const fileStream = fs.createReadStream(actor.file.path);
+        fileStream.pipe(res);
+    } catch (error) {
+        console.error('Error downloading actor file:', error);
+        res.status(500).json({
+            success: false,
+            error: 'Lỗi server khi download file'
+        });
+    }
+};
+
+// @desc    Run actor with input
+// @route   POST /api/actors/:id/run
+// @access  Private
+const runActor = async (req, res) => {
+    try {
+        const actor = await Actor.findById(req.params.id);
+
+        if (!actor) {
+            return res.status(404).json({
+                success: false,
+                error: 'Không tìm thấy actor'
+            });
+        }
+
+        if (actor.status !== 'active') {
+            return res.status(400).json({
+                success: false,
+                error: 'Actor không ở trạng thái active'
+            });
+        }
+
+        const { input } = req.body;
+
+        // Validate input against schema
+        if (actor.inputSchema && actor.inputSchema.properties) {
+            const requiredFields = actor.inputSchema.required || [];
+
+            for (const field of requiredFields) {
+                if (!input[field]) {
+                    return res.status(400).json({
+                        success: false,
+                        error: `Thiếu trường bắt buộc: ${field}`
+                    });
+                }
+            }
+        }
+
+        // Simulate running actor (in real implementation, this would execute the code)
+        const runResult = {
+            actorId: actor._id,
+            actorName: actor.name,
+            input: input,
+            status: 'running',
+            startTime: new Date(),
+            estimatedDuration: '5-10 minutes',
+            message: 'Actor đang được chạy...'
+        };
+
+        // TODO: Implement actual actor execution
+        // This would involve:
+        // 1. Setting up execution environment
+        // 2. Running the actor code with input
+        // 3. Collecting results
+        // 4. Storing results in database
+
+        res.json({
+            success: true,
+            data: runResult,
+            message: 'Actor đã được khởi chạy thành công'
+        });
+
+    } catch (error) {
+        console.error('Error running actor:', error);
+        res.status(500).json({
+            success: false,
+            error: 'Lỗi server khi chạy actor'
+        });
+    }
+};
+
+// @desc    Get actor execution history
+// @route   GET /api/actors/:id/runs
+// @access  Private
+const getActorRuns = async (req, res) => {
+    try {
+        const actor = await Actor.findById(req.params.id);
+
+        if (!actor) {
+            return res.status(404).json({
+                success: false,
+                error: 'Không tìm thấy actor'
+            });
+        }
+
+        // TODO: Implement getting execution history from database
+        const runs = [
+            {
+                id: '1',
+                actorId: actor._id,
+                status: 'completed',
+                startTime: new Date(Date.now() - 3600000),
+                endTime: new Date(),
+                input: { url: 'https://example.com', maxPages: 5 },
+                result: { pagesScraped: 5, dataCollected: 150 }
+            }
+        ];
+
+        res.json({
+            success: true,
+            data: runs
+        });
+
+    } catch (error) {
+        console.error('Error getting actor runs:', error);
+        res.status(500).json({
+            success: false,
+            error: 'Lỗi server khi lấy lịch sử chạy actor'
+        });
+    }
+};
+
 module.exports = {
     getAllActors,
     getActorById,
     createActor,
     updateActor,
     deleteActor,
-    getActorStats
+    getActorStats,
+    downloadActorFile,
+    runActor,
+    getActorRuns
 }; 
