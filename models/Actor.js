@@ -64,6 +64,41 @@ const actorSchema = new mongoose.Schema({
         size: Number,
         mimetype: String
     },
+    // Apify-style input schema
+    inputSchema: {
+        title: {
+            type: String,
+            default: 'Input Schema'
+        },
+        type: {
+            type: String,
+            default: 'object'
+        },
+        schemaVersion: {
+            type: Number,
+            default: 1
+        },
+        properties: {
+            type: mongoose.Schema.Types.Mixed, // Allow full JSON object
+            default: {}
+        },
+        required: {
+            type: [String],
+            default: []
+        }
+    },
+    // Apify actor metadata
+    apifyMetadata: {
+        actorId: String,
+        version: String,
+        buildTag: String,
+        buildNumber: Number,
+        dockerImageName: String,
+        dockerImageTag: String,
+        sourceCodeUrl: String,
+        readmeUrl: String,
+        changelogUrl: String
+    },
     status: {
         type: String,
         enum: {

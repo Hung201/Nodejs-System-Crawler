@@ -6,15 +6,15 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: [true, 'Tên người dùng là bắt buộc'],
     trim: true,
-    maxlength: [50, 'Tên không được quá 50 ký tự']
+    maxlength: [100, 'Tên người dùng không được quá 100 ký tự']
   },
   email: {
     type: String,
     required: [true, 'Email là bắt buộc'],
     unique: true,
-    lowercase: true,
     trim: true,
-    match: [/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/, 'Email không hợp lệ']
+    lowercase: true,
+    match: [/.+@.+\..+/, 'Email không hợp lệ']
   },
   password: {
     type: String,
@@ -23,35 +23,36 @@ const userSchema = new mongoose.Schema({
   },
   role: {
     type: String,
-    enum: ['admin', 'editor', 'viewer'],
+    enum: {
+      values: ['admin', 'editor', 'viewer'],
+      message: 'Vai trò không hợp lệ'
+    },
     default: 'viewer'
-  },
-  avatar: {
-    type: String,
-    default: null
   },
   status: {
     type: String,
-    enum: ['active', 'inactive', 'suspended'],
+    enum: {
+      values: ['active', 'inactive', 'pending', 'blocked'],
+      message: 'Trạng thái không hợp lệ'
+    },
     default: 'active'
   },
-  lastLogin: {
-    type: Date,
-    default: null
+  createdBy: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User'
   },
-  passwordChangedAt: Date,
-  passwordResetToken: String,
-  passwordResetExpires: Date
+  updatedBy: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User'
+  }
 }, {
-  timestamps: true,
-  toJSON: { virtuals: true },
-  toObject: { virtuals: true }
+  timestamps: true
 });
 
 // Hash password before saving
-userSchema.pre('save', async function(next) {
+userSchema.pre('save', async function (next) {
   if (!this.isModified('password')) return next();
-  
+
   try {
     const salt = await bcrypt.genSalt(12);
     this.password = await bcrypt.hash(this.password, salt);
@@ -62,12 +63,12 @@ userSchema.pre('save', async function(next) {
 });
 
 // Compare password method
-userSchema.methods.comparePassword = async function(candidatePassword) {
+userSchema.methods.comparePassword = async function (candidatePassword) {
   return await bcrypt.compare(candidatePassword, this.password);
 };
 
 // Remove password from output
-userSchema.methods.toJSON = function() {
+userSchema.methods.toJSON = function () {
   const user = this.toObject();
   delete user.password;
   return user;

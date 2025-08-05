@@ -2,6 +2,7 @@ const express = require('express');
 const { auth, authorize } = require('../middleware/auth');
 const { body } = require('express-validator');
 const { validate } = require('../middleware/validation');
+const { upload, handleUploadError } = require('../middleware/upload');
 const actorController = require('../controllers/actorController');
 
 const router = express.Router();
@@ -47,11 +48,27 @@ router.get('/', auth, actorController.getAllActors);
 // Get actor statistics
 router.get('/stats/overview', auth, actorController.getActorStats);
 
-// Create new actor
-router.post('/', auth, authorize('admin', 'editor'), actorValidation, actorController.createActor);
+// Create new actor (with file upload)
+router.post('/',
+  auth,
+  authorize('admin', 'editor'),
+  upload.single('actorFile'),
+  handleUploadError,
+  actorValidation,
+  actorController.createActor
+);
 
 // Get actor by ID
 router.get('/:id', auth, actorController.getActorById);
+
+// Download actor file
+router.get('/:id/download', auth, actorController.downloadActorFile);
+
+// Run actor
+router.post('/:id/run', auth, actorController.runActor);
+
+// Get actor runs history
+router.get('/:id/runs', auth, actorController.getActorRuns);
 
 // Update actor
 router.put('/:id', auth, authorize('admin', 'editor'), actorValidation, actorController.updateActor);
