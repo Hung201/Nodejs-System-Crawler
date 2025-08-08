@@ -22,6 +22,32 @@ const getAllCampaigns = async (req, res) => {
     }
 };
 
+// @desc    Get campaigns by actor
+// @route   GET /api/campaigns/actor/:actorId
+// @access  Private
+const getCampaignsByActor = async (req, res) => {
+    try {
+        const { actorId } = req.params;
+        const filters = {
+            ...req.query,
+            actorId: actorId
+        };
+
+        const result = await campaignService.getAllCampaigns(filters);
+        res.json({
+            success: true,
+            data: result.campaigns,
+            pagination: result.pagination
+        });
+    } catch (error) {
+        console.error('Error getting campaigns by actor:', error);
+        res.status(500).json({
+            success: false,
+            error: error.message || 'Lỗi server khi lấy danh sách campaigns theo actor'
+        });
+    }
+};
+
 // @desc    Get campaign by ID
 // @route   GET /api/campaigns/:id
 // @access  Private
@@ -112,7 +138,10 @@ const updateCampaign = async (req, res) => {
 // @access  Private
 const runCampaign = async (req, res) => {
     try {
-        const result = await campaignService.runCampaign(req.params.id);
+        // Nhận custom input từ request body nếu có
+        const customInput = req.body.input || null;
+
+        const result = await campaignService.runCampaign(req.params.id, customInput);
         res.json({
             success: true,
             data: result
@@ -164,6 +193,25 @@ const cancelCampaign = async (req, res) => {
     }
 };
 
+// @desc    Reset campaign status
+// @route   POST /api/campaigns/:id/reset
+// @access  Private
+const resetCampaign = async (req, res) => {
+    try {
+        const result = await campaignService.resetCampaign(req.params.id);
+        res.json({
+            success: true,
+            data: result
+        });
+    } catch (error) {
+        console.error('Error resetting campaign:', error);
+        res.status(400).json({
+            success: false,
+            error: error.message || 'Lỗi server khi reset campaign'
+        });
+    }
+};
+
 // @desc    Delete campaign
 // @route   DELETE /api/campaigns/:id
 // @access  Private
@@ -187,11 +235,13 @@ const deleteCampaign = async (req, res) => {
 
 module.exports = {
     getAllCampaigns,
+    getCampaignsByActor,
     getCampaignById,
     createCampaign,
     updateCampaign,
     runCampaign,
     getCampaignStatus,
     cancelCampaign,
+    resetCampaign,
     deleteCampaign
 };

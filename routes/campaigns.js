@@ -40,6 +40,9 @@ const campaignValidation = [
 // Get all campaigns
 router.get('/', auth, campaignController.getAllCampaigns);
 
+// Get campaigns by actor (phải đặt trước /:id để tránh conflict)
+router.get('/actor/:actorId', auth, campaignController.getCampaignsByActor);
+
 // Get campaign by ID
 router.get('/:id', auth, campaignController.getCampaignById);
 
@@ -57,6 +60,9 @@ router.get('/:id/status', auth, campaignController.getCampaignStatus);
 
 // Cancel campaign
 router.post('/:id/cancel', auth, authorize('admin', 'editor'), campaignController.cancelCampaign);
+
+// Reset campaign status
+router.post('/:id/reset', auth, authorize('admin', 'editor'), campaignController.resetCampaign);
 
 // Delete campaign
 router.delete('/:id', auth, authorize('admin'), campaignController.deleteCampaign);

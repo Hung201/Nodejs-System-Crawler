@@ -142,7 +142,7 @@ const updateCampaign = async (campaignId, updateData) => {
 };
 
 // Run campaign
-const runCampaign = async (campaignId) => {
+const runCampaign = async (campaignId, customInput = null) => {
     const campaign = await Campaign.findById(campaignId)
         .populate('actorId');
 
@@ -150,10 +150,72 @@ const runCampaign = async (campaignId) => {
         throw new Error('Không tìm thấy campaign');
     }
 
+    // Kiểm tra xem có campaign nào khác đang chạy cùng actor không
+    const runningCampaigns = await Campaign.find({
+        actorId: campaign.actorId._id,
+        status: 'running'
+    });
+
+    // Cho phép nhiều campaign chạy cùng lúc, nhưng giới hạn số lượng
+    const maxConcurrentRuns = 3; // Có thể config
+    if (runningCampaigns.length >= maxConcurrentRuns) {
+        throw new Error(`Actor đang chạy ${runningCampaigns.length} campaigns. Giới hạn tối đa: ${maxConcurrentRuns}`);
+    }
+
     // Check if campaign is already running
     if (campaign.status === 'running') {
-        throw new Error('Campaign đang chạy');
+        // Kiểm tra xem campaign có đang thực sự chạy không
+        const startTime = campaign.result?.startTime ? new Date(campaign.result.startTime) : null;
+        const now = new Date();
+
+        if (startTime) {
+            const durationMs = now - startTime;
+            const durationMinutes = Math.floor(durationMs / (1000 * 60));
+
+            // Nếu có records và chạy quá 5 phút, force complete
+            if (campaign.result?.recordsProcessed > 0 && durationMinutes > 5) {
+                console.log(`⚠️ Campaign có ${campaign.result.recordsProcessed} records và đã chạy ${durationMinutes} phút, force complete`);
+                campaign.status = 'completed';
+                campaign.result.endTime = now.toISOString();
+                campaign.result.duration = durationMs;
+                await campaign.save();
+            }
+            // Nếu chạy quá 10 phút mà không có kết quả, coi như failed
+            else if (durationMinutes > 10 && (!campaign.result?.recordsProcessed || campaign.result.recordsProcessed === 0)) {
+                console.log(`⚠️ Campaign đã chạy ${durationMinutes} phút không có kết quả, reset về pending`);
+                campaign.status = 'pending';
+                campaign.result = {
+                    log: '',
+                    output: [],
+                    error: 'Campaign timeout - không có kết quả sau 10 phút',
+                    startTime: null,
+                    endTime: null,
+                    duration: 0,
+                    recordsProcessed: 0
+                };
+                await campaign.save();
+            } else {
+                throw new Error('Campaign đang chạy');
+            }
+        } else {
+            // Nếu không có startTime, reset về pending
+            console.log('⚠️ Campaign running nhưng không có startTime, reset về pending');
+            campaign.status = 'pending';
+            campaign.result = {
+                log: '',
+                output: [],
+                error: null,
+                startTime: null,
+                endTime: null,
+                duration: 0,
+                recordsProcessed: 0
+            };
+            await campaign.save();
+        }
     }
+
+    // Sử dụng custom input nếu có,否则 sử dụng input từ campaign
+    const inputToUse = customInput || campaign.input;
 
     // Update campaign status
     campaign.status = 'running';
@@ -172,8 +234,8 @@ const runCampaign = async (campaignId) => {
         startTime: new Date()
     });
 
-    // Run actor asynchronously
-    runActorAsync(campaign, runId);
+    // Run actor asynchronously with custom input
+    runActorAsync(campaign, runId, inputToUse);
 
     return {
         campaignId: campaign._id,
@@ -249,8 +311,30 @@ const deleteCampaign = async (campaignId) => {
     return { message: 'Campaign đã được xóa thành công' };
 };
 
+const resetCampaign = async (campaignId) => {
+    const campaign = await Campaign.findById(campaignId);
+    if (!campaign) {
+        throw new Error('Không tìm thấy campaign');
+    }
+
+    campaign.status = 'pending';
+    campaign.result = {
+        log: '',
+        output: [],
+        error: null,
+        startTime: null,
+        endTime: null,
+        duration: 0,
+        recordsProcessed: 0
+    };
+    campaign.runHistory = [];
+
+    await campaign.save();
+    return { message: 'Campaign đã được reset thành công' };
+};
+
 // Helper function để chạy actor
-async function runActorAsync(campaign, runId) {
+async function runActorAsync(campaign, runId, customInput = null) {
     try {
         const actor = campaign.actorId;
         const actorPath = path.join(process.cwd(), 'actors_storage', actor.userId.toString(), actor._id.toString());
@@ -263,13 +347,27 @@ async function runActorAsync(campaign, runId) {
         await fs.mkdir(keyValueStorePath, { recursive: true });
         await fs.mkdir(datasetPath, { recursive: true });
 
-        // Ghi input vào input.json trong thư mục src của actor (vì actor chạy từ src)
+        // Sử dụng custom input nếu có,否则 sử dụng input từ campaign
+        const inputToUse = customInput || campaign.input;
+
+        // Ghi input vào input.json trong thư mục src của actor
         const inputPath = path.join(actorPath, 'src', 'input.json');
-        await fs.writeFile(inputPath, JSON.stringify(campaign.input, null, 2));
+        await fs.writeFile(inputPath, JSON.stringify(inputToUse, null, 2));
+        console.log(`✅ Input file written to: ${inputPath}`);
 
         // Cũng ghi vào apify_storage để tương thích
         const apifyInputPath = path.join(keyValueStorePath, 'INPUT.json');
-        await fs.writeFile(apifyInputPath, JSON.stringify(campaign.input, null, 2));
+        await fs.writeFile(apifyInputPath, JSON.stringify(inputToUse, null, 2));
+        console.log(`✅ Apify input file written to: ${apifyInputPath}`);
+
+        // Check file permissions and existence
+        try {
+            const inputStats = await fs.stat(inputPath);
+            console.log(`📄 Input file size: ${inputStats.size} bytes`);
+            console.log(`📄 Input file permissions: ${inputStats.mode.toString(8)}`);
+        } catch (error) {
+            console.log(`❌ Error checking input file: ${error.message}`);
+        }
 
         // Cài đặt dependencies nếu có package.json
         const packageJsonPath = path.join(actorPath, 'package.json');
@@ -300,23 +398,94 @@ async function runActorAsync(campaign, runId) {
         }
 
         // Chạy actor từ thư mục src
+        const actorWorkingDir = path.join(actorPath, 'src');
+        console.log(`🚀 Starting actor process in: ${actorWorkingDir}`);
+        console.log(`📁 Actor path: ${actorPath}`);
+        console.log(`📄 Input file: ${inputPath}`);
+
         const child = spawn('node', ['main.js'], {
-            cwd: path.join(actorPath, 'src'),
-            stdio: ['pipe', 'pipe', 'pipe']
+            cwd: actorWorkingDir,
+            stdio: ['pipe', 'pipe', 'pipe'],
+            env: { ...process.env, NODE_ENV: 'production' }
         });
+
+        console.log(`🔄 Actor process started with PID: ${child.pid}`);
 
         let log = '';
         let startTime = Date.now();
+        let lastLogUpdate = Date.now();
+
+        // Add timeout for actor process (5 minutes)
+        const timeout = setTimeout(() => {
+            console.log('⏰ Actor process timeout after 5 minutes');
+            child.kill('SIGTERM');
+            reject(new Error('Actor process timeout after 5 minutes'));
+        }, 5 * 60 * 1000);
 
         child.stdout.on('data', (data) => {
-            log += data.toString();
+            const output = data.toString();
+            log += output;
+
+            // Log real-time output từ actor
+            console.log(`[Actor Output] ${output.trim()}`);
+
+            // Detect khi actor bắt đầu lấy sản phẩm
+            if (output.includes('🎯 Added product to scrapedData')) {
+                console.log('🎯 Actor đang lấy sản phẩm...');
+            }
+
+            // Detect khi actor tìm thấy link sản phẩm
+            if (output.includes('Tìm thấy') && output.includes('link sản phẩm')) {
+                console.log('🔗 Actor tìm thấy link sản phẩm...');
+            }
+
+            // Detect khi actor lấy xong dữ liệu sản phẩm
+            if (output.includes('Đã lấy xong dữ liệu sản phẩm')) {
+                console.log('✅ Actor đã lấy xong 1 sản phẩm...');
+            }
+
+            // Detect khi actor sắp lưu file hung.json
+            if (output.includes('About to save data to hung.json')) {
+                console.log('💾 Actor sắp lưu data vào hung.json...');
+            }
+
+            // Detect khi actor lưu thành công hung.json
+            if (output.includes('Successfully saved') && output.includes('products to hung.json')) {
+                console.log('🎉 Actor đã lưu thành công data vào hung.json!');
+            }
+
+            // Detect khi actor sắp exit
+            if (output.includes('About to exit actor')) {
+                console.log('🚪 Actor sắp kết thúc...');
+            }
+
+            // Update campaign log mỗi 5 giây
+            const now = Date.now();
+            if (now - lastLogUpdate > 5000) {
+                campaign.result.log = log;
+                campaign.save().catch(err => console.error('Error updating campaign log:', err));
+                lastLogUpdate = now;
+            }
         });
 
         child.stderr.on('data', (data) => {
-            log += data.toString();
+            const error = data.toString();
+            log += error;
+            console.log(`[Actor Error] ${error.trim()}`);
+        });
+
+        child.on('error', (error) => {
+            console.log(`❌ Actor process error: ${error.message}`);
+            clearTimeout(timeout);
+            reject(error);
+        });
+
+        child.on('exit', (code, signal) => {
+            console.log(`🚪 Actor process exited with code: ${code}, signal: ${signal}`);
         });
 
         child.on('close', async (code) => {
+            clearTimeout(timeout); // Clear timeout when process closes
             const endTime = Date.now();
             const duration = endTime - startTime;
 
@@ -428,5 +597,6 @@ module.exports = {
     runCampaign,
     getCampaignStatus,
     cancelCampaign,
+    resetCampaign,
     deleteCampaign
 };

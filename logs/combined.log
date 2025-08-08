@@ -2150,3 +2150,803 @@
 {"level":"info","message":"::1 - - [08/Aug/2025:03:12:51 +0000] \"GET /api/actors?search=&status= HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 10:12:51"}
 {"level":"info","message":"::1 - - [08/Aug/2025:03:12:52 +0000] \"GET /api/campaigns HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 10:12:52"}
 {"level":"info","message":"::1 - - [08/Aug/2025:03:12:52 +0000] \"GET /api/campaigns HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 10:12:52"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:15:22 +0000] \"GET /api/campaigns HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 10:15:22"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:15:22 +0000] \"GET /api/campaigns HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 10:15:22"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:16:01 +0000] \"GET /api/campaigns/6894658410595b979c150037 HTTP/1.1\" 200 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 10:16:01"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:16:01 +0000] \"PUT /api/campaigns/6894658410595b979c150037 HTTP/1.1\" 400 174 \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 10:16:01"}
+{"body":"{\" input\\: {\\paginationPattern\\: \\?page=hung\\, \\pageStart\\: 1, \\pageEnd\\: 5, \\url\\: \\https://b2b.daisan.vn/products/gach-op-tuong\\, \\websiteName\\: \\DAISAN\\}}","expose":true,"level":"error","message":"Bad escaped character in JSON at position 9","stack":"SyntaxError: Bad escaped character in JSON at position 9\n    at JSON.parse (<anonymous>)\n    at parse (D:\\system-craw\\backend\\node_modules\\body-parser\\lib\\types\\json.js:89:19)\n    at D:\\system-craw\\backend\\node_modules\\body-parser\\lib\\read.js:128:18\n    at AsyncResource.runInAsyncScope (node:async_hooks:206:9)\n    at invokeCallback (D:\\system-craw\\backend\\node_modules\\raw-body\\index.js:231:16)\n    at done (D:\\system-craw\\backend\\node_modules\\raw-body\\index.js:220:7)\n    at IncomingMessage.onEnd (D:\\system-craw\\backend\\node_modules\\raw-body\\index.js:280:7)\n    at IncomingMessage.emit (node:events:514:28)\n    at endReadableNT (node:internal/streams/readable:1376:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)","status":400,"statusCode":400,"timestamp":"2025-08-08 10:16:40","type":"entity.parse.failed"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:17:10 +0000] \"GET /api/campaigns/6894658410595b979c150037 HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 10:17:10"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:17:10 +0000] \"PUT /api/campaigns/6894658410595b979c150037 HTTP/1.1\" 400 174 \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 10:17:10"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:18:02 +0000] \"GET /api/campaigns HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 10:18:02"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:18:17 +0000] \"GET /api/campaigns HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 10:18:17"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:18:26 +0000] \"GET /api/campaigns HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 10:18:26"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:18:42 +0000] \"GET /api/campaigns HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 10:18:42"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:18:42 +0000] \"GET /api/campaigns HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 10:18:42"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:19:54 +0000] \"GET /api/campaigns/6894658410595b979c150037 HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 10:19:54"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:19:54 +0000] \"PUT /api/campaigns/6894658410595b979c150037 HTTP/1.1\" 400 174 \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 10:19:54"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:20:42 +0000] \"GET /api/campaigns HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 10:20:42"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:23:49 +0000] \"PUT /api/campaigns/6894658410595b979c150037 HTTP/1.1\" 200 - \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 10:23:49"}
+{"body":"{\r\n    \"name\": \"Test DAISANB2B - Latest Actor hung\",\r\n    \"actorId\": \"689464ac10595b979c15002a\",\r\n \"input\": {\r\n    \"url\": \"https://b2b.daisan.vn/products/gach-op-tuong\",\r\n    \"paginationPattern\": \"?page=\",\r\n    \"pageStart\": 1,\r\n    \"pageEnd\": 2,\r\n    \"productLinkSelector\": \".list-item-img a\",\r\n    \"productLinkIncludePatterns\": [\"gach-\"],\r\n    \"productLinkExcludePatterns\": [\"gioi-thieu\", \"tin-tuc\", \"du-an\", \"lien-he\", \"about\", \"news\", \"contact\", \"p=\"],\r\n    \"titleClass\": \".product-detail_title h1\",\r\n    \"descriptionClass\": \".product-attribute\",\r\n    \"priceClass\": \".price\",\r\n    \"skuClass\": \"\",\r\n    \"contentClass\": \".description-info\",\r\n    \"thumbnailClass\": \".image-slider-item img\",\r\n    \"imagesClass\": \".thumb-slider .swiper-container .swiper-wrapper .swiper-slide\",\r\n    \"includePatterns\": [],\r\n    \"excludePatterns\": [\"thumb\", \"small\", \"icon\", \"logo\"],\r\n    \"skuInImage\": false,\r\n    \"autoGenerateSku\": true,\r\n    \"websiteName\": \"DAISANB2B\",\r\n    \"isPrice\": true,\r\n    \"isThumbnail\": true,\r\n    \"category\": \"Gạch ốp tường\",\r\n    \"supplier\": \"DAISANB2B\",\r\n    \"url_supplier\": \"https://b2b.daisan.vn\",\r\n    \"maxRequestsPerCrawl\": 50000,\r\n    \"maxProductLinks\": 50,\r\n    \"isBrowser\": false\r\n  }\r\n  }\r\n}","expose":true,"level":"error","message":"Unexpected non-whitespace character after JSON at position 1209","stack":"SyntaxError: Unexpected non-whitespace character after JSON at position 1209\n    at JSON.parse (<anonymous>)\n    at parse (D:\\system-craw\\backend\\node_modules\\body-parser\\lib\\types\\json.js:89:19)\n    at D:\\system-craw\\backend\\node_modules\\body-parser\\lib\\read.js:128:18\n    at AsyncResource.runInAsyncScope (node:async_hooks:206:9)\n    at invokeCallback (D:\\system-craw\\backend\\node_modules\\raw-body\\index.js:231:16)\n    at done (D:\\system-craw\\backend\\node_modules\\raw-body\\index.js:220:7)\n    at IncomingMessage.onEnd (D:\\system-craw\\backend\\node_modules\\raw-body\\index.js:280:7)\n    at IncomingMessage.emit (node:events:514:28)\n    at endReadableNT (node:internal/streams/readable:1376:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)","status":400,"statusCode":400,"timestamp":"2025-08-08 10:24:07","type":"entity.parse.failed"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:24:15 +0000] \"PUT /api/campaigns/6894658410595b979c150037 HTTP/1.1\" 200 - \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 10:24:15"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:25:33 +0000] \"GET /api/campaigns HTTP/1.1\" 200 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 10:25:33"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:25:33 +0000] \"GET /api/campaigns HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 10:25:33"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:26:40 +0000] \"PUT /api/campaigns/6894658410595b979c150037 HTTP/1.1\" 400 174 \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 10:26:40"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:30:01 +0000] \"PUT /api/campaigns/6894658410595b979c150037 HTTP/1.1\" 400 174 \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 10:30:01"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:31:41 +0000] \"GET /api/campaigns HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 10:31:41"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:33:05 +0000] \"GET /api/campaigns HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 10:33:05"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:33:05 +0000] \"GET /api/campaigns HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 10:33:05"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:33:11 +0000] \"PUT /api/campaigns/6894658410595b979c150037 HTTP/1.1\" 400 155 \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 10:33:11"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:35:06 +0000] \"GET /api/campaigns HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 10:35:06"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:36:42 +0000] \"GET /api/campaigns HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 10:36:42"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:36:42 +0000] \"GET /api/campaigns HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 10:36:42"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:36:50 +0000] \"PUT /api/campaigns/6894658410595b979c150037 HTTP/1.1\" 400 155 \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 10:36:50"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:37:31 +0000] \"PUT /api/campaigns/6894658410595b979c150037 HTTP/1.1\" 200 - \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 10:37:31"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:37:44 +0000] \"PUT /api/campaigns/6894658410595b979c150037 HTTP/1.1\" 200 - \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 10:37:44"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:39:10 +0000] \"GET /api/campaigns HTTP/1.1\" 200 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 10:39:10"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:39:10 +0000] \"GET /api/campaigns HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 10:39:10"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:39:17 +0000] \"PUT /api/campaigns/6894658410595b979c150037 HTTP/1.1\" 400 155 \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 10:39:17"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:39:51 +0000] \"PUT /api/campaigns/6894658410595b979c150037 HTTP/1.1\" 400 155 \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 10:39:51"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:43:36 +0000] \"GET /api/campaigns HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 10:43:36"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:43:46 +0000] \"GET /api/campaigns HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 10:43:46"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:43:54 +0000] \"GET /api/campaigns HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 10:43:54"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:44:02 +0000] \"GET /api/campaigns HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 10:44:02"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:44:09 +0000] \"GET /api/campaigns HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 10:44:09"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:44:09 +0000] \"GET /api/campaigns HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 10:44:09"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:44:17 +0000] \"PUT /api/campaigns/6894658410595b979c150037 HTTP/1.1\" 200 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 10:44:17"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:44:17 +0000] \"GET /api/campaigns/6894658410595b979c150037 HTTP/1.1\" 200 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 10:44:17"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:44:17 +0000] \"GET /api/campaigns HTTP/1.1\" 200 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 10:44:17"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:44:42 +0000] \"PUT /api/campaigns/6894658410595b979c150037 HTTP/1.1\" 200 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 10:44:42"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:44:42 +0000] \"GET /api/campaigns/6894658410595b979c150037 HTTP/1.1\" 200 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 10:44:42"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:44:42 +0000] \"GET /api/campaigns HTTP/1.1\" 200 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 10:44:42"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:45:00 +0000] \"PUT /api/campaigns/6894658410595b979c150037 HTTP/1.1\" 200 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 10:45:00"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:45:00 +0000] \"GET /api/campaigns/6894658410595b979c150037 HTTP/1.1\" 200 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 10:45:00"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:45:00 +0000] \"GET /api/campaigns HTTP/1.1\" 200 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 10:45:00"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:45:12 +0000] \"GET /api/campaigns HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 10:45:12"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:45:35 +0000] \"GET /api/campaigns HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 10:45:35"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:45:46 +0000] \"GET /api/campaigns HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 10:45:46"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:45:46 +0000] \"GET /api/campaigns HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 10:45:46"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:45:59 +0000] \"GET /api/campaigns HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 10:45:59"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:50:58 +0000] \"POST /api/campaigns/6894658410595b979c150037/run HTTP/1.1\" 200 171 \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 10:50:58"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 10:50:59"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 10:50:59"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 10:50:59"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:51:09 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 10:51:09"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:51:34 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 10:51:34"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:51:36 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 10:51:36"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:51:37 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 10:51:37"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:52:05 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 10:52:05"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:52:35 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 10:52:35"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:52:38 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 10:52:38"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 10:53:57"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 10:53:57"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 10:53:57"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 10:54:56"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 10:54:56"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 10:54:56"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 10:55:34"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 10:55:34"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 10:55:34"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 10:56:40"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 10:56:40"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 10:56:40"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:57:19 +0000] \"POST /api/campaigns/6894658410595b979c150037/run HTTP/1.1\" 200 171 \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 10:57:19"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 10:57:20"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 10:57:20"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 10:57:20"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 10:58:10"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 10:58:10"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 10:58:10"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 10:58:32"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 10:58:32"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 10:58:32"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:58:36 +0000] \"POST /api/campaigns/6894658410595b979c150037/run HTTP/1.1\" 200 171 \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 10:58:36"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 10:58:37"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 10:58:37"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 10:58:37"}
+{"level":"info","message":"::1 - - [08/Aug/2025:03:59:01 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 10:59:01"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:00:09 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 11:00:09"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:00:27 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 11:00:27"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:01:13 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 11:01:13"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:01:14 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 11:01:14"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:01:15 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 11:01:15"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 11:01:24"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 11:01:24"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 11:01:24"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 11:01:39"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 11:01:39"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 11:01:39"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 11:01:57"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 11:01:57"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 11:01:57"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 11:02:12"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 11:02:12"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 11:02:12"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:02:31 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 11:02:31"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:02:45 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 11:02:45"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:02:52 +0000] \"POST /api/campaigns/6894658410595b979c150037/run HTTP/1.1\" 200 171 \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 11:02:52"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 11:02:53"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 11:02:53"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 11:02:53"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:03:03 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 11:03:03"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:03:54 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 11:03:54"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:03:55 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 11:03:55"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 11:04:51"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 11:04:51"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 11:04:51"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:05:01 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:05:01"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:05:01 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:05:01"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:05:01 +0000] \"POST /api/campaigns/6894658410595b979c150037/run HTTP/1.1\" 200 171 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:05:01"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 11:05:02"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 11:05:02"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 11:05:02"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:05:06 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:05:06"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:05:06 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:05:06"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 11:05:23"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 11:05:23"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 11:05:23"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 11:06:12"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 11:06:12"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 11:06:12"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:06:18 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:06:18"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:06:18 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:06:18"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 11:06:48"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 11:06:48"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 11:06:48"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:07:25 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:07:25"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:07:26 +0000] \"GET /api/campaigns/6894658410595b979c150037 HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:07:26"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 11:07:42"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 11:07:42"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 11:07:42"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:07:51 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:07:51"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:07:51 +0000] \"POST /api/campaigns/6894658410595b979c150037/cancel HTTP/1.1\" 200 79 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:07:51"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:07:53 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:07:53"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 11:08:12"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 11:08:12"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 11:08:12"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:08:15 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 11:08:15"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 11:08:30"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 11:08:30"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 11:08:30"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:08:48 +0000] \"POST /api/campaigns/6894658410595b979c150037/run HTTP/1.1\" 200 171 \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 11:08:48"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 11:08:49"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 11:08:49"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 11:08:49"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:08:54 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 11:08:54"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:08:56 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 11:08:56"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:09:05 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 11:09:05"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:09:06 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 11:09:06"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:09:35 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 11:09:35"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:09:36 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 11:09:36"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:09:36 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 11:09:36"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 11:10:42"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 11:10:42"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 11:10:42"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:10:51 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:10:51"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:10:51 +0000] \"POST /api/campaigns/6894658410595b979c150037/run HTTP/1.1\" 200 171 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:10:51"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 11:10:52"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 11:10:52"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 11:10:52"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:11:01 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:11:01"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:11:11 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:11:11"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:11:21 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:11:21"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:11:31 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:11:31"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:11:41 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:11:41"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:11:52 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:11:52"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:12:02 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:12:02"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:12:12 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:12:12"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:12:22 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:12:22"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:12:32 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:12:32"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:12:50 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:12:50"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:12:50 +0000] \"POST /api/campaigns/6894658410595b979c150037/cancel HTTP/1.1\" 200 79 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:12:50"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:12:52 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:12:52"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 11:13:11"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 11:13:11"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 11:13:11"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 11:13:14"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 11:13:14"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 11:13:14"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 11:13:37"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 11:13:37"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 11:13:37"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 11:13:50"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 11:13:50"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 11:13:50"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 11:14:05"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 11:14:05"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 11:14:05"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 11:14:11"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 11:14:11"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 11:14:11"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 11:14:27"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 11:14:27"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 11:14:27"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:14:32 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:14:32"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:14:32 +0000] \"POST /api/campaigns/6894658410595b979c150037/run HTTP/1.1\" 200 171 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:14:32"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 11:14:33"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 11:14:33"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 11:14:33"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:14:37 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:14:37"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:14:42 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:14:42"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:14:47 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:14:47"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:14:52 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:14:52"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 11:14:56"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 11:14:56"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 11:14:56"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 11:15:00"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 11:15:00"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 11:15:00"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 11:18:11"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 11:18:11"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 11:18:11"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 11:18:19"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 11:18:19"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 11:18:19"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 11:18:52"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 11:18:52"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 11:18:52"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 11:21:23"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 11:21:23"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 11:21:23"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 11:21:34"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 11:21:34"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 11:21:34"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 11:23:53"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 11:23:53"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 11:23:53"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 11:24:43"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 11:24:43"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 11:24:43"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 11:24:54"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 11:24:54"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 11:24:54"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 11:25:06"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 11:25:06"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 11:25:06"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 11:25:57"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 11:25:57"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 11:25:57"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 11:26:02"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 11:26:02"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 11:26:02"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 11:26:23"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 11:26:23"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 11:26:23"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 11:26:46"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 11:26:46"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 11:26:46"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 11:27:06"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 11:27:06"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 11:27:06"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 11:29:06"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 11:29:06"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 11:29:06"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 11:29:22"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 11:29:22"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 11:29:22"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 11:29:34"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 11:29:34"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 11:29:34"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 11:29:36"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 11:29:36"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 11:29:36"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:29:38 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:29:38"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:29:38 +0000] \"POST /api/campaigns/6894658410595b979c150037/run HTTP/1.1\" 400 49 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:29:38"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 11:29:39"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 11:29:39"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 11:29:39"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 11:30:07"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 11:30:07"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 11:30:07"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:30:14 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:30:14"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:30:14 +0000] \"POST /api/campaigns/6894658410595b979c150037/run HTTP/1.1\" 400 49 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:30:14"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 11:30:25"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 11:30:25"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 11:30:25"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:30:32 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:30:32"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:30:32 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:30:32"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:30:42 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:30:42"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:30:42 +0000] \"POST /api/campaigns/6894658410595b979c150037/cancel HTTP/1.1\" 200 79 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:30:42"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:30:44 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:30:44"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 11:31:04"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 11:31:04"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 11:31:04"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:31:09 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:31:09"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:31:09 +0000] \"POST /api/campaigns/6894658410595b979c150037/run HTTP/1.1\" 200 171 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:31:09"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 11:31:10"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 11:31:10"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 11:31:10"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:31:15 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:31:15"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:31:20 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:31:20"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:31:25 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:31:25"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:31:30 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:31:30"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:31:35 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:31:35"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:31:40 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:31:40"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:31:45 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:31:45"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 11:31:46"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 11:31:46"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 11:31:46"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:31:50 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:31:50"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 11:31:58"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 11:31:58"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 11:31:58"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 11:43:26"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 11:43:26"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 11:43:26"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:43:46 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:43:46"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:43:46 +0000] \"POST /api/campaigns/6894658410595b979c150037/cancel HTTP/1.1\" 200 79 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:43:46"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:43:48 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:43:48"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 11:44:00"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 11:44:00"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 11:44:00"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:44:04 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:44:04"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:44:04 +0000] \"POST /api/campaigns/6894658410595b979c150037/run HTTP/1.1\" 200 171 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:44:04"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 11:44:05"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 11:44:05"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 11:44:05"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:44:14 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:44:14"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:44:24 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:44:24"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:44:34 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:44:34"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:44:44 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:44:44"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:44:54 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:44:54"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:45:04 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:45:04"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:45:14 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:45:14"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:45:24 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:45:24"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:45:34 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:45:34"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:45:44 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:45:44"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:45:54 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:45:54"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:46:05 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:46:05"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:46:15 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:46:15"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:46:25 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:46:25"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:46:35 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:46:35"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:46:45 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:46:45"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:46:55 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:46:55"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:47:05 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:47:05"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:47:15 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:47:15"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:47:25 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:47:25"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:47:35 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:47:35"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:47:45 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:47:45"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:47:55 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:47:55"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:48:05 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:48:05"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:48:15 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:48:15"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:48:25 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:48:25"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:48:35 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:48:35"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:48:46 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:48:46"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:48:56 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:48:56"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:49:06 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:49:06"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:49:16 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:49:16"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:49:26 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:49:26"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:49:36 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:49:36"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:49:46 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:49:46"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:49:56 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:49:56"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:50:06 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:50:06"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:50:16 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:50:16"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:50:26 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:50:26"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:50:36 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:50:36"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:50:46 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:50:46"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:50:56 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:50:56"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:51:06 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:51:06"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:51:16 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:51:16"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:51:26 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:51:26"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:51:37 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:51:37"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:51:47 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:51:47"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:51:57 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:51:57"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:52:07 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:52:07"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:52:17 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:52:17"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:52:27 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:52:27"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:52:37 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:52:37"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:52:47 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:52:47"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:52:57 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:52:57"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:53:07 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:53:07"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:53:17 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:53:17"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:53:27 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:53:27"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:53:37 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:53:37"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:53:47 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:53:47"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:53:57 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:53:57"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:54:07 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:54:07"}
+{"level":"info","message":"::1 - - [08/Aug/2025:04:54:07 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 11:54:07"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 11:55:08"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 11:55:08"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 11:55:08"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:12:41 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:12:41"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:12:41 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:12:41"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 13:12:43"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 13:12:43"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 13:12:43"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 13:13:03"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 13:13:03"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 13:13:03"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 13:14:35"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 13:14:35"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 13:14:35"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 13:14:37"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 13:14:37"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 13:14:37"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:15:18 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:15:18"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:15:19 +0000] \"POST /api/campaigns/6894658410595b979c150037/run HTTP/1.1\" 200 171 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:15:19"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 13:15:19"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 13:15:19"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 13:15:19"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:15:29 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:15:29"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:15:39 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:15:39"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:15:49 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:15:49"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:15:59 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:15:59"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 13:16:00"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 13:16:00"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 13:16:00"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:16:20 +0000] \"PUT /api/campaigns/6894658410595b979c150037 HTTP/1.1\" 200 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 13:16:20"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:16:20 +0000] \"GET /api/campaigns/6894658410595b979c150037 HTTP/1.1\" 200 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 13:16:20"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:16:20 +0000] \"GET /api/campaigns HTTP/1.1\" 200 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 13:16:20"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 13:16:35"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 13:16:35"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 13:16:35"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 13:17:34"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 13:17:34"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 13:17:34"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 13:17:37"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 13:17:37"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 13:17:37"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:18:00 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:18:00"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:18:00 +0000] \"POST /api/campaigns/6894658410595b979c150037/run HTTP/1.1\" 400 49 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:18:00"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:18:12 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:18:12"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:18:12 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:18:12"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:18:19 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:18:19"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:18:19 +0000] \"POST /api/campaigns/6894658410595b979c150037/cancel HTTP/1.1\" 200 79 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:18:19"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:18:21 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:18:21"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:18:28 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:18:28"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:18:28 +0000] \"POST /api/campaigns/6894658410595b979c150037/run HTTP/1.1\" 200 171 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:18:28"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 13:18:28"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 13:18:28"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 13:18:28"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:18:38 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:18:38"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:18:48 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:18:48"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:18:58 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:18:58"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:19:08 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:19:08"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:19:18 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:19:18"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:19:28 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:19:28"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:19:38 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:19:38"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:19:48 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:19:48"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:19:58 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:19:58"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:20:08 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:20:08"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:20:18 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:20:18"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 13:21:45"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 13:21:45"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 13:21:52"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 13:21:52"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 13:21:52"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:22:35 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:22:35"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:22:35 +0000] \"POST /api/campaigns/6894658410595b979c150037/cancel HTTP/1.1\" 200 79 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:22:35"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:22:37 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:22:37"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:22:42 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:22:42"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:22:42 +0000] \"POST /api/campaigns/6894658410595b979c150037/run HTTP/1.1\" 200 171 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:22:42"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 13:22:43"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 13:22:43"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 13:22:43"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:22:52 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:22:52"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:23:02 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:23:02"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:23:13 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:23:13"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:23:23 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:23:23"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:23:33 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:23:33"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 13:23:56"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 13:23:56"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 13:23:56"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:24:07 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:24:07"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:24:07 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:24:07"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:24:14 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:24:14"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:24:14 +0000] \"POST /api/campaigns/6894658410595b979c150037/run HTTP/1.1\" 200 171 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:24:14"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 13:24:15"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 13:24:15"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 13:24:15"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:24:25 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:24:25"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 13:24:34"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 13:24:34"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 13:24:34"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:25:16 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 13:25:16"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 13:27:05"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 13:27:05"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 13:27:05"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 13:27:07"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 13:27:07"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 13:27:07"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:27:54 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:27:54"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:27:54 +0000] \"PUT /api/campaigns/6894658410595b979c150037 HTTP/1.1\" 400 174 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:27:54"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 13:28:01"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 13:28:01"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 13:28:01"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 13:28:11"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 13:28:11"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 13:28:11"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 13:28:13"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 13:28:13"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 13:28:13"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 13:28:32"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 13:28:32"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 13:28:32"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 13:28:33"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 13:28:33"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 13:28:33"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:28:41 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:28:41"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:28:41 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:28:41"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:28:41 +0000] \"POST /api/campaigns/6894658410595b979c150037/cancel HTTP/1.1\" 400 56 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:28:41"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 13:28:56"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 13:28:56"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 13:28:56"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 13:28:58"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 13:28:58"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 13:28:58"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:29:06 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:29:06"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:29:06 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:29:06"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:29:07 +0000] \"PUT /api/campaigns/6894658410595b979c150037 HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:29:07"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:29:07 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:29:07"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 13:29:16"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 13:29:16"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 13:29:16"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:29:22 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:29:22"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:29:22 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:29:22"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:29:22 +0000] \"PUT /api/campaigns/6894658410595b979c150037 HTTP/1.1\" 400 115 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:29:22"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 13:29:32"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 13:29:32"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 13:29:32"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:30:32 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:30:32"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:30:32 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:30:32"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:30:32 +0000] \"PUT /api/campaigns/6894658410595b979c150037 HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:30:32"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:30:32 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 350 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:30:32"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:30:39 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:30:39"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:30:39 +0000] \"POST /api/campaigns/6894658410595b979c150037/run HTTP/1.1\" 200 171 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:30:39"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 13:30:40"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 13:30:40"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 13:30:40"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:30:49 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 542 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:30:49"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:30:59 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 542 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:30:59"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:31:09 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 542 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:31:09"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:31:19 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 542 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:31:19"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 13:31:48"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 13:31:48"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 13:31:48"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 13:32:52"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 13:32:52"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 13:32:52"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 13:33:01"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 13:33:01"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 13:33:01"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:33:32 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:33:32"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:33:32 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 542 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:33:32"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 13:35:31"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 13:35:31"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 13:35:31"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 13:35:40"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 13:35:40"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 13:35:40"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 13:36:07"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 13:36:07"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 13:36:07"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:36:18 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:36:18"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:36:18 +0000] \"POST /api/campaigns/6894658410595b979c150037/run HTTP/1.1\" 400 49 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:36:18"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:36:26 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:36:26"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:36:26 +0000] \"POST /api/campaigns/6894658410595b979c150037/cancel HTTP/1.1\" 200 79 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:36:26"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:36:28 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 717 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:36:28"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:36:34 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:36:34"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:36:34 +0000] \"POST /api/campaigns/6894658410595b979c150037/run HTTP/1.1\" 200 171 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:36:34"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 13:36:35"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 13:36:35"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 13:36:35"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:36:44 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 564 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:36:44"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:36:54 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 564 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:36:54"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:37:04 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 564 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:37:04"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:37:14 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 564 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:37:14"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:37:24 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 564 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:37:24"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:37:34 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 564 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:37:34"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 13:38:10"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 13:38:10"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 13:38:10"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 13:38:22"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 13:38:22"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 13:38:22"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 13:38:33"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 13:38:33"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 13:38:33"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:39:00 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:39:00"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:39:00 +0000] \"POST /api/campaigns/6894658410595b979c150037/run HTTP/1.1\" 400 49 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:39:00"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:39:12 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:39:12"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:39:12 +0000] \"POST /api/campaigns/6894658410595b979c150037/cancel HTTP/1.1\" 200 79 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:39:12"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:39:14 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 717 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:39:14"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:39:21 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:39:21"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:39:21 +0000] \"POST /api/campaigns/6894658410595b979c150037/run HTTP/1.1\" 200 171 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:39:21"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 13:39:22"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 13:39:22"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 13:39:22"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:39:31 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 564 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:39:31"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:39:41 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 564 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:39:41"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:39:51 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 564 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:39:51"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 13:40:06"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 13:40:06"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 13:40:06"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 13:40:20"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 13:40:20"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 13:40:20"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 13:40:31"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 13:40:31"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 13:40:31"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 13:41:01"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 13:41:01"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 13:41:01"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 13:41:03"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 13:41:03"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 13:41:03"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:41:28 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:41:28"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:41:28 +0000] \"POST /api/campaigns/6894658410595b979c150037/run HTTP/1.1\" 400 49 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:41:28"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:41:35 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:41:35"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:41:35 +0000] \"POST /api/campaigns/6894658410595b979c150037/cancel HTTP/1.1\" 200 79 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:41:35"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:41:37 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 717 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:41:37"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:41:42 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:41:42"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:41:42 +0000] \"POST /api/campaigns/6894658410595b979c150037/run HTTP/1.1\" 200 171 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:41:42"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 13:41:43"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 13:41:43"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 13:41:43"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:41:47 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 564 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:41:47"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:41:52 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 564 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:41:52"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:41:57 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 564 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:41:57"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:42:02 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 564 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:42:02"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:42:07 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 564 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:42:07"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:42:12 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 564 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:42:12"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:42:17 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 564 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:42:17"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 13:42:54"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 13:42:54"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 13:42:54"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 13:45:45"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 13:45:45"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 13:45:45"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 13:46:19"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 13:46:19"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 13:46:19"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:46:23 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:46:23"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:46:23 +0000] \"POST /api/campaigns/6894658410595b979c150037/run HTTP/1.1\" 400 49 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:46:23"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:47:32 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:47:32"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:47:32 +0000] \"POST /api/campaigns/6894658410595b979c150037/cancel HTTP/1.1\" 200 79 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:47:32"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:47:34 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 717 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:47:34"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:49:14 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:49:14"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:49:14 +0000] \"POST /api/campaigns/6894658410595b979c150037/run HTTP/1.1\" 200 171 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:49:14"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:49:20 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 564 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:49:20"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:49:25 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 564 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:49:25"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:49:30 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:49:30"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:49:30 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:49:30"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:55:30 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:55:30"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:55:30 +0000] \"GET /api/campaigns/actor/689464ac10595b979c15002a HTTP/1.1\" 404 27 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:55:30"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:55:47 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:55:47"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:55:47 +0000] \"GET /api/campaigns/actor/689464ac10595b979c15002a HTTP/1.1\" 404 27 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:55:47"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 13:56:08"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 13:56:08"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 13:56:08"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:56:19 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:56:19"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:56:19 +0000] \"GET /api/campaigns/actor/689464ac10595b979c15002a HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:56:19"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:56:19 +0000] \"POST /api/campaigns/6894658410595b979c150037/run HTTP/1.1\" 200 171 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:56:19"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:56:24 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:56:24"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:56:29 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:56:29"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:58:03 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:58:03"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:58:03 +0000] \"POST /api/campaigns HTTP/1.1\" 201 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:58:03"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:58:03 +0000] \"POST /api/campaigns HTTP/1.1\" 201 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:58:03"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:58:03 +0000] \"POST /api/campaigns HTTP/1.1\" 201 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:58:03"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:58:03 +0000] \"GET /api/campaigns/actor/689464ac10595b979c15002a HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:58:03"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:58:12 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:58:12"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:58:12 +0000] \"GET /api/campaigns/actor/689464ac10595b979c15002a HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:58:12"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:58:12 +0000] \"POST /api/campaigns/68959ffb4bb5b6a75e414603/run HTTP/1.1\" 200 171 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:58:12"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:58:12 +0000] \"POST /api/campaigns/68959ffb4bb5b6a75e4145fd/run HTTP/1.1\" 200 171 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:58:12"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:58:12 +0000] \"POST /api/campaigns/68959ffb4bb5b6a75e4145f7/run HTTP/1.1\" 200 171 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:58:12"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:58:17 +0000] \"GET /api/campaigns/68959ffb4bb5b6a75e414603/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:58:17"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:58:17 +0000] \"GET /api/campaigns/68959ffb4bb5b6a75e4145fd/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:58:17"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:58:17 +0000] \"GET /api/campaigns/68959ffb4bb5b6a75e4145f7/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:58:17"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:59:19 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:59:19"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:59:19 +0000] \"GET /api/campaigns/actor/689464ac10595b979c15002a HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:59:19"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:59:19 +0000] \"POST /api/campaigns/68959ffb4bb5b6a75e414603/run HTTP/1.1\" 200 171 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:59:19"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:59:19 +0000] \"POST /api/campaigns/68959ffb4bb5b6a75e4145fd/run HTTP/1.1\" 200 171 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:59:19"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:59:19 +0000] \"POST /api/campaigns/68959ffb4bb5b6a75e4145f7/run HTTP/1.1\" 200 171 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:59:19"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:59:24 +0000] \"GET /api/campaigns/68959ffb4bb5b6a75e414603/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:59:24"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:59:24 +0000] \"GET /api/campaigns/68959ffb4bb5b6a75e4145fd/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:59:24"}
+{"level":"info","message":"::1 - - [08/Aug/2025:06:59:24 +0000] \"GET /api/campaigns/68959ffb4bb5b6a75e4145f7/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 13:59:24"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:00:14 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 14:00:14"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:00:14 +0000] \"POST /api/campaigns/68959ffb4bb5b6a75e4145f7/run HTTP/1.1\" 200 171 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 14:00:14"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:00:17 +0000] \"GET /api/campaigns/68959ffb4bb5b6a75e4145f7/status HTTP/1.1\" 200 550 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 14:00:17"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:00:20 +0000] \"GET /api/campaigns/68959ffb4bb5b6a75e4145f7/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 14:00:20"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:03:03 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 14:03:03"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:03:29 +0000] \"POST /api/campaigns/6894658410595b979c150037/run HTTP/1.1\" 200 171 \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 14:03:29"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:03:35 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 564 \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 14:03:35"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:03:40 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 14:03:40"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:03:48 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 14:03:48"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:09:08 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 14:09:08"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:09:08 +0000] \"POST /api/campaigns/68959ffb4bb5b6a75e4145f7/run HTTP/1.1\" 200 171 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 14:09:08"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:09:11 +0000] \"GET /api/campaigns/68959ffb4bb5b6a75e4145f7/status HTTP/1.1\" 200 550 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 14:09:11"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:09:14 +0000] \"GET /api/campaigns/68959ffb4bb5b6a75e4145f7/status HTTP/1.1\" 200 550 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 14:09:14"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:09:17 +0000] \"GET /api/campaigns/68959ffb4bb5b6a75e4145f7/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 14:09:17"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:09:48 +0000] \"POST /api/campaigns/6894658410595b979c150037/run HTTP/1.1\" 200 171 \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 14:09:48"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:09:52 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 564 \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 14:09:52"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:09:55 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 564 \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 14:09:55"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:09:56 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 14:09:56"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:21:12 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 14:21:12"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:23:10 +0000] \"GET /api/dashboard/stats HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 14:23:10"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:23:10 +0000] \"GET /api/dashboard/recent-data HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 14:23:10"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:23:10 +0000] \"GET /api/dashboard/chart-data?period=7d HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 14:23:10"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:23:15 +0000] \"GET /api/campaigns HTTP/1.1\" 200 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 14:23:15"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:23:15 +0000] \"GET /api/campaigns HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 14:23:15"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:23:30 +0000] \"PUT /api/campaigns/6894658410595b979c150037 HTTP/1.1\" 200 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 14:23:30"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:23:31 +0000] \"GET /api/campaigns/6894658410595b979c150037 HTTP/1.1\" 200 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 14:23:31"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:23:31 +0000] \"GET /api/campaigns HTTP/1.1\" 200 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 14:23:31"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:24:03 +0000] \"POST /api/campaigns/6894658410595b979c150037/run HTTP/1.1\" 200 171 \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 14:24:03"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:24:08 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 14:24:08"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:24:10 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 14:24:10"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:24:20 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 14:24:20"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:28:36 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 14:28:36"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:28:36 +0000] \"POST /api/campaigns/6894658410595b979c150037/run HTTP/1.1\" 200 171 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 14:28:36"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:28:39 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 14:28:39"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:28:42 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 14:28:42"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:28:45 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 14:28:45"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:29:34 +0000] \"POST /api/campaigns/6894658410595b979c150037/run HTTP/1.1\" 200 171 \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 14:29:34"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:29:37 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 14:29:37"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:29:44 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 14:29:44"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:29:49 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 14:29:49"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:29:52 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 14:29:52"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:30:01 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 14:30:01"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 14:31:41"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 14:31:41"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 14:31:41"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:31:57 +0000] \"GET /api/dashboard/stats HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 14:31:57"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:31:57 +0000] \"GET /api/dashboard/recent-data HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 14:31:57"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:31:57 +0000] \"GET /api/dashboard/chart-data?period=7d HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 14:31:57"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:32:06 +0000] \"POST /api/campaigns/6894658410595b979c150037/run HTTP/1.1\" 200 171 \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 14:32:06"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 14:32:07"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 14:32:07"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 14:32:07"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:32:11 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 14:32:11"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:32:27 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 14:32:27"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:34:07 +0000] \"POST /api/campaigns/6894658410595b979c150037/run HTTP/1.1\" 400 49 \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 14:34:07"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:34:13 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 14:34:13"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:34:25 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 14:34:25"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:34:27 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 14:34:27"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:35:03 +0000] \"POST /api/campaigns/6894658410595b979c150037/run HTTP/1.1\" 400 49 \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 14:35:03"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 14:38:52"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 14:38:52"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 14:38:52"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:39:32 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 14:39:32"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:39:32 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 14:39:32"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:39:32 +0000] \"POST /api/campaigns/6894658410595b979c150037/run HTTP/1.1\" 400 49 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 14:39:32"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:39:59 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 14:39:59"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:39:59 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 14:39:59"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:39:59 +0000] \"POST /api/campaigns/6894658410595b979c150037/run HTTP/1.1\" 400 49 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 14:39:59"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:40:31 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 14:40:31"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:40:31 +0000] \"GET /api/campaigns/6894658410595b979c150037 HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 14:40:31"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:40:56 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 14:40:56"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:40:56 +0000] \"GET /api/campaigns/6894658410595b979c150037 HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 14:40:56"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:40:56 +0000] \"PUT /api/campaigns/6894658410595b979c150037 HTTP/1.1\" 400 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 14:40:56"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:41:57 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 14:41:57"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:41:58 +0000] \"GET /api/campaigns/6894658410595b979c150037 HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 14:41:58"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:41:58 +0000] \"PUT /api/campaigns/6894658410595b979c150037 HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 14:41:58"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:41:58 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 14:41:58"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:41:58 +0000] \"POST /api/campaigns/6894658410595b979c150037/run HTTP/1.1\" 400 49 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 14:41:58"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:42:34 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 14:42:34"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:42:34 +0000] \"PUT /api/campaigns/6894658410595b979c150037 HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 14:42:34"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:42:34 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 14:42:34"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:45:41 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 14:45:41"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:45:41 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 14:45:41"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:45:41 +0000] \"POST /api/campaigns/6894658410595b979c150037/reset HTTP/1.1\" 404 27 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 14:45:41"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-08 14:45:54"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-08 14:45:54"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-08 14:45:54"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:46:00 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 14:46:00"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:46:00 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 14:46:00"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:46:00 +0000] \"POST /api/campaigns/6894658410595b979c150037/reset HTTP/1.1\" 200 79 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 14:46:00"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:46:00 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 348 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 14:46:00"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:46:00 +0000] \"POST /api/campaigns/6894658410595b979c150037/run HTTP/1.1\" 200 171 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-08 14:46:00"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:47:26 +0000] \"POST /api/campaigns/6894658410595b979c150037/run HTTP/1.1\" 200 171 \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 14:47:26"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:47:31 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 14:47:31"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:47:40 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 14:47:40"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:48:01 +0000] \"GET /api/dashboard/stats HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 14:48:01"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:48:01 +0000] \"GET /api/dashboard/recent-data HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 14:48:01"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:48:01 +0000] \"GET /api/dashboard/chart-data?period=7d HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 14:48:01"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:49:08 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 14:49:08"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:49:18 +0000] \"POST /api/campaigns/6894658410595b979c150037/run HTTP/1.1\" 200 171 \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 14:49:18"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:49:22 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 14:49:22"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:49:38 +0000] \"GET /api/campaigns/6894658410595b979c150037/status HTTP/1.1\" 200 - \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-08 14:49:38"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:50:03 +0000] \"GET /api/sources?search=&status=&type= HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 14:50:03"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:50:05 +0000] \"GET /api/actors?search=&status= HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 14:50:05"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:50:05 +0000] \"GET /api/campaigns HTTP/1.1\" 200 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 14:50:05"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:50:05 +0000] \"GET /api/campaigns HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 14:50:05"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:50:07 +0000] \"GET /api/campaigns HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 14:50:07"}
+{"level":"info","message":"::1 - - [08/Aug/2025:07:50:07 +0000] \"GET /api/campaigns HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-08 14:50:07"}

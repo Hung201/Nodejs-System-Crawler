@@ -1,0 +1,9 @@
+{
+	"id": "3hMcnG8la4GOOWc",
+	"json": "{\"id\":\"3hMcnG8la4GOOWc\",\"url\":\"https://b2b.daisan.vn/gach-men-3d-chong-tham-op-tuong-phong-tam-cao-cap-250x400mm-469627.html\",\"loadedUrl\":\"https://b2b.daisan.vn/gach-men-3d-chong-tham-op-tuong-phong-tam-cao-cap-250x400mm-469627.html\",\"uniqueKey\":\"https://b2b.daisan.vn/gach-men-3d-chong-tham-op-tuong-phong-tam-cao-cap-250x400mm-469627.html\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"paginationPattern\":\"?page=\",\"pageStart\":1,\"pageEnd\":2,\"productLinkSelector\":\".list-item-img a\",\"productLinkIncludePatterns\":[\"gach-\"],\"productLinkExcludePatterns\":[\"gioi-thieu\",\"tin-tuc\",\"du-an\",\"lien-he\",\"about\",\"news\",\"contact\",\"p=\"],\"titleClass\":\".product-detail_title h1\",\"descriptionClass\":\".product-attribute\",\"priceClass\":\".price\",\"contentClass\":\".description-info\",\"thumbnailClass\":\".image-slider-item img\",\"imagesClass\":\".thumb-slider .swiper-container .swiper-wrapper .swiper-slide\",\"imageFilters\":{\"includePatterns\":[],\"excludePatterns\":[\"thumb\",\"small\",\"icon\",\"logo\"],\"skuInImage\":false},\"autoGenerateSku\":true,\"websiteName\":\"DAISANB2B\",\"isPrice\":true,\"isThumbnail\":true,\"category\":\"Gạch ốp tường\",\"supplier\":\"DAISANB2B\",\"url_supplier\":\"https://b2b.daisan.vn\",\"isBrowser\":false,\"maxProductLinks\":30,\"label\":\"unknown-detail\",\"__crawlee\":{\"enqueueStrategy\":\"same-domain\",\"state\":4}},\"handledAt\":\"2025-08-08T07:24:10.233Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://b2b.daisan.vn/gach-men-3d-chong-tham-op-tuong-phong-tam-cao-cap-250x400mm-469627.html",
+	"url": "https://b2b.daisan.vn/gach-men-3d-chong-tham-op-tuong-phong-tam-cao-cap-250x400mm-469627.html"
+}

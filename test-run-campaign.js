@@ -1,97 +1,135 @@
 const axios = require('axios');
+const fs = require('fs');
 
 async function testRunCampaign() {
     try {
-        console.log('🚀 Testing Campaign Run...');
-
-        // 1. Login
-        console.log('\n1️⃣ Login...');
+        console.log('🔐 Step 1: Login...');
         const loginResponse = await axios.post('http://localhost:5000/api/auth/login', {
             email: 'hung@gmail.com',
             password: '123456'
         });
-
         const token = loginResponse.data.data.token;
-        const headers = {
-            'Authorization': `Bearer ${token}`,
-            'Content-Type': 'application/json'
-        };
-        console.log('✅ Login successful');
+        console.log('✅ Login thành công!');
 
-        // 2. Get the campaign we just created
-        console.log('\n2️⃣ Getting campaign...');
-        const campaignId = '689451a216d5ec0bc87b9907'; // From new upload
-        const campaignResponse = await axios.get(`http://localhost:5000/api/campaigns/${campaignId}`, { headers });
-        const campaign = campaignResponse.data.data;
-        console.log(`✅ Found campaign: ${campaign.name} (${campaign.status})`);
+        // Xóa file hung.json cũ nếu có
+        const hungJsonPath = 'actors_storage/6891a5c601229ef8877f74f1/689464ac10595b979c15002a/hung.json';
+        try {
+            fs.unlinkSync(hungJsonPath);
+            console.log('🗑️  Xóa file hung.json cũ');
+        } catch (error) {
+            console.log('📝 Không có file hung.json cũ để xóa');
+        }
 
-        // 3. Run campaign
-        console.log('\n3️⃣ Running campaign...');
-        const runResponse = await axios.post(`http://localhost:5000/api/campaigns/${campaignId}/run`, {}, { headers });
-        console.log('✅ Campaign started:', runResponse.data.data);
+        console.log('\n🚀 Step 2: Chạy campaign...');
+        const runResponse = await axios.post('http://localhost:5000/api/campaigns/6894658410595b979c150037/run', {}, {
+            headers: { 'Authorization': `Bearer ${token}` }
+        });
+        
+        console.log('✅ Campaign đã được khởi chạy!');
+        console.log('Campaign ID:', runResponse.data.data.campaignId);
+        console.log('Run ID:', runResponse.data.data.runId);
+        console.log('Status:', runResponse.data.data.status);
 
-        // 4. Monitor campaign status
-        console.log('\n4️⃣ Monitoring campaign status...');
+        console.log('\n📊 Step 3: Monitor campaign status...');
         let attempts = 0;
-        const maxAttempts = 60; // 60 giây
+        const maxAttempts = 30; // 5 phút max
 
-        const monitorStatus = async () => {
-            try {
-                const statusResponse = await axios.get(`http://localhost:5000/api/campaigns/${campaignId}/status`, { headers });
-                const status = statusResponse.data.data;
-
-                console.log(`📊 Status: ${status.status} | Records: ${status.result.recordsProcessed || 0}`);
-
-                if (status.status === 'completed' || status.status === 'failed') {
-                    console.log('\n🎯 Campaign finished!');
-                    console.log('📋 Final Result:');
-                    console.log(`   - Status: ${status.status}`);
-                    console.log(`   - Duration: ${status.result.duration || 0}ms`);
-                    console.log(`   - Records Processed: ${status.result.recordsProcessed || 0}`);
-                    console.log(`   - Output Records: ${status.result.output ? status.result.output.length : 0}`);
-
-                    if (status.result.error) {
-                        console.log(`   - Error: ${status.result.error}`);
-                    }
-
-                    if (status.result.log) {
-                        console.log('\n📝 Log:');
-                        console.log(status.result.log);
-                    }
-
-                    if (status.result.output && status.result.output.length > 0) {
-                        console.log('\n📄 Sample Output:');
-                        console.log(JSON.stringify(status.result.output[0], null, 2));
-                    }
-
-                    return true;
-                }
-
-                return false;
-            } catch (error) {
-                console.error('❌ Error checking status:', error.response?.data || error.message);
-                return false;
-            }
-        };
-
-        // Poll status every second
-        const pollInterval = setInterval(async () => {
+        while (attempts < maxAttempts) {
             attempts++;
-            const isFinished = await monitorStatus();
-
-            if (isFinished || attempts >= maxAttempts) {
-                clearInterval(pollInterval);
-                if (attempts >= maxAttempts) {
-                    console.log('⏰ Timeout waiting for campaign to finish');
+            await new Promise(resolve => setTimeout(resolve, 10000)); // Đợi 10 giây
+            
+            try {
+                const statusResponse = await axios.get('http://localhost:5000/api/campaigns/6894658410595b979c150037/status', {
+                    headers: { 'Authorization': `Bearer ${token}` }
+                });
+                
+                const data = statusResponse.data.data;
+                console.log(`\n📊 Check #${attempts} (${new Date().toLocaleTimeString()})`);
+                console.log('Status:', data.status);
+                console.log('Records:', data.result?.recordsProcessed || 0);
+                
+                // Check if file exists
+                let fileExists = false;
+                let fileSize = 0;
+                try {
+                    const stats = fs.statSync(hungJsonPath);
+                    fileExists = true;
+                    fileSize = stats.size;
+                    console.log(`File hung.json: ${fileSize} bytes`);
+                } catch (error) {
+                    console.log('File hung.json: Chưa tạo');
                 }
+
+                // Check if completed or failed
+                if (data.status === 'completed') {
+                    console.log('\n🎉 THÀNH CÔNG! Campaign đã hoàn thành!');
+                    console.log('✅ Final records:', data.result?.recordsProcessed);
+                    console.log('✅ Duration:', data.result?.duration + 'ms');
+                    console.log('✅ File size:', fileSize, 'bytes');
+                    
+                    // Hiển thị sample output
+                    if (data.result?.output && data.result.output.length > 0) {
+                        console.log('\n📋 Sample Output (3 sản phẩm đầu):');
+                        data.result.output.slice(0, 3).forEach((product, index) => {
+                            console.log(`\n--- Sản phẩm ${index + 1} ---`);
+                            console.log('Tên:', product.name || product.title || 'N/A');
+                            console.log('Giá:', product.price || product.cost || 'N/A');
+                            console.log('URL:', product.url || product.link || 'N/A');
+                        });
+                    }
+                    break;
+                } else if (data.status === 'failed') {
+                    console.log('\n❌ Campaign failed!');
+                    console.log('Error:', data.result?.error);
+                    break;
+                } else if (data.status === 'cancelled') {
+                    console.log('\n⚠️ Campaign đã bị hủy');
+                    break;
+                } else {
+                    // Still running
+                    if (data.result?.recordsProcessed > 0) {
+                        console.log(`📈 Progress: Đã tìm thấy ${data.result.recordsProcessed} sản phẩm...`);
+                    }
+                    if (fileExists && fileSize > 0) {
+                        console.log(`📄 File đã tạo: ${fileSize} bytes`);
+                    }
+                }
+                
+            } catch (statusError) {
+                console.log('⚠️ Error checking status:', statusError.message);
             }
-        }, 1000);
+        }
 
-        console.log('\n🎉 Campaign test completed!');
+        console.log('\n📋 Step 4: Kết quả cuối cùng...');
+        console.log('='.repeat(60));
+        
+        const finalStatusResponse = await axios.get('http://localhost:5000/api/campaigns/6894658410595b979c150037/status', {
+            headers: { 'Authorization': `Bearer ${token}` }
+        });
+        
+        const finalData = finalStatusResponse.data.data;
+        console.log('Final Status:', finalData.status);
+        console.log('Final Records:', finalData.result?.recordsProcessed || 0);
+        
+        if (finalData.status === 'completed') {
+            console.log('🎯 TEST PASSED: Campaign hoàn thành thành công!');
+            console.log('✅ Status: completed');
+            console.log('✅ Có output data');
+        } else {
+            console.log('❌ TEST FAILED: Campaign không hoàn thành');
+            console.log('Final status:', finalData.status);
+        }
 
+        console.log('='.repeat(60));
+        
     } catch (error) {
-        console.error('❌ Test failed:', error.response?.data || error.message);
+        console.error('❌ Test Error:', error.response?.data || error.message);
     }
 }
 
+console.log('🧪 Testing Campaign Run with Unique Directory');
+console.log('=============================================');
+console.log('Mục tiêu: Chạy campaign với unique directory để tránh permission error');
+console.log('API: POST /api/campaigns/6894658410595b979c150037/run');
+console.log('='.repeat(60));
 testRunCampaign();
