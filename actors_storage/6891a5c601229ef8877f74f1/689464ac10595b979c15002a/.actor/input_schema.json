@@ -1,0 +1,177 @@
+{
+    "title": "Multi-Website Product Crawler",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "url": {
+            "title": "URL",
+            "type": "string",
+            "description": "Category or product page URL to start crawling",
+            "editor": "textfield"
+        },
+        "paginationPattern": {
+            "title": "Pagination Pattern",
+            "type": "string",
+            "description": "Pattern for pagination URLs (e.g., '?page=', '/page/', '&page=')",
+            "editor": "textfield"
+        },
+        "pageStart": {
+            "title": "Page Start",
+            "type": "integer",
+            "description": "Starting page number for pagination",
+            "default": 1
+        },
+        "pageEnd": {
+            "title": "Page End",
+            "type": "integer",
+            "description": "Ending page number for pagination",
+            "default": 5
+        },
+        "productLinkSelector": {
+            "title": "Product Link Selector",
+            "type": "string",
+            "description": "CSS selector for product links (e.g., '.list-item-img a')",
+            "editor": "textfield"
+        },
+        "productLinkIncludePatterns": {
+            "title": "Product Link Include Patterns",
+            "type": "array",
+            "description": "URL patterns that product links MUST include (e.g., ['gach-'])",
+            "editor": "json",
+            "items": {
+                "type": "string"
+            }
+        },
+        "productLinkExcludePatterns": {
+            "title": "Product Link Exclude Patterns",
+            "type": "array",
+            "description": "URL patterns to exclude from product links (e.g., ['gioi-thieu', 'tin-tuc'])",
+            "editor": "json",
+            "items": {
+                "type": "string"
+            }
+        },
+        "titleClass": {
+            "title": "Title Selector",
+            "type": "string",
+            "description": "CSS selector for product title (e.g., '.product-detail_title h1')",
+            "editor": "textfield"
+        },
+        "descriptionClass": {
+            "title": "Description Selector",
+            "type": "string",
+            "description": "CSS selector for product description (e.g., '.product-shipping')",
+            "editor": "textfield"
+        },
+        "priceClass": {
+            "title": "Price Selector",
+            "type": "string",
+            "description": "CSS selector for product price (e.g., '.price')",
+            "editor": "textfield"
+        },
+        "skuClass": {
+            "title": "SKU Selector",
+            "type": "string",
+            "description": "CSS selector for product SKU (leave empty for auto-generate)",
+            "editor": "textfield"
+        },
+        "contentClass": {
+            "title": "Content Selector",
+            "type": "string",
+            "description": "CSS selector for product content HTML (e.g., '.product-description')",
+            "editor": "textfield"
+        },
+        "thumbnailClass": {
+            "title": "Thumbnail Selector",
+            "type": "string",
+            "description": "CSS selector for product thumbnail (e.g., '.image-slider-item img')",
+            "editor": "textfield"
+        },
+        "imagesClass": {
+            "title": "Images Selector",
+            "type": "string",
+            "description": "CSS selector for product images (e.g., '.swiper-slide img')",
+            "editor": "textfield"
+        },
+        "includePatterns": {
+            "title": "Include Patterns",
+            "type": "array",
+            "description": "URL patterns to include images (leave empty for all)",
+            "editor": "json",
+            "items": {
+                "type": "string"
+            }
+        },
+        "excludePatterns": {
+            "title": "Exclude Patterns",
+            "type": "array",
+            "description": "URL patterns to exclude images (e.g., ['thumb', 'small', 'icon', 'logo'])",
+            "editor": "json",
+            "items": {
+                "type": "string"
+            }
+        },
+        "skuInImage": {
+            "title": "SKU in Image",
+            "type": "boolean",
+            "description": "Only include images containing SKU in URL"
+        },
+        "autoGenerateSku": {
+            "title": "Auto Generate SKU",
+            "type": "boolean",
+            "description": "Automatically generate SKU if not found on page",
+            "default": true
+        },
+        "websiteName": {
+            "title": "Website Name",
+            "type": "string",
+            "description": "Website name for SKU generation (e.g., 'DAISAN')",
+            "editor": "textfield"
+        },
+        "isPrice": {
+            "title": "Price Required",
+            "type": "boolean",
+            "description": "Skip products without price (true = skip, false = include all)",
+            "default": true
+        },
+        "isThumbnail": {
+            "title": "Thumbnail Required",
+            "type": "boolean",
+            "description": "Skip products without thumbnail (true = skip, false = include all)",
+            "default": false
+        },
+        "supplier": {
+            "title": "Supplier",
+            "type": "string",
+            "description": "Supplier name for products (e.g., 'DAISAN')",
+            "editor": "textfield"
+        },
+        "url_supplier": {
+            "title": "Supplier URL",
+            "type": "string",
+            "description": "Supplier website URL (e.g., 'https://b2b.daisan.vn')",
+            "editor": "textfield"
+        },
+        "maxRequestsPerCrawl": {
+            "title": "Max Requests per Crawl",
+            "type": "integer",
+            "description": "Maximum number of requests that can be made by this crawler",
+            "default": 50000
+        },
+        "maxProductLinks": {
+            "title": "Max Product Links",
+            "type": "integer",
+            "description": "Maximum number of product links to collect (for recursive API crawling)",
+            "default": 50
+        },
+        "isBrowser": {
+            "title": "Use Browser API",
+            "type": "boolean",
+            "description": "Use external API for product link discovery (true = API, false = direct crawl)",
+            "default": false
+        }
+    },
+    "required": [
+        "url"
+    ]
+}

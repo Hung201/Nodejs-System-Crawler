@@ -6,12 +6,16 @@ const { validationResult } = require('express-validator');
 // @access  Private
 const getAllActors = async (req, res) => {
     try {
-        const { page = 1, limit = 10, status, type, search } = req.query;
+        const { page = 1, limit = 10, status, type, search, category, visibility, buildStatus, runStatus } = req.query;
 
         // Build filter
         const filter = {};
         if (status) filter.status = status;
         if (type) filter.type = type;
+        if (category) filter.category = category;
+        if (visibility) filter.visibility = visibility;
+        if (buildStatus) filter['buildInfo.buildStatus'] = buildStatus;
+        if (runStatus) filter['runInfo.runStatus'] = runStatus;
         if (search) {
             filter.$or = [
                 { name: { $regex: search, $options: 'i' } },
@@ -106,11 +110,19 @@ const createActor = async (req, res) => {
             type,
             config,
             code,
-            status = 'active',
-            version = '1.0.0',
+            status = 'ready',
+            version = '0.0.1',
             tags = [],
             inputSchema,
-            apifyMetadata
+            apifyMetadata,
+            // New fields
+            sourceCode,
+            environmentVariables,
+            visibility = 'private',
+            category = 'web-scraping',
+            license = 'MIT',
+            gitInfo,
+            public: isPublic = false
         } = req.body;
 
         // Check if actor name already exists
@@ -124,12 +136,22 @@ const createActor = async (req, res) => {
 
         // Xử lý file upload nếu có
         let fileInfo = null;
+        let fileUploadInfo = null;
         if (req.file) {
             fileInfo = {
                 filename: req.file.originalname,
                 path: req.file.path,
                 size: req.file.size,
                 mimetype: req.file.mimetype
+            };
+
+            fileUploadInfo = {
+                filename: req.file.filename,
+                originalName: req.file.originalname,
+                path: req.file.path,
+                size: req.file.size,
+                mimetype: req.file.mimetype,
+                uploadedAt: new Date()
             };
         }
 
@@ -153,6 +175,7 @@ const createActor = async (req, res) => {
             config: config || {},
             code,
             file: fileInfo,
+            fileUpload: fileUploadInfo,
             status,
             version,
             tags,
@@ -164,10 +187,71 @@ const createActor = async (req, res) => {
                 required: []
             },
             apifyMetadata: apifyMetadata || {},
+            // New fields
+            sourceCode: sourceCode || {
+                main: '',
+                package: '',
+                inputSchema: '',
+                actorConfig: '',
+                lastModified: new Date()
+            },
+            environmentVariables: environmentVariables || [],
+            visibility,
+            category,
+            license,
+            gitInfo: gitInfo || {
+                repository: '',
+                branch: '',
+                commitHash: '',
+                lastSync: null
+            },
+            // File-based storage fields
+            userId: req.user.id,
+            path: `actors_storage/${req.user.id}/`, // Sẽ được cập nhật sau khi có actor._id
+            files: [],
+            public: isPublic,
+            // Initialize build and run info
+            buildInfo: {
+                buildCount: 0,
+                buildStatus: 'pending'
+            },
+            runInfo: {
+                runCount: 0,
+                runStatus: 'idle'
+            },
+            metrics: {
+                averageRunTime: 0,
+                successRate: 0,
+                totalDataProcessed: 0
+            },
             createdBy: req.user.id
         });
 
         await actor.save();
+
+        // Tạo thư mục cho actor và giải nén file nếu có
+        const fileSystemService = require('../services/fileSystemService');
+        try {
+            console.log(`Creating directory for actor: ${actor._id}, user: ${req.user.id}`);
+            const actorPath = await fileSystemService.createActorDirectory(req.user.id, actor._id);
+            console.log(`Actor directory created: ${actorPath}`);
+
+            // Giải nén file nếu có
+            if (req.file && req.file.mimetype === 'application/zip') {
+                console.log(`Extracting zip file: ${req.file.path} to ${actorPath}`);
+                await fileSystemService.extractZipFile(req.file.path, actorPath);
+                console.log('Zip file extracted successfully');
+            }
+
+            // Cập nhật path trong database
+            actor.path = `actors_storage/${req.user.id}/${actor._id}/`;
+            await actor.save();
+
+        } catch (error) {
+            console.error('Error creating actor directory or extracting file:', error);
+            console.error('Error details:', error.message);
+            console.error('Stack trace:', error.stack);
+        }
 
         // Populate creator info
         await actor.populate('createdBy', 'name email');
@@ -289,6 +373,16 @@ const deleteActor = async (req, res) => {
             });
         }
 
+        // Xóa thư mục actor nếu có
+        const fileSystemService = require('../services/fileSystemService');
+        try {
+            if (actor.userId) {
+                await fileSystemService.deleteActorDirectory(actor.userId, actor._id);
+            }
+        } catch (error) {
+            console.error('Error deleting actor directory:', error);
+        }
+
         await Actor.findByIdAndDelete(req.params.id);
 
         res.json({
@@ -402,13 +496,12 @@ const downloadActorFile = async (req, res) => {
     }
 };
 
-// @desc    Run actor with input
-// @route   POST /api/actors/:id/run
-// @access  Private
-const runActor = async (req, res) => {
+// @desc    Build actor
+// @route   POST /api/actors/:id/build
+// @access  Private (Admin, Editor)
+const buildActor = async (req, res) => {
     try {
         const actor = await Actor.findById(req.params.id);
-
         if (!actor) {
             return res.status(404).json({
                 success: false,
@@ -416,53 +509,107 @@ const runActor = async (req, res) => {
             });
         }
 
-        if (actor.status !== 'active') {
-            return res.status(400).json({
-                success: false,
-                error: 'Actor không ở trạng thái active'
-            });
-        }
+        // Update build status
+        actor.buildInfo.buildStatus = 'building';
+        actor.buildInfo.lastBuildAt = new Date();
+        actor.buildInfo.buildCount += 1;
+        actor.buildInfo.buildLog = 'Starting build process...';
+        actor.buildInfo.buildError = null;
 
-        const { input } = req.body;
+        await actor.save();
 
-        // Validate input against schema
-        if (actor.inputSchema && actor.inputSchema.properties) {
-            const requiredFields = actor.inputSchema.required || [];
-
-            for (const field of requiredFields) {
-                if (!input[field]) {
-                    return res.status(400).json({
-                        success: false,
-                        error: `Thiếu trường bắt buộc: ${field}`
-                    });
-                }
+        // Simulate build process (in real implementation, this would be async)
+        setTimeout(async () => {
+            try {
+                // Simulate successful build
+                actor.buildInfo.buildStatus = 'success';
+                actor.buildInfo.buildLog = 'Build completed successfully';
+                actor.status = 'ready';
+                await actor.save();
+            } catch (error) {
+                console.error('Build simulation error:', error);
             }
-        }
-
-        // Simulate running actor (in real implementation, this would execute the code)
-        const runResult = {
-            actorId: actor._id,
-            actorName: actor.name,
-            input: input,
-            status: 'running',
-            startTime: new Date(),
-            estimatedDuration: '5-10 minutes',
-            message: 'Actor đang được chạy...'
-        };
-
-        // TODO: Implement actual actor execution
-        // This would involve:
-        // 1. Setting up execution environment
-        // 2. Running the actor code with input
-        // 3. Collecting results
-        // 4. Storing results in database
+        }, 3000);
 
         res.json({
             success: true,
-            data: runResult,
-            message: 'Actor đã được khởi chạy thành công'
+            data: {
+                buildId: actor.buildInfo.buildCount,
+                status: 'building',
+                message: 'Build process started'
+            }
         });
+    } catch (error) {
+        console.error('Error building actor:', error);
+        res.status(500).json({
+            success: false,
+            error: 'Lỗi server khi build actor'
+        });
+    }
+};
 
+// @desc    Run actor
+// @route   POST /api/actors/:id/run
+// @access  Private (Admin, Editor)
+const runActor = async (req, res) => {
+    try {
+        const { input } = req.body;
+
+        const actor = await Actor.findById(req.params.id);
+        if (!actor) {
+            return res.status(404).json({
+                success: false,
+                error: 'Không tìm thấy actor'
+            });
+        }
+
+        // Check if actor is ready to run
+        if (actor.status !== 'ready' && actor.buildInfo.buildStatus !== 'success') {
+            return res.status(400).json({
+                success: false,
+                error: 'Actor chưa sẵn sàng để chạy. Vui lòng build trước.'
+            });
+        }
+
+        // Update run status
+        const runId = `run_${Date.now()}`;
+        actor.runInfo.runStatus = 'running';
+        actor.runInfo.lastRunAt = new Date();
+        actor.runInfo.runCount += 1;
+        actor.runInfo.currentRunId = runId;
+        actor.runInfo.runLog = 'Starting actor execution...';
+        actor.runInfo.runError = null;
+        actor.status = 'running';
+
+        await actor.save();
+
+        // Simulate run process (in real implementation, this would be async)
+        setTimeout(async () => {
+            try {
+                // Simulate successful run
+                actor.runInfo.runStatus = 'completed';
+                actor.runInfo.runLog = 'Actor execution completed successfully';
+                actor.status = 'ready';
+
+                // Update metrics
+                actor.metrics.totalDataProcessed += 100; // Simulate data processed
+                actor.metrics.lastPerformanceUpdate = new Date();
+
+                await actor.save();
+            } catch (error) {
+                console.error('Run simulation error:', error);
+            }
+        }, 5000);
+
+        res.json({
+            success: true,
+            data: {
+                runId,
+                status: 'running',
+                message: 'Actor execution started',
+                input: input || {}
+            }
+        });
     } catch (error) {
         console.error('Error running actor:', error);
         res.status(500).json({
@@ -472,13 +619,12 @@ const runActor = async (req, res) => {
     }
 };
 
-// @desc    Get actor execution history
-// @route   GET /api/actors/:id/runs
-// @access  Private
-const getActorRuns = async (req, res) => {
+// @desc    Get actor build history
+// @route   GET /api/actors/:id/builds
+// @access  Private (Admin, Editor)
+const getActorBuilds = async (req, res) => {
     try {
         const actor = await Actor.findById(req.params.id);
-
         if (!actor) {
             return res.status(404).json({
                 success: false,
@@ -486,29 +632,396 @@ const getActorRuns = async (req, res) => {
             });
         }
 
-        // TODO: Implement getting execution history from database
-        const runs = [
-            {
-                id: '1',
-                actorId: actor._id,
-                status: 'completed',
-                startTime: new Date(Date.now() - 3600000),
-                endTime: new Date(),
-                input: { url: 'https://example.com', maxPages: 5 },
-                result: { pagesScraped: 5, dataCollected: 150 }
+        res.json({
+            success: true,
+            data: {
+                buildInfo: actor.buildInfo,
+                totalBuilds: actor.buildInfo.buildCount
             }
-        ];
+        });
+    } catch (error) {
+        console.error('Error getting actor builds:', error);
+        res.status(500).json({
+            success: false,
+            error: 'Lỗi server khi lấy thông tin build'
+        });
+    }
+};
+
+// @desc    Get actor run history
+// @route   GET /api/actors/:id/runs
+// @access  Private (Admin, Editor)
+const getActorRuns = async (req, res) => {
+    try {
+        const actor = await Actor.findById(req.params.id);
+        if (!actor) {
+            return res.status(404).json({
+                success: false,
+                error: 'Không tìm thấy actor'
+            });
+        }
 
         res.json({
             success: true,
-            data: runs
+            data: {
+                runInfo: actor.runInfo,
+                totalRuns: actor.runInfo.runCount,
+                metrics: actor.metrics
+            }
         });
-
     } catch (error) {
         console.error('Error getting actor runs:', error);
         res.status(500).json({
             success: false,
-            error: 'Lỗi server khi lấy lịch sử chạy actor'
+            error: 'Lỗi server khi lấy thông tin run'
+        });
+    }
+};
+
+// @desc    Update actor source code
+// @route   PUT /api/actors/:id/source
+// @access  Private (Admin, Editor)
+const updateActorSource = async (req, res) => {
+    try {
+        const { main, package, inputSchema, actorConfig } = req.body;
+
+        const actor = await Actor.findById(req.params.id);
+        if (!actor) {
+            return res.status(404).json({
+                success: false,
+                error: 'Không tìm thấy actor'
+            });
+        }
+
+        // Update source code
+        if (main !== undefined) actor.sourceCode.main = main;
+        if (package !== undefined) actor.sourceCode.package = package;
+        if (inputSchema !== undefined) actor.sourceCode.inputSchema = inputSchema;
+        if (actorConfig !== undefined) actor.sourceCode.actorConfig = actorConfig;
+
+        actor.sourceCode.lastModified = new Date();
+        actor.updatedBy = req.user.id;
+
+        await actor.save();
+
+        res.json({
+            success: true,
+            data: actor.sourceCode,
+            message: 'Source code đã được cập nhật thành công'
+        });
+    } catch (error) {
+        console.error('Error updating actor source:', error);
+        res.status(500).json({
+            success: false,
+            error: 'Lỗi server khi cập nhật source code'
+        });
+    }
+};
+
+// @desc    Save source code for specific file
+// @route   POST /api/actors/:id/source/file
+// @access  Private (Admin, Editor)
+const saveSourceFile = async (req, res) => {
+    try {
+        const { filePath, content } = req.body;
+
+        const actor = await Actor.findById(req.params.id);
+        if (!actor) {
+            return res.status(404).json({
+                success: false,
+                error: 'Không tìm thấy actor'
+            });
+        }
+
+        // Update source code for specific file
+        if (!actor.sourceCode) {
+            actor.sourceCode = {};
+        }
+
+        actor.sourceCode[filePath] = content;
+        actor.sourceCode.lastModified = new Date();
+        actor.updatedBy = req.user.id;
+
+        await actor.save();
+
+        res.json({
+            success: true,
+            message: 'File đã được lưu thành công',
+            data: {
+                filePath,
+                content,
+                lastModified: actor.sourceCode.lastModified
+            }
+        });
+    } catch (error) {
+        console.error('Error saving source file:', error);
+        res.status(500).json({
+            success: false,
+            error: 'Lỗi server khi lưu file'
+        });
+    }
+};
+
+// @desc    Get source code for specific file
+// @route   GET /api/actors/:id/source/file
+// @access  Private (Admin, Editor)
+const getSourceFile = async (req, res) => {
+    try {
+        const { filePath } = req.query;
+
+        const actor = await Actor.findById(req.params.id);
+        if (!actor) {
+            return res.status(404).json({
+                success: false,
+                error: 'Không tìm thấy actor'
+            });
+        }
+
+        const content = actor.sourceCode?.[filePath] || '';
+
+        // Determine language based on file extension
+        const getLanguage = (path) => {
+            const ext = path.split('.').pop().toLowerCase();
+            switch (ext) {
+                case 'js': return 'javascript';
+                case 'json': return 'json';
+                case 'html': return 'html';
+                case 'css': return 'css';
+                case 'py': return 'python';
+                case 'java': return 'java';
+                case 'cpp': return 'cpp';
+                case 'c': return 'c';
+                case 'php': return 'php';
+                case 'rb': return 'ruby';
+                case 'go': return 'go';
+                case 'rs': return 'rust';
+                case 'ts': return 'typescript';
+                case 'jsx': return 'javascript';
+                case 'tsx': return 'typescript';
+                default: return 'text';
+            }
+        };
+
+        res.json({
+            success: true,
+            data: {
+                filePath,
+                content,
+                language: getLanguage(filePath),
+                lastModified: actor.sourceCode?.lastModified
+            }
+        });
+    } catch (error) {
+        console.error('Error getting source file:', error);
+        res.status(500).json({
+            success: false,
+            error: 'Lỗi server khi lấy file'
+        });
+    }
+};
+
+// @desc    Run actor with streaming output
+// @route   POST /api/actors/:id/run/stream
+// @access  Private (Admin, Editor)
+const runActorStream = async (req, res) => {
+    try {
+        const { input } = req.body;
+        const { spawn } = require('child_process');
+        const fs = require('fs').promises;
+        const path = require('path');
+        const os = require('os');
+
+        const actor = await Actor.findById(req.params.id);
+        if (!actor) {
+            return res.status(404).json({
+                success: false,
+                error: 'Không tìm thấy actor'
+            });
+        }
+
+        // Check if actor has source code
+        if (!actor.sourceCode?.main) {
+            return res.status(400).json({
+                success: false,
+                error: 'Actor chưa có source code'
+            });
+        }
+
+        // Update run status
+        const runId = `run_${Date.now()}`;
+        actor.runInfo.runStatus = 'running';
+        actor.runInfo.lastRunAt = new Date();
+        actor.runInfo.runCount += 1;
+        actor.runInfo.currentRunId = runId;
+        actor.runInfo.runLog = 'Starting actor execution...';
+        actor.runInfo.runError = null;
+        actor.status = 'running';
+
+        await actor.save();
+
+        // Tạo temporary directory
+        const tempDir = path.join(os.tmpdir(), `actor-${actor._id}-${Date.now()}`);
+        await fs.mkdir(tempDir, { recursive: true });
+
+        try {
+            // Lưu source code vào file
+            const mainFile = path.join(tempDir, 'main.js');
+            await fs.writeFile(mainFile, actor.sourceCode.main);
+
+            // Tạo package.json nếu có
+            if (actor.sourceCode.package) {
+                const packageFile = path.join(tempDir, 'package.json');
+                await fs.writeFile(packageFile, actor.sourceCode.package);
+            }
+
+            // Tạo input.json nếu có input
+            if (input) {
+                const inputFile = path.join(tempDir, 'input.json');
+                await fs.writeFile(inputFile, JSON.stringify(input, null, 2));
+            }
+
+            // Set headers cho streaming
+            res.setHeader('Content-Type', 'text/plain');
+            res.setHeader('Cache-Control', 'no-cache');
+            res.setHeader('Connection', 'keep-alive');
+            res.setHeader('Access-Control-Allow-Origin', '*');
+            res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+
+            // Send initial status
+            res.write(`[INFO] Starting actor: ${actor.name}\n`);
+            res.write(`[INFO] Run ID: ${runId}\n`);
+            res.write(`[INFO] Input: ${JSON.stringify(input || {})}\n`);
+            res.write(`[INFO] Working directory: ${tempDir}\n\n`);
+
+            // Chạy actor với child_process
+            const child = spawn('node', ['main.js'], {
+                cwd: tempDir,
+                env: {
+                    ...process.env,
+                    APIFY_INPUT: JSON.stringify(input || {}),
+                    NODE_ENV: 'production',
+                    ACTOR_ID: actor._id.toString(),
+                    RUN_ID: runId
+                },
+                stdio: ['pipe', 'pipe', 'pipe']
+            });
+
+            // Stream output
+            child.stdout.on('data', (data) => {
+                const output = data.toString();
+                res.write(`[OUT] ${output}`);
+            });
+
+            child.stderr.on('data', (data) => {
+                const error = data.toString();
+                res.write(`[ERR] ${error}`);
+            });
+
+            child.on('close', async (code) => {
+                res.write(`\n[END] Process exited with code ${code}\n`);
+                res.write(`[INFO] Execution completed\n`);
+                res.end();
+
+                // Update status
+                actor.runInfo.runStatus = code === 0 ? 'completed' : 'failed';
+                actor.runInfo.runLog = code === 0 ? 'Actor execution completed successfully' : `Actor execution failed with code ${code}`;
+                actor.status = code === 0 ? 'ready' : 'error';
+
+                // Update metrics
+                if (code === 0) {
+                    actor.metrics.totalDataProcessed += 100; // Simulate data processed
+                    actor.metrics.lastPerformanceUpdate = new Date();
+                }
+
+                await actor.save();
+
+                // Cleanup
+                try {
+                    await fs.rm(tempDir, { recursive: true, force: true });
+                } catch (cleanupError) {
+                    console.error('Cleanup error:', cleanupError);
+                }
+            });
+
+            child.on('error', async (error) => {
+                res.write(`\n[ERROR] ${error.message}\n`);
+                res.write(`[INFO] Execution failed\n`);
+                res.end();
+
+                // Update status
+                actor.runInfo.runStatus = 'failed';
+                actor.runInfo.runError = error.message;
+                actor.status = 'error';
+                await actor.save();
+
+                // Cleanup
+                try {
+                    await fs.rm(tempDir, { recursive: true, force: true });
+                } catch (cleanupError) {
+                    console.error('Cleanup error:', cleanupError);
+                }
+            });
+
+        } catch (error) {
+            // Update status on error
+            actor.runInfo.runStatus = 'failed';
+            actor.runInfo.runError = error.message;
+            actor.status = 'error';
+            await actor.save();
+
+            res.status(500).json({
+                success: false,
+                error: error.message
+            });
+        }
+
+    } catch (error) {
+        console.error('Error running actor stream:', error);
+        res.status(500).json({
+            success: false,
+            error: 'Lỗi server khi chạy actor'
+        });
+    }
+};
+
+// @desc    Get all source files for actor
+// @route   GET /api/actors/:id/source/files
+// @access  Private (Admin, Editor)
+const getSourceFiles = async (req, res) => {
+    try {
+        const actor = await Actor.findById(req.params.id);
+        if (!actor) {
+            return res.status(404).json({
+                success: false,
+                error: 'Không tìm thấy actor'
+            });
+        }
+
+        const files = [];
+        if (actor.sourceCode) {
+            Object.keys(actor.sourceCode).forEach(filePath => {
+                if (filePath !== 'lastModified') {
+                    files.push({
+                        path: filePath,
+                        name: filePath.split('/').pop(),
+                        type: 'file'
+                    });
+                }
+            });
+        }
+
+        res.json({
+            success: true,
+            data: {
+                files,
+                lastModified: actor.sourceCode?.lastModified
+            }
+        });
+    } catch (error) {
+        console.error('Error getting source files:', error);
+        res.status(500).json({
+            success: false,
+            error: 'Lỗi server khi lấy danh sách files'
         });
     }
 };
@@ -522,5 +1035,13 @@ module.exports = {
     getActorStats,
     downloadActorFile,
     runActor,
-    getActorRuns
+    getActorRuns,
+    buildActor,
+    getActorBuilds,
+    updateActorSource,
+    // Thêm các API mới
+    saveSourceFile,
+    getSourceFile,
+    runActorStream,
+    getSourceFiles
 }; 
