@@ -5,7 +5,8 @@ const actorSchema = new mongoose.Schema({
         type: String,
         required: [true, 'Tên actor là bắt buộc'],
         trim: true,
-        maxlength: [100, 'Tên actor không được quá 100 ký tự']
+        maxlength: [100, 'Tên actor không được quá 100 ký tự'],
+        unique: true
     },
     description: {
         type: String,
@@ -20,6 +21,57 @@ const actorSchema = new mongoose.Schema({
             message: 'Loại actor không hợp lệ'
         }
     },
+
+    // File-based storage fields
+    userId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+        required: true,
+        index: true
+    },
+    path: {
+        type: String,
+        required: true,
+        default: function () {
+            return `actors_storage/${this.userId}/${this._id}/`;
+        }
+    },
+    files: [{
+        type: String,
+        default: []
+    }],
+
+    // File upload fields (for backward compatibility)
+    fileUpload: {
+        filename: String,
+        originalName: String,
+        path: String,
+        size: Number,
+        mimetype: String,
+        uploadedAt: Date
+    },
+
+    // Source code management (cho editor)
+    sourceCode: {
+        main: {
+            type: String,
+            trim: true
+        },
+        package: {
+            type: String,
+            trim: true
+        },
+        inputSchema: {
+            type: String,
+            trim: true
+        },
+        actorConfig: {
+            type: String,
+            trim: true
+        },
+        lastModified: Date
+    },
+
     config: {
         maxConcurrency: {
             type: Number,
@@ -54,6 +106,92 @@ const actorSchema = new mongoose.Schema({
             password: String
         }
     },
+
+    // Build & Run tracking
+    buildInfo: {
+        lastBuildAt: Date,
+        buildCount: {
+            type: Number,
+            default: 0
+        },
+        buildStatus: {
+            type: String,
+            enum: ['pending', 'building', 'success', 'failed'],
+            default: 'pending'
+        },
+        buildLog: String,
+        buildError: String
+    },
+
+    runInfo: {
+        lastRunAt: Date,
+        runCount: {
+            type: Number,
+            default: 0
+        },
+        runStatus: {
+            type: String,
+            enum: ['idle', 'running', 'completed', 'failed', 'stopped'],
+            default: 'idle'
+        },
+        runLog: String,
+        runError: String,
+        currentRunId: String
+    },
+
+    // Environment variables
+    environmentVariables: [{
+        key: {
+            type: String,
+            required: true,
+            trim: true
+        },
+        value: {
+            type: String,
+            required: true
+        },
+        isSecret: {
+            type: Boolean,
+            default: false
+        }
+    }],
+
+    // Visibility & sharing
+    visibility: {
+        type: String,
+        enum: ['public', 'private', 'shared'],
+        default: 'private'
+    },
+
+    // Category for better organization
+    category: {
+        type: String,
+        enum: ['web-scraping', 'e-commerce', 'news', 'social-media', 'data-processing', 'api-integration', 'other'],
+        default: 'web-scraping'
+    },
+
+    // License information
+    license: {
+        type: String,
+        default: 'MIT'
+    },
+
+    // Performance metrics
+    metrics: {
+        averageRunTime: Number, // in milliseconds
+        successRate: Number,    // percentage
+        totalDataProcessed: Number,
+        lastPerformanceUpdate: Date
+    },
+
+    // Git integration (optional)
+    gitInfo: {
+        repository: String,
+        branch: String,
+        commitHash: String,
+        lastSync: Date
+    },
+
     code: {
         type: String,
         trim: true
@@ -64,6 +202,7 @@ const actorSchema = new mongoose.Schema({
         size: Number,
         mimetype: String
     },
+
     // Apify-style input schema
     inputSchema: {
         title: {
@@ -79,7 +218,7 @@ const actorSchema = new mongoose.Schema({
             default: 1
         },
         properties: {
-            type: mongoose.Schema.Types.Mixed, // Allow full JSON object
+            type: mongoose.Schema.Types.Mixed,
             default: {}
         },
         required: {
@@ -87,6 +226,7 @@ const actorSchema = new mongoose.Schema({
             default: []
         }
     },
+
     // Apify actor metadata
     apifyMetadata: {
         actorId: String,
@@ -99,27 +239,37 @@ const actorSchema = new mongoose.Schema({
         readmeUrl: String,
         changelogUrl: String
     },
+
     status: {
         type: String,
         enum: {
-            values: ['active', 'inactive', 'draft'],
+            values: ['ready', 'building', 'running', 'error', 'draft', 'active', 'inactive'],
             message: 'Trạng thái không hợp lệ'
         },
-        default: 'active'
+        default: 'ready'
     },
+
     version: {
         type: String,
-        default: '1.0.0'
+        default: '0.0.1'
     },
+
+    public: {
+        type: Boolean,
+        default: false
+    },
+
     tags: [{
         type: String,
         trim: true
     }],
+
     createdBy: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
         required: true
     },
+
     updatedBy: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User'
@@ -133,7 +283,13 @@ actorSchema.index({ name: 1 });
 actorSchema.index({ type: 1 });
 actorSchema.index({ status: 1 });
 actorSchema.index({ createdBy: 1 });
+actorSchema.index({ userId: 1 });
 actorSchema.index({ tags: 1 });
+actorSchema.index({ category: 1 });
+actorSchema.index({ visibility: 1 });
+actorSchema.index({ public: 1 });
+actorSchema.index({ 'buildInfo.buildStatus': 1 });
+actorSchema.index({ 'runInfo.runStatus': 1 });
 
 // Virtual for actor usage count
 actorSchema.virtual('usageCount', {

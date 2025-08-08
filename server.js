@@ -12,6 +12,7 @@ const sourceRoutes = require('./routes/sources');
 const dataRoutes = require('./routes/data');
 const userRoutes = require('./routes/users');
 const actorRoutes = require('./routes/actors');
+const campaignRoutes = require('./routes/campaigns');
 const logRoutes = require('./routes/logs');
 const dashboardRoutes = require('./routes/dashboard');
 
@@ -26,8 +27,8 @@ app.use(compression());
 
 // CORS configuration
 app.use(cors({
-  origin: process.env.NODE_ENV === 'production' 
-    ? ['https://yourdomain.com'] 
+  origin: process.env.NODE_ENV === 'production'
+    ? ['https://yourdomain.com']
     : ['http://localhost:3000', 'http://localhost:3001'],
   credentials: true
 }));
@@ -51,8 +52,8 @@ app.use(morgan('combined', { stream: { write: message => logger.info(message.tri
 
 // Health check
 app.get('/health', (req, res) => {
-  res.status(200).json({ 
-    status: 'OK', 
+  res.status(200).json({
+    status: 'OK',
     timestamp: new Date().toISOString(),
     uptime: process.uptime()
   });
@@ -64,6 +65,7 @@ app.use('/api/sources', sourceRoutes);
 app.use('/api/data', dataRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/actors', actorRoutes);
+app.use('/api/campaigns', campaignRoutes);
 app.use('/api/logs', logRoutes);
 app.use('/api/dashboard', dashboardRoutes);
 
@@ -80,13 +82,13 @@ mongoose.connect(process.env.MONGODB_URI || process.env.MONGODB_URI_PROD, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
-.then(() => {
-  logger.info('Connected to MongoDB');
-})
-.catch((error) => {
-  logger.error('MongoDB connection error:', error);
-  process.exit(1);
-});
+  .then(() => {
+    logger.info('Connected to MongoDB');
+  })
+  .catch((error) => {
+    logger.error('MongoDB connection error:', error);
+    process.exit(1);
+  });
 
 // Start server
 const PORT = process.env.PORT || 5000;
