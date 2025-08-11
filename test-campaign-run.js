@@ -1,81 +1,52 @@
 const axios = require('axios');
 
+const BASE_URL = 'http://localhost:5000/api';
+
 async function testCampaignRun() {
     try {
-        console.log('🚀 Testing campaign run...');
+        console.log('🔐 Sử dụng token có sẵn...');
+
+        // Sử dụng token có sẵn
+        const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODkxYTVjNjAxMjI5ZWY4ODc3Zjc0ZjEiLCJpYXQiOjE3NTQ1NTExMzYsImV4cCI6MTc1NTE1NTkzNn0.LzSyVhsJq2omFqgT-kqZbX8pJSV7yRz9SVMQ64ljs4o';
+        console.log('✅ Token đã sẵn sàng');
+
+        // Headers với token
+        const headers = {
+            'Authorization': `Bearer ${token}`,
+            'Content-Type': 'application/json'
+        };
 
         const campaignId = '6894658410595b979c150037';
 
-        // 1. First, check current status
-        console.log('\n1️⃣ Checking current campaign status...');
-        try {
-            const statusResponse = await axios.get(`http://localhost:5000/api/campaigns/${campaignId}/status`, {
-                headers: {
-                    'Authorization': 'Bearer YOUR_TOKEN_HERE'
-                }
-            });
-            console.log('Current status:', statusResponse.data.data.status);
-        } catch (error) {
-            console.log('Status check failed:', error.response?.data?.error);
-        }
+        // Kiểm tra trạng thái hiện tại
+        console.log('\n📊 Kiểm tra trạng thái campaign...');
+        const statusResponse = await axios.get(`${BASE_URL}/campaigns/${campaignId}/status`, { headers });
+        console.log('Trạng thái hiện tại:', statusResponse.data);
 
-        // 2. Run campaign
-        console.log('\n2️⃣ Running campaign...');
-        const runResponse = await axios.post(`http://localhost:5000/api/campaigns/${campaignId}/run`, {}, {
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': 'Bearer YOUR_TOKEN_HERE'
-            }
-        });
+        // Chạy campaign
+        console.log('\n🚀 Chạy campaign...');
+        const runResponse = await axios.post(`${BASE_URL}/campaigns/${campaignId}/run`, {}, { headers });
+        console.log('Kết quả chạy:', runResponse.data);
 
-        console.log('✅ Campaign started!');
-        console.log('Run ID:', runResponse.data.data.runId);
+        // Đợi 10 giây rồi kiểm tra trạng thái
+        console.log('\n⏳ Đợi 10 giây...');
+        await new Promise(resolve => setTimeout(resolve, 10000));
 
-        // 3. Monitor status
-        console.log('\n3️⃣ Monitoring campaign progress...');
-        let attempts = 0;
-        const maxAttempts = 20;
+        // Kiểm tra trạng thái sau khi chạy
+        console.log('\n📊 Kiểm tra trạng thái sau khi chạy...');
+        const statusAfterResponse = await axios.get(`${BASE_URL}/campaigns/${campaignId}/status`, { headers });
+        console.log('Trạng thái sau khi chạy:', statusAfterResponse.data);
 
-        while (attempts < maxAttempts) {
-            await new Promise(resolve => setTimeout(resolve, 5000)); // Wait 5 seconds
+        // Đợi thêm 30 giây và kiểm tra lại
+        console.log('\n⏳ Đợi thêm 30 giây...');
+        await new Promise(resolve => setTimeout(resolve, 30000));
 
-            try {
-                const statusResponse = await axios.get(`http://localhost:5000/api/campaigns/${campaignId}/status`, {
-                    headers: {
-                        'Authorization': 'Bearer YOUR_TOKEN_HERE'
-                    }
-                });
-
-                const status = statusResponse.data.data;
-                console.log(`\n📊 Attempt ${attempts + 1}:`);
-                console.log(`Status: ${status.status}`);
-
-                if (status.result) {
-                    console.log(`Records processed: ${status.result.recordsProcessed || 0}`);
-                    if (status.result.output && status.result.output.length > 0) {
-                        console.log(`🎉 Found ${status.result.output.length} products!`);
-                        console.log('Sample product:', status.result.output[0]);
-                    }
-                }
-
-                if (status.status === 'completed' || status.status === 'failed') {
-                    console.log(`\n🏁 Campaign finished with status: ${status.status}`);
-                    break;
-                }
-
-            } catch (error) {
-                console.log('Status check error:', error.response?.data?.error);
-            }
-
-            attempts++;
-        }
-
-        if (attempts >= maxAttempts) {
-            console.log('\n⚠️ Monitoring timed out after 100 seconds');
-        }
+        console.log('\n📊 Kiểm tra trạng thái cuối cùng...');
+        const finalStatusResponse = await axios.get(`${BASE_URL}/campaigns/${campaignId}/status`, { headers });
+        console.log('Trạng thái cuối cùng:', finalStatusResponse.data);
 
     } catch (error) {
-        console.error('❌ Error:', error.response?.data || error.message);
+        console.error('❌ Lỗi:', error.response?.data || error.message);
     }
 }
 

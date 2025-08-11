@@ -231,6 +231,27 @@ const deleteCampaign = async (req, res) => {
     }
 };
 
+// @desc    Emergency cleanup all node processes
+// @route   POST /api/campaigns/cleanup
+// @access  Private (Admin only)
+const cleanupProcesses = async (req, res) => {
+    try {
+        console.log('🚨 Emergency cleanup requested by user:', req.user.email);
+        campaignService.cleanupAllNodeProcesses();
+
+        res.json({
+            success: true,
+            message: 'Emergency cleanup initiated. All node processes will be terminated.'
+        });
+    } catch (error) {
+        console.error('Error during emergency cleanup:', error);
+        res.status(500).json({
+            success: false,
+            error: error.message || 'Lỗi server khi thực hiện emergency cleanup'
+        });
+    }
+};
+
 
 
 module.exports = {
@@ -243,5 +264,6 @@ module.exports = {
     getCampaignStatus,
     cancelCampaign,
     resetCampaign,
-    deleteCampaign
+    deleteCampaign,
+    cleanupProcesses
 };

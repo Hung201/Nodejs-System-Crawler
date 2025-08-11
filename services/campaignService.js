@@ -3,6 +3,94 @@ const Actor = require('../models/Actor');
 const fs = require('fs').promises;
 const path = require('path');
 const { spawn } = require('child_process');
+// const crawlDataService = require('./crawlDataService'); // Đã bỏ phần lưu data vào DB
+
+// Helper function để kill actor process một cách an toàn
+function killActorProcess(child, reason = 'unknown') {
+    if (!child) {
+        console.log('⚠️ No child process to kill');
+        return;
+    }
+
+    try {
+        if (!child.killed) {
+            console.log(`🔪 Killing actor process (PID: ${child.pid}) - Reason: ${reason}`);
+
+            // Thử kill gracefully trước
+            child.kill('SIGTERM');
+
+            // Đợi 3 giây rồi force kill nếu cần
+            setTimeout(() => {
+                try {
+                    if (!child.killed) {
+                        console.log(`💀 Force killing actor process (PID: ${child.pid})`);
+                        child.kill('SIGKILL');
+                    }
+                } catch (forceKillError) {
+                    console.log(`❌ Failed to force kill process: ${forceKillError.message}`);
+                }
+            }, 3000);
+
+            console.log(`✅ Kill signal sent to actor process (PID: ${child.pid})`);
+        } else {
+            console.log(`ℹ️ Actor process (PID: ${child.pid}) already killed`);
+        }
+    } catch (killError) {
+        console.log(`❌ Error killing actor process: ${killError.message}`);
+    }
+}
+
+// Helper function để cleanup tất cả process node (emergency cleanup)
+function cleanupAllNodeProcesses() {
+    const { exec } = require('child_process');
+
+    if (process.platform === 'win32') {
+        // Windows
+        exec('taskkill /f /im node.exe', (error, stdout, stderr) => {
+            if (error) {
+                console.log(`❌ Failed to cleanup node processes: ${error.message}`);
+            } else {
+                console.log('✅ Cleaned up all node processes');
+            }
+        });
+    } else {
+        // Linux/Mac
+        exec('pkill -f node', (error, stdout, stderr) => {
+            if (error) {
+                console.log(`❌ Failed to cleanup node processes: ${error.message}`);
+            } else {
+                console.log('✅ Cleaned up all node processes');
+            }
+        });
+    }
+}
+
+// Handle uncaught exceptions và process termination
+process.on('uncaughtException', (error) => {
+    console.error('🚨 Uncaught Exception:', error);
+    console.log('🔄 Attempting emergency cleanup...');
+    cleanupAllNodeProcesses();
+    process.exit(1);
+});
+
+process.on('unhandledRejection', (reason, promise) => {
+    console.error('🚨 Unhandled Rejection at:', promise, 'reason:', reason);
+    console.log('🔄 Attempting emergency cleanup...');
+    cleanupAllNodeProcesses();
+    process.exit(1);
+});
+
+process.on('SIGTERM', () => {
+    console.log('🛑 Received SIGTERM, cleaning up...');
+    cleanupAllNodeProcesses();
+    process.exit(0);
+});
+
+process.on('SIGINT', () => {
+    console.log('🛑 Received SIGINT, cleaning up...');
+    cleanupAllNodeProcesses();
+    process.exit(0);
+});
 
 // Get all campaigns with pagination and filters
 const getAllCampaigns = async (filters) => {
@@ -113,13 +201,8 @@ const updateCampaign = async (campaignId, updateData) => {
 
     // Handle input update with partial merge support
     if (input !== undefined) {
-        if (typeof input === 'object' && input !== null) {
-            // Merge with existing input (partial update)
-            campaign.input = { ...campaign.input, ...input };
-            console.log('Input merged successfully:', Object.keys(input));
-        } else {
-            campaign.input = input;
-        }
+        // Thay thế hoàn toàn input thay vì merge
+        campaign.input = input;
     }
 
     // Handle other fields based on campaign status
@@ -252,6 +335,75 @@ const getCampaignStatus = async (campaignId) => {
 
     if (!campaign) {
         throw new Error('Không tìm thấy campaign');
+    }
+
+    // Auto-completion logic: Kiểm tra và tự động chuyển status
+    if (campaign.status === 'running') {
+        const startTime = campaign.result?.startTime ? new Date(campaign.result.startTime) : null;
+        const now = new Date();
+        if (startTime) {
+            const durationMs = now - startTime;
+            const durationMinutes = Math.floor(durationMs / (1000 * 60));
+
+            // Nếu có dữ liệu và chạy hơn 5 phút, tự động complete
+            if (campaign.result?.recordsProcessed > 0 && durationMinutes > 5) {
+                campaign.status = 'completed';
+                campaign.result.endTime = now;
+                campaign.result.duration = durationMs;
+
+                // Update run history
+                if (campaign.runHistory.length > 0) {
+                    const lastRun = campaign.runHistory[campaign.runHistory.length - 1];
+                    lastRun.status = 'completed';
+                    lastRun.endTime = now;
+                    lastRun.duration = durationMs;
+                    lastRun.recordsProcessed = campaign.result.recordsProcessed;
+                }
+
+                await campaign.save();
+                console.log(`✅ Campaign ${campaign.name} (${campaign._id}) auto-completed.`);
+            }
+            // Nếu không có dữ liệu và chạy hơn 10 phút, reset về pending
+            else if (durationMinutes > 10 && (!campaign.result?.recordsProcessed || campaign.result.recordsProcessed === 0)) {
+                campaign.status = 'pending';
+                campaign.result = {
+                    log: '',
+                    output: [],
+                    error: null,
+                    startTime: null,
+                    endTime: null,
+                    duration: 0,
+                    recordsProcessed: 0
+                };
+
+                // Update run history
+                if (campaign.runHistory.length > 0) {
+                    const lastRun = campaign.runHistory[campaign.runHistory.length - 1];
+                    lastRun.status = 'failed';
+                    lastRun.endTime = now;
+                    lastRun.duration = durationMs;
+                    lastRun.recordsProcessed = 0;
+                    lastRun.error = 'Auto-reset due to no data after 10 minutes';
+                }
+
+                await campaign.save();
+                console.log(`⚠️ Campaign ${campaign.name} (${campaign._id}) reset to pending due to no data after 10 minutes.`);
+            }
+        } else {
+            // Nếu status là running nhưng không có startTime, reset về pending
+            campaign.status = 'pending';
+            campaign.result = {
+                log: '',
+                output: [],
+                error: null,
+                startTime: null,
+                endTime: null,
+                duration: 0,
+                recordsProcessed: 0
+            };
+            await campaign.save();
+            console.log(`⚠️ Campaign ${campaign.name} (${campaign._id}) reset to pending due to missing startTime.`);
+        }
     }
 
     return {
@@ -418,7 +570,7 @@ async function runActorAsync(campaign, runId, customInput = null) {
         // Add timeout for actor process (5 minutes)
         const timeout = setTimeout(() => {
             console.log('⏰ Actor process timeout after 5 minutes');
-            child.kill('SIGTERM');
+            killActorProcess(child, 'timeout');
             reject(new Error('Actor process timeout after 5 minutes'));
         }, 5 * 60 * 1000);
 
@@ -459,6 +611,18 @@ async function runActorAsync(campaign, runId, customInput = null) {
                 console.log('🚪 Actor sắp kết thúc...');
             }
 
+            // Detect khi actor đã lưu xong data và sắp hoàn thành
+            if (output.includes('Successfully saved') && output.includes('products to hung.json')) {
+                console.log('🎉 Actor đã lưu thành công data vào hung.json!');
+                // Đợi 2 giây rồi kill process để đảm bảo actor có thời gian exit gracefully
+                setTimeout(() => {
+                    if (!child.killed) {
+                        console.log('🔄 Auto-killing actor process after successful data save');
+                        killActorProcess(child, 'auto_kill_after_save');
+                    }
+                }, 2000);
+            }
+
             // Update campaign log mỗi 5 giây
             const now = Date.now();
             if (now - lastLogUpdate > 5000) {
@@ -477,11 +641,20 @@ async function runActorAsync(campaign, runId, customInput = null) {
         child.on('error', (error) => {
             console.log(`❌ Actor process error: ${error.message}`);
             clearTimeout(timeout);
+            killActorProcess(child, 'error');
             reject(error);
         });
 
         child.on('exit', (code, signal) => {
             console.log(`🚪 Actor process exited with code: ${code}, signal: ${signal}`);
+
+            // Nếu process bị kill bởi signal, log thông tin
+            if (signal) {
+                console.log(`⚠️ Actor process was terminated by signal: ${signal}`);
+            }
+
+            // Cleanup timeout nếu process exit sớm
+            clearTimeout(timeout);
         });
 
         child.on('close', async (code) => {
@@ -493,8 +666,8 @@ async function runActorAsync(campaign, runId, customInput = null) {
                 // Đọc kết quả từ file hung.json hoặc dataset
                 let output = [];
                 try {
-                    // Thử đọc từ file hung.json trước
-                    const hungJsonPath = path.join(actorPath, 'hung.json');
+                    // Thử đọc từ file hung.json trước (từ thư mục src)
+                    const hungJsonPath = path.join(actorPath, 'src', 'hung.json');
                     try {
                         const content = await fs.readFile(hungJsonPath, 'utf8');
                         const data = JSON.parse(content);
@@ -505,7 +678,7 @@ async function runActorAsync(campaign, runId, customInput = null) {
                         }
                         console.log(`Đọc được ${output.length} sản phẩm từ hung.json`);
                     } catch (error) {
-                        console.log('Không tìm thấy hung.json, thử đọc từ dataset');
+                        console.log('Không tìm thấy hung.json trong src/, thử đọc từ dataset');
 
                         // Fallback: đọc từ dataset
                         const datasetFiles = await fs.readdir(datasetPath);
@@ -525,22 +698,31 @@ async function runActorAsync(campaign, runId, customInput = null) {
                     console.log('No output files found or error reading output');
                 }
 
+                // Bỏ phần lưu dữ liệu vào database
+                let savedDataCount = 0;
+
                 // Update campaign result
                 const resultData = {
                     log: log,
                     output: output,
                     endTime: new Date(),
                     duration: duration,
-                    recordsProcessed: output.length
+                    recordsProcessed: output.length,
+                    savedDataCount: savedDataCount
                 };
 
                 if (code === 0) {
                     campaign.status = 'completed';
                     campaign.result.error = null;
+                    console.log('✅ Campaign completed successfully');
                 } else {
                     campaign.status = 'failed';
                     campaign.result.error = `Actor exited with code ${code}`;
+                    console.log(`❌ Campaign failed with exit code: ${code}`);
                 }
+
+                // Luôn kill process actor sau khi hoàn thành (thành công hoặc thất bại)
+                killActorProcess(child, code === 0 ? 'completed' : 'failed');
 
                 await campaign.updateResult(resultData);
 
@@ -572,6 +754,9 @@ async function runActorAsync(campaign, runId, customInput = null) {
         child.on('error', async (error) => {
             console.error('Error running actor:', error);
 
+            // Kill process actor khi có lỗi runtime
+            killActorProcess(child, 'runtime_error');
+
             campaign.status = 'failed';
             campaign.result.error = error.message;
             campaign.result.endTime = new Date();
@@ -581,6 +766,11 @@ async function runActorAsync(campaign, runId, customInput = null) {
 
     } catch (error) {
         console.error('Error in runActorAsync:', error);
+
+        // Kill process nếu có lỗi trong quá trình setup
+        if (typeof child !== 'undefined' && child) {
+            killActorProcess(child, 'setup_error');
+        }
 
         campaign.status = 'failed';
         campaign.result.error = error.message;
@@ -598,5 +788,6 @@ module.exports = {
     getCampaignStatus,
     cancelCampaign,
     resetCampaign,
-    deleteCampaign
+    deleteCampaign,
+    cleanupAllNodeProcesses
 };

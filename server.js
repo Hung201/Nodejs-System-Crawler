@@ -13,6 +13,7 @@ const dataRoutes = require('./routes/data');
 const userRoutes = require('./routes/users');
 const actorRoutes = require('./routes/actors');
 const campaignRoutes = require('./routes/campaigns');
+const crawlDataRoutes = require('./routes/crawlData');
 const logRoutes = require('./routes/logs');
 const dashboardRoutes = require('./routes/dashboard');
 
@@ -66,6 +67,7 @@ app.use('/api/data', dataRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/actors', actorRoutes);
 app.use('/api/campaigns', campaignRoutes);
+app.use('/api/crawl-data', crawlDataRoutes);
 app.use('/api/logs', logRoutes);
 app.use('/api/dashboard', dashboardRoutes);
 
