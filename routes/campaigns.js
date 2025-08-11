@@ -67,4 +67,7 @@ router.post('/:id/reset', auth, authorize('admin', 'editor'), campaignController
 // Delete campaign
 router.delete('/:id', auth, authorize('admin'), campaignController.deleteCampaign);
 
+// Emergency cleanup all node processes
+router.post('/cleanup', auth, authorize('admin'), campaignController.cleanupProcesses);
+
 module.exports = router;
