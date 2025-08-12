@@ -1,15 +1,13 @@
 {
-  "url": "https://b2b.daisan.vn/products/gach-op-tuong",
   "paginationPattern": "?page=",
+  "url": "https://b2b.daisan.vn/products/gach-op-tuong",
   "pageStart": 1,
-  "pageEnd": 2,
+  "pageEnd": 1,
   "productLinkSelector": ".list-item-img a",
   "productLinkIncludePatterns": [
     "gach-"
   ],
   "productLinkExcludePatterns": [
-    "gioi-thieu",
-    "tin-tuc",
     "du-an",
     "lien-he",
     "about",
@@ -40,6 +38,6 @@
   "supplier": "DAISANB2B",
   "url_supplier": "https://b2b.daisan.vn",
   "maxRequestsPerCrawl": 50000,
-  "maxProductLinks": 50,
+  "maxProductLinks": 30,
   "isBrowser": false
 }

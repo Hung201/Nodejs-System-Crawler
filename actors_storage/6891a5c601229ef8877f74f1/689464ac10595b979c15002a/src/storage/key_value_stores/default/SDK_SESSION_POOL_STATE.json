@@ -1,9 +1,9 @@
 {
-  "usableSessionsCount": 63,
+  "usableSessionsCount": 32,
   "retiredSessionsCount": 0,
   "sessions": [
     {
-      "id": "session_DJH0FEHJqR",
+      "id": "session_f2YzRuqbD2",
       "cookieJar": {
         "version": "tough-cookie@5.1.2",
         "storeType": "MemoryCookieStore",
@@ -14,26 +14,26 @@
         "cookies": [
           {
             "key": "PHPSESSID",
-            "value": "n42u65a1s9bbiu5gafmuoqtuao",
+            "value": "cbg3m5f894l99h0i1u6t6jqd5f",
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:53.293Z",
-            "lastAccessed": "2025-08-11T08:59:53.293Z"
+            "creation": "2025-08-12T07:11:44.099Z",
+            "lastAccessed": "2025-08-12T07:11:44.099Z"
           }
         ]
       },
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:52.836Z",
-      "createdAt": "2025-08-11T08:59:52.836Z",
+      "expiresAt": "2025-08-12T08:01:43.643Z",
+      "createdAt": "2025-08-12T07:11:43.643Z",
       "usageCount": 1,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_EK6lxhZsRl",
+      "id": "session_SQPMqH9PnK",
       "cookieJar": {
         "version": "tough-cookie@5.1.2",
         "storeType": "MemoryCookieStore",
@@ -44,26 +44,26 @@
         "cookies": [
           {
             "key": "PHPSESSID",
-            "value": "rqfuaeeau6a9aeusr1grn74njg",
+            "value": "k04jpfdvmq72b319t85ve7c3cq",
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:53.621Z",
-            "lastAccessed": "2025-08-11T08:59:53.621Z"
+            "creation": "2025-08-12T07:11:44.409Z",
+            "lastAccessed": "2025-08-12T07:11:44.409Z"
           }
         ]
       },
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:53.445Z",
-      "createdAt": "2025-08-11T08:59:53.445Z",
+      "expiresAt": "2025-08-12T08:01:44.278Z",
+      "createdAt": "2025-08-12T07:11:44.278Z",
       "usageCount": 1,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_LGxNXe6tiG",
+      "id": "session_bekcZmgRHY",
       "cookieJar": {
         "version": "tough-cookie@5.1.2",
         "storeType": "MemoryCookieStore",
@@ -74,67 +74,37 @@
         "cookies": [
           {
             "key": "PHPSESSID",
-            "value": "8d1cvc0s9rsqpp5rhg841rtesq",
+            "value": "7f41loi1bjb5o6mvfmd5lovpk9",
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:53.725Z",
-            "lastAccessed": "2025-08-11T08:59:53.725Z"
-          }
-        ]
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:53.448Z",
-      "createdAt": "2025-08-11T08:59:53.448Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_ACnXJ2KUJl",
-      "cookieJar": {
-        "version": "tough-cookie@5.1.2",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": [
-          {
-            "key": "PHPSESSID",
-            "value": "9ag1arn08albrrkbs0mq2gmu2n",
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:53.822Z",
-            "lastAccessed": "2025-08-11T08:59:53.822Z"
+            "creation": "2025-08-12T07:11:44.574Z",
+            "lastAccessed": "2025-08-12T07:11:44.574Z"
           },
           {
             "key": "HodineCache",
             "value": "%7B%22product_view%22%3A%5B%22479070%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
-            "expires": "2028-01-28T08:59:54.000Z",
+            "expires": "2028-01-29T07:11:44.000Z",
             "maxAge": 77760000,
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:53.822Z",
-            "lastAccessed": "2025-08-11T08:59:53.822Z"
+            "creation": "2025-08-12T07:11:44.575Z",
+            "lastAccessed": "2025-08-12T07:11:44.575Z"
           }
         ]
       },
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:53.451Z",
-      "createdAt": "2025-08-11T08:59:53.451Z",
+      "expiresAt": "2025-08-12T08:01:44.284Z",
+      "createdAt": "2025-08-12T07:11:44.284Z",
       "usageCount": 1,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_jew7mADYOM",
+      "id": "session_QNgP9d6OgN",
       "cookieJar": {
         "version": "tough-cookie@5.1.2",
         "storeType": "MemoryCookieStore",
@@ -145,37 +115,37 @@
         "cookies": [
           {
             "key": "PHPSESSID",
-            "value": "vdvuuuact4gqslj1nkuth8llgr",
+            "value": "6f7ccisik14r3eic4h2og0e7nj",
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:53.688Z",
-            "lastAccessed": "2025-08-11T08:59:53.688Z"
+            "creation": "2025-08-12T07:11:44.504Z",
+            "lastAccessed": "2025-08-12T07:11:44.504Z"
           },
           {
             "key": "HodineCache",
             "value": "%7B%22product_view%22%3A%5B%22657943%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
-            "expires": "2028-01-28T08:59:54.000Z",
+            "expires": "2028-01-29T07:11:44.000Z",
             "maxAge": 77760000,
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:53.688Z",
-            "lastAccessed": "2025-08-11T08:59:53.688Z"
+            "creation": "2025-08-12T07:11:44.504Z",
+            "lastAccessed": "2025-08-12T07:11:44.504Z"
           }
         ]
       },
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:53.453Z",
-      "createdAt": "2025-08-11T08:59:53.453Z",
+      "expiresAt": "2025-08-12T08:01:44.288Z",
+      "createdAt": "2025-08-12T07:11:44.288Z",
       "usageCount": 1,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_aw53DxtuE3",
+      "id": "session_wBOMAxctbu",
       "cookieJar": {
         "version": "tough-cookie@5.1.2",
         "storeType": "MemoryCookieStore",
@@ -186,37 +156,37 @@
         "cookies": [
           {
             "key": "PHPSESSID",
-            "value": "36e3nceshr9ne83sr83i2umbmt",
+            "value": "7m1i147va7vjd71uqovukc3o60",
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:53.893Z",
-            "lastAccessed": "2025-08-11T08:59:53.893Z"
+            "creation": "2025-08-12T07:11:44.679Z",
+            "lastAccessed": "2025-08-12T07:11:44.679Z"
           },
           {
             "key": "HodineCache",
             "value": "%7B%22product_view%22%3A%5B%22411818%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
-            "expires": "2028-01-28T08:59:54.000Z",
+            "expires": "2028-01-29T07:11:44.000Z",
             "maxAge": 77760000,
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:53.893Z",
-            "lastAccessed": "2025-08-11T08:59:53.893Z"
+            "creation": "2025-08-12T07:11:44.679Z",
+            "lastAccessed": "2025-08-12T07:11:44.679Z"
           }
         ]
       },
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:53.456Z",
-      "createdAt": "2025-08-11T08:59:53.456Z",
+      "expiresAt": "2025-08-12T08:01:44.291Z",
+      "createdAt": "2025-08-12T07:11:44.291Z",
       "usageCount": 1,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_CtTfb3pTEl",
+      "id": "session_11ZGO7VlMD",
       "cookieJar": {
         "version": "tough-cookie@5.1.2",
         "storeType": "MemoryCookieStore",
@@ -227,37 +197,37 @@
         "cookies": [
           {
             "key": "PHPSESSID",
-            "value": "khirlt905srvpj30n613jfugef",
+            "value": "c03kpbnd252p2vpe72jtqf67pk",
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:53.927Z",
-            "lastAccessed": "2025-08-11T08:59:53.927Z"
+            "creation": "2025-08-12T07:11:44.854Z",
+            "lastAccessed": "2025-08-12T07:11:44.854Z"
           },
           {
             "key": "HodineCache",
             "value": "%7B%22product_view%22%3A%5B%22411774%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
-            "expires": "2028-01-28T08:59:54.000Z",
+            "expires": "2028-01-29T07:11:44.000Z",
             "maxAge": 77760000,
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:53.927Z",
-            "lastAccessed": "2025-08-11T08:59:53.927Z"
+            "creation": "2025-08-12T07:11:44.854Z",
+            "lastAccessed": "2025-08-12T07:11:44.854Z"
           }
         ]
       },
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:53.459Z",
-      "createdAt": "2025-08-11T08:59:53.459Z",
+      "expiresAt": "2025-08-12T08:01:44.294Z",
+      "createdAt": "2025-08-12T07:11:44.294Z",
       "usageCount": 1,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_yfpAUxoOpM",
+      "id": "session_imqraHZQfm",
       "cookieJar": {
         "version": "tough-cookie@5.1.2",
         "storeType": "MemoryCookieStore",
@@ -268,37 +238,37 @@
         "cookies": [
           {
             "key": "PHPSESSID",
-            "value": "u35clpvabt808fssnhe2tq6ps3",
+            "value": "r8urop7v394atu31vhvo0q0iqo",
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:53.948Z",
-            "lastAccessed": "2025-08-11T08:59:53.948Z"
+            "creation": "2025-08-12T07:11:44.628Z",
+            "lastAccessed": "2025-08-12T07:11:44.628Z"
           },
           {
             "key": "HodineCache",
             "value": "%7B%22product_view%22%3A%5B%22411817%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
-            "expires": "2028-01-28T08:59:54.000Z",
+            "expires": "2028-01-29T07:11:44.000Z",
             "maxAge": 77760000,
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:53.948Z",
-            "lastAccessed": "2025-08-11T08:59:53.948Z"
+            "creation": "2025-08-12T07:11:44.628Z",
+            "lastAccessed": "2025-08-12T07:11:44.628Z"
           }
         ]
       },
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:53.462Z",
-      "createdAt": "2025-08-11T08:59:53.462Z",
+      "expiresAt": "2025-08-12T08:01:44.298Z",
+      "createdAt": "2025-08-12T07:11:44.298Z",
       "usageCount": 1,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_0yF4VMfigS",
+      "id": "session_1RarKT5MR5",
       "cookieJar": {
         "version": "tough-cookie@5.1.2",
         "storeType": "MemoryCookieStore",
@@ -309,37 +279,37 @@
         "cookies": [
           {
             "key": "PHPSESSID",
-            "value": "72hua80hpguuk0tbd9d9ab7810",
+            "value": "hbi02a19jmj8p8lrll14red6jn",
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:53.773Z",
-            "lastAccessed": "2025-08-11T08:59:53.773Z"
+            "creation": "2025-08-12T07:11:44.796Z",
+            "lastAccessed": "2025-08-12T07:11:44.796Z"
           },
           {
             "key": "HodineCache",
             "value": "%7B%22product_view%22%3A%5B%22141899%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
-            "expires": "2028-01-28T08:59:54.000Z",
+            "expires": "2028-01-29T07:11:44.000Z",
             "maxAge": 77760000,
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:53.773Z",
-            "lastAccessed": "2025-08-11T08:59:53.773Z"
+            "creation": "2025-08-12T07:11:44.796Z",
+            "lastAccessed": "2025-08-12T07:11:44.796Z"
           }
         ]
       },
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:53.464Z",
-      "createdAt": "2025-08-11T08:59:53.464Z",
+      "expiresAt": "2025-08-12T08:01:44.302Z",
+      "createdAt": "2025-08-12T07:11:44.302Z",
       "usageCount": 1,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_vgk57DFQdz",
+      "id": "session_L1sJ93dUQx",
       "cookieJar": {
         "version": "tough-cookie@5.1.2",
         "storeType": "MemoryCookieStore",
@@ -350,37 +320,37 @@
         "cookies": [
           {
             "key": "PHPSESSID",
-            "value": "tttabvc1cn5ukduckfc89rcc6o",
+            "value": "qenc0v8tfu6c0a8r3fb9s5q8hm",
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:53.798Z",
-            "lastAccessed": "2025-08-11T08:59:53.798Z"
+            "creation": "2025-08-12T07:11:44.710Z",
+            "lastAccessed": "2025-08-12T07:11:44.710Z"
           },
           {
             "key": "HodineCache",
             "value": "%7B%22product_view%22%3A%5B%22141905%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
-            "expires": "2028-01-28T08:59:54.000Z",
+            "expires": "2028-01-29T07:11:44.000Z",
             "maxAge": 77760000,
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:53.798Z",
-            "lastAccessed": "2025-08-11T08:59:53.798Z"
+            "creation": "2025-08-12T07:11:44.710Z",
+            "lastAccessed": "2025-08-12T07:11:44.710Z"
           }
         ]
       },
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:53.467Z",
-      "createdAt": "2025-08-11T08:59:53.467Z",
+      "expiresAt": "2025-08-12T08:01:44.304Z",
+      "createdAt": "2025-08-12T07:11:44.304Z",
       "usageCount": 1,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_IRQ6sEaeX9",
+      "id": "session_uiY5EyLl3C",
       "cookieJar": {
         "version": "tough-cookie@5.1.2",
         "storeType": "MemoryCookieStore",
@@ -391,37 +361,37 @@
         "cookies": [
           {
             "key": "PHPSESSID",
-            "value": "cvqi3vhvrq0148k4gej767os1o",
+            "value": "fv94dei9nl918hbimnjh1k8lf5",
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:53.861Z",
-            "lastAccessed": "2025-08-11T08:59:53.861Z"
+            "creation": "2025-08-12T07:11:44.748Z",
+            "lastAccessed": "2025-08-12T07:11:44.748Z"
           },
           {
             "key": "HodineCache",
             "value": "%7B%22product_view%22%3A%5B%22469627%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
-            "expires": "2028-01-28T08:59:54.000Z",
+            "expires": "2028-01-29T07:11:44.000Z",
             "maxAge": 77760000,
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:53.861Z",
-            "lastAccessed": "2025-08-11T08:59:53.861Z"
+            "creation": "2025-08-12T07:11:44.748Z",
+            "lastAccessed": "2025-08-12T07:11:44.748Z"
           }
         ]
       },
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:53.469Z",
-      "createdAt": "2025-08-11T08:59:53.469Z",
+      "expiresAt": "2025-08-12T08:01:44.307Z",
+      "createdAt": "2025-08-12T07:11:44.307Z",
       "usageCount": 1,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_Ws0EO3UPcc",
+      "id": "session_IYDeDIchHB",
       "cookieJar": {
         "version": "tough-cookie@5.1.2",
         "storeType": "MemoryCookieStore",
@@ -432,37 +402,37 @@
         "cookies": [
           {
             "key": "PHPSESSID",
-            "value": "ku1aufqu2qvqr93f1ib9uiqis2",
+            "value": "mlauo2eadnc4kmka67m2ubrvtg",
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:53.997Z",
-            "lastAccessed": "2025-08-11T08:59:53.997Z"
+            "creation": "2025-08-12T07:11:44.651Z",
+            "lastAccessed": "2025-08-12T07:11:44.651Z"
           },
           {
             "key": "HodineCache",
             "value": "%7B%22product_view%22%3A%5B%22411819%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
-            "expires": "2028-01-28T08:59:54.000Z",
+            "expires": "2028-01-29T07:11:44.000Z",
             "maxAge": 77760000,
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:53.997Z",
-            "lastAccessed": "2025-08-11T08:59:53.997Z"
+            "creation": "2025-08-12T07:11:44.651Z",
+            "lastAccessed": "2025-08-12T07:11:44.651Z"
           }
         ]
       },
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:53.705Z",
-      "createdAt": "2025-08-11T08:59:53.705Z",
+      "expiresAt": "2025-08-12T08:01:44.309Z",
+      "createdAt": "2025-08-12T07:11:44.309Z",
       "usageCount": 1,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_0o7wMss3Rn",
+      "id": "session_MjdQ5v37TM",
       "cookieJar": {
         "version": "tough-cookie@5.1.2",
         "storeType": "MemoryCookieStore",
@@ -473,37 +443,37 @@
         "cookies": [
           {
             "key": "PHPSESSID",
-            "value": "il1jjmp0j028h6hqj441ue6uao",
+            "value": "e71r6e6o9eujsdic7nn74pig28",
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:54.023Z",
-            "lastAccessed": "2025-08-11T08:59:54.023Z"
+            "creation": "2025-08-12T07:11:44.827Z",
+            "lastAccessed": "2025-08-12T07:11:44.827Z"
           },
           {
             "key": "HodineCache",
             "value": "%7B%22product_view%22%3A%5B%22432724%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
-            "expires": "2028-01-28T08:59:54.000Z",
+            "expires": "2028-01-29T07:11:44.000Z",
             "maxAge": 77760000,
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:54.023Z",
-            "lastAccessed": "2025-08-11T08:59:54.023Z"
+            "creation": "2025-08-12T07:11:44.827Z",
+            "lastAccessed": "2025-08-12T07:11:44.827Z"
           }
         ]
       },
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:53.839Z",
-      "createdAt": "2025-08-11T08:59:53.839Z",
+      "expiresAt": "2025-08-12T08:01:44.456Z",
+      "createdAt": "2025-08-12T07:11:44.456Z",
       "usageCount": 1,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_gPLcYNf1kY",
+      "id": "session_GJVJvcYzl1",
       "cookieJar": {
         "version": "tough-cookie@5.1.2",
         "storeType": "MemoryCookieStore",
@@ -514,37 +484,37 @@
         "cookies": [
           {
             "key": "PHPSESSID",
-            "value": "pf013inhriajlvqot7ev93tq85",
+            "value": "0s1a2ki6mpcvtpkudm2nsr3q6j",
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:54.057Z",
-            "lastAccessed": "2025-08-11T08:59:54.057Z"
+            "creation": "2025-08-12T07:11:44.885Z",
+            "lastAccessed": "2025-08-12T07:11:44.885Z"
           },
           {
             "key": "HodineCache",
             "value": "%7B%22product_view%22%3A%5B%22469626%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
-            "expires": "2028-01-28T08:59:55.000Z",
+            "expires": "2028-01-29T07:11:44.000Z",
             "maxAge": 77760000,
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:54.057Z",
-            "lastAccessed": "2025-08-11T08:59:54.057Z"
+            "creation": "2025-08-12T07:11:44.885Z",
+            "lastAccessed": "2025-08-12T07:11:44.885Z"
           }
         ]
       },
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:53.903Z",
-      "createdAt": "2025-08-11T08:59:53.903Z",
+      "expiresAt": "2025-08-12T08:01:44.597Z",
+      "createdAt": "2025-08-12T07:11:44.597Z",
       "usageCount": 1,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_ehBV42FHvI",
+      "id": "session_Wwwk6RqsHI",
       "cookieJar": {
         "version": "tough-cookie@5.1.2",
         "storeType": "MemoryCookieStore",
@@ -555,37 +525,37 @@
         "cookies": [
           {
             "key": "PHPSESSID",
-            "value": "todmad09rauc4d1cop5lqgfsbc",
+            "value": "6ptn7rik2gks915n5iev3k05nj",
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:54.094Z",
-            "lastAccessed": "2025-08-11T08:59:54.094Z"
+            "creation": "2025-08-12T07:11:44.950Z",
+            "lastAccessed": "2025-08-12T07:11:44.950Z"
           },
           {
             "key": "HodineCache",
             "value": "%7B%22product_view%22%3A%5B%22411820%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
-            "expires": "2028-01-28T08:59:55.000Z",
+            "expires": "2028-01-29T07:11:44.000Z",
             "maxAge": 77760000,
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:54.094Z",
-            "lastAccessed": "2025-08-11T08:59:54.094Z"
+            "creation": "2025-08-12T07:11:44.950Z",
+            "lastAccessed": "2025-08-12T07:11:44.950Z"
           }
         ]
       },
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:53.905Z",
-      "createdAt": "2025-08-11T08:59:53.905Z",
+      "expiresAt": "2025-08-12T08:01:44.610Z",
+      "createdAt": "2025-08-12T07:11:44.610Z",
       "usageCount": 1,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_4thhM5Vqvh",
+      "id": "session_7pWqCOI5nh",
       "cookieJar": {
         "version": "tough-cookie@5.1.2",
         "storeType": "MemoryCookieStore",
@@ -596,37 +566,37 @@
         "cookies": [
           {
             "key": "PHPSESSID",
-            "value": "83p789v5p0lgfacfgq2b3b3377",
+            "value": "5r0epvgj6c0ueakp9urdufkfa2",
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:54.120Z",
-            "lastAccessed": "2025-08-11T08:59:54.120Z"
+            "creation": "2025-08-12T07:11:45.031Z",
+            "lastAccessed": "2025-08-12T07:11:45.031Z"
           },
           {
             "key": "HodineCache",
             "value": "%7B%22product_view%22%3A%5B%22473386%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
-            "expires": "2028-01-28T08:59:55.000Z",
+            "expires": "2028-01-29T07:11:44.000Z",
             "maxAge": 77760000,
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:54.120Z",
-            "lastAccessed": "2025-08-11T08:59:54.120Z"
+            "creation": "2025-08-12T07:11:45.031Z",
+            "lastAccessed": "2025-08-12T07:11:45.031Z"
           }
         ]
       },
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:53.908Z",
-      "createdAt": "2025-08-11T08:59:53.908Z",
+      "expiresAt": "2025-08-12T08:01:44.765Z",
+      "createdAt": "2025-08-12T07:11:44.765Z",
       "usageCount": 1,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_qvBxUDerUu",
+      "id": "session_nUr44VY8gw",
       "cookieJar": {
         "version": "tough-cookie@5.1.2",
         "storeType": "MemoryCookieStore",
@@ -637,37 +607,37 @@
         "cookies": [
           {
             "key": "PHPSESSID",
-            "value": "9g5soeq0fpnq8bubomoe3qt2h2",
+            "value": "qdjrkfv2ifhtj3lemh0eg037qu",
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:54.317Z",
-            "lastAccessed": "2025-08-11T08:59:54.317Z"
+            "creation": "2025-08-12T07:11:45.007Z",
+            "lastAccessed": "2025-08-12T07:11:45.007Z"
           },
           {
             "key": "HodineCache",
             "value": "%7B%22product_view%22%3A%5B%221577950%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
-            "expires": "2028-01-28T08:59:55.000Z",
+            "expires": "2028-01-29T07:11:44.000Z",
             "maxAge": 77760000,
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:54.317Z",
-            "lastAccessed": "2025-08-11T08:59:54.317Z"
+            "creation": "2025-08-12T07:11:45.007Z",
+            "lastAccessed": "2025-08-12T07:11:45.007Z"
           }
         ]
       },
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:53.969Z",
-      "createdAt": "2025-08-11T08:59:53.969Z",
+      "expiresAt": "2025-08-12T08:01:44.767Z",
+      "createdAt": "2025-08-12T07:11:44.767Z",
       "usageCount": 1,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_ktRjtxI7P5",
+      "id": "session_dew7jP9nlL",
       "cookieJar": {
         "version": "tough-cookie@5.1.2",
         "storeType": "MemoryCookieStore",
@@ -678,37 +648,37 @@
         "cookies": [
           {
             "key": "PHPSESSID",
-            "value": "dk7tkpjl8djqi5i0q16s3jknvv",
+            "value": "d0qlpn9vdht278smmkuuk8u40h",
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:54.162Z",
-            "lastAccessed": "2025-08-11T08:59:54.162Z"
+            "creation": "2025-08-12T07:11:45.075Z",
+            "lastAccessed": "2025-08-12T07:11:45.075Z"
           },
           {
             "key": "HodineCache",
             "value": "%7B%22product_view%22%3A%5B%22376216%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
-            "expires": "2028-01-28T08:59:55.000Z",
+            "expires": "2028-01-29T07:11:44.000Z",
             "maxAge": 77760000,
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:54.162Z",
-            "lastAccessed": "2025-08-11T08:59:54.162Z"
+            "creation": "2025-08-12T07:11:45.075Z",
+            "lastAccessed": "2025-08-12T07:11:45.075Z"
           }
         ]
       },
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:53.977Z",
-      "createdAt": "2025-08-11T08:59:53.977Z",
+      "expiresAt": "2025-08-12T08:01:44.774Z",
+      "createdAt": "2025-08-12T07:11:44.774Z",
       "usageCount": 1,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_kLf6M1HuOy",
+      "id": "session_jLgnIOkUGd",
       "cookieJar": {
         "version": "tough-cookie@5.1.2",
         "storeType": "MemoryCookieStore",
@@ -719,37 +689,37 @@
         "cookies": [
           {
             "key": "PHPSESSID",
-            "value": "jeim13jptvifdd2g477discrs7",
+            "value": "36it70a6jntdcr84savbsdjh9i",
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:54.182Z",
-            "lastAccessed": "2025-08-11T08:59:54.182Z"
+            "creation": "2025-08-12T07:11:44.979Z",
+            "lastAccessed": "2025-08-12T07:11:44.979Z"
           },
           {
             "key": "HodineCache",
             "value": "%7B%22product_view%22%3A%5B%22473392%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
-            "expires": "2028-01-28T08:59:55.000Z",
+            "expires": "2028-01-29T07:11:44.000Z",
             "maxAge": 77760000,
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:54.182Z",
-            "lastAccessed": "2025-08-11T08:59:54.182Z"
+            "creation": "2025-08-12T07:11:44.979Z",
+            "lastAccessed": "2025-08-12T07:11:44.979Z"
           }
         ]
       },
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:53.981Z",
-      "createdAt": "2025-08-11T08:59:53.981Z",
+      "expiresAt": "2025-08-12T08:01:44.776Z",
+      "createdAt": "2025-08-12T07:11:44.776Z",
       "usageCount": 1,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_Vp809MBfY5",
+      "id": "session_YkDuXrlD2f",
       "cookieJar": {
         "version": "tough-cookie@5.1.2",
         "storeType": "MemoryCookieStore",
@@ -760,37 +730,37 @@
         "cookies": [
           {
             "key": "PHPSESSID",
-            "value": "eael2s16hknf8vlk7qa7bqhe54",
+            "value": "4rmti06mpkhbe9b8kd05b8jfff",
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:54.232Z",
-            "lastAccessed": "2025-08-11T08:59:54.232Z"
+            "creation": "2025-08-12T07:11:45.152Z",
+            "lastAccessed": "2025-08-12T07:11:45.152Z"
           },
           {
             "key": "HodineCache",
             "value": "%7B%22product_view%22%3A%5B%22473394%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
-            "expires": "2028-01-28T08:59:55.000Z",
+            "expires": "2028-01-29T07:11:45.000Z",
             "maxAge": 77760000,
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:54.232Z",
-            "lastAccessed": "2025-08-11T08:59:54.232Z"
+            "creation": "2025-08-12T07:11:45.152Z",
+            "lastAccessed": "2025-08-12T07:11:45.152Z"
           }
         ]
       },
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:53.983Z",
-      "createdAt": "2025-08-11T08:59:53.983Z",
+      "expiresAt": "2025-08-12T08:01:44.908Z",
+      "createdAt": "2025-08-12T07:11:44.908Z",
       "usageCount": 1,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_sMANqyHWed",
+      "id": "session_HKiAJHkGQN",
       "cookieJar": {
         "version": "tough-cookie@5.1.2",
         "storeType": "MemoryCookieStore",
@@ -801,37 +771,37 @@
         "cookies": [
           {
             "key": "PHPSESSID",
-            "value": "jar9ft982g9ghp5nf0m6m8t4i1",
+            "value": "gvg7n65dk6n98726hk29rqlu69",
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:54.206Z",
-            "lastAccessed": "2025-08-11T08:59:54.206Z"
+            "creation": "2025-08-12T07:11:45.103Z",
+            "lastAccessed": "2025-08-12T07:11:45.103Z"
           },
           {
             "key": "HodineCache",
             "value": "%7B%22product_view%22%3A%5B%22658010%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
-            "expires": "2028-01-28T08:59:55.000Z",
+            "expires": "2028-01-29T07:11:45.000Z",
             "maxAge": 77760000,
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:54.206Z",
-            "lastAccessed": "2025-08-11T08:59:54.206Z"
+            "creation": "2025-08-12T07:11:45.103Z",
+            "lastAccessed": "2025-08-12T07:11:45.103Z"
           }
         ]
       },
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:54.039Z",
-      "createdAt": "2025-08-11T08:59:54.039Z",
+      "expiresAt": "2025-08-12T08:01:44.921Z",
+      "createdAt": "2025-08-12T07:11:44.921Z",
       "usageCount": 1,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_k1Zxm8kwtY",
+      "id": "session_HcPZTD8x2A",
       "cookieJar": {
         "version": "tough-cookie@5.1.2",
         "storeType": "MemoryCookieStore",
@@ -842,37 +812,37 @@
         "cookies": [
           {
             "key": "PHPSESSID",
-            "value": "getjh51hcsbs3vn8ua9qbdhkon",
+            "value": "ltcp9eso6kfs261q81p5llld9o",
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:54.269Z",
-            "lastAccessed": "2025-08-11T08:59:54.269Z"
+            "creation": "2025-08-12T07:11:45.125Z",
+            "lastAccessed": "2025-08-12T07:11:45.125Z"
           },
           {
             "key": "HodineCache",
             "value": "%7B%22product_view%22%3A%5B%22432721%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
-            "expires": "2028-01-28T08:59:55.000Z",
+            "expires": "2028-01-29T07:11:45.000Z",
             "maxAge": 77760000,
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:54.269Z",
-            "lastAccessed": "2025-08-11T08:59:54.269Z"
+            "creation": "2025-08-12T07:11:45.125Z",
+            "lastAccessed": "2025-08-12T07:11:45.125Z"
           }
         ]
       },
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:54.074Z",
-      "createdAt": "2025-08-11T08:59:54.074Z",
+      "expiresAt": "2025-08-12T08:01:44.924Z",
+      "createdAt": "2025-08-12T07:11:44.924Z",
       "usageCount": 1,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_D7gedHoE25",
+      "id": "session_f5ESe6e9z2",
       "cookieJar": {
         "version": "tough-cookie@5.1.2",
         "storeType": "MemoryCookieStore",
@@ -883,37 +853,37 @@
         "cookies": [
           {
             "key": "PHPSESSID",
-            "value": "aub0n1i2tghpoqm6kk4l4jetpu",
+            "value": "gav0d9s7hh7pl58damcah7n7fc",
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:54.292Z",
-            "lastAccessed": "2025-08-11T08:59:54.292Z"
+            "creation": "2025-08-12T07:11:45.186Z",
+            "lastAccessed": "2025-08-12T07:11:45.186Z"
           },
           {
             "key": "HodineCache",
             "value": "%7B%22product_view%22%3A%5B%22141903%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
-            "expires": "2028-01-28T08:59:55.000Z",
+            "expires": "2028-01-29T07:11:45.000Z",
             "maxAge": 77760000,
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:54.292Z",
-            "lastAccessed": "2025-08-11T08:59:54.292Z"
+            "creation": "2025-08-12T07:11:45.186Z",
+            "lastAccessed": "2025-08-12T07:11:45.186Z"
           }
         ]
       },
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:54.079Z",
-      "createdAt": "2025-08-11T08:59:54.079Z",
+      "expiresAt": "2025-08-12T08:01:44.929Z",
+      "createdAt": "2025-08-12T07:11:44.929Z",
       "usageCount": 1,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_mb3dPmnd5i",
+      "id": "session_WvIrNG32M3",
       "cookieJar": {
         "version": "tough-cookie@5.1.2",
         "storeType": "MemoryCookieStore",
@@ -924,37 +894,37 @@
         "cookies": [
           {
             "key": "PHPSESSID",
-            "value": "c4ogsm5dp2d7q1617dfia1dedp",
+            "value": "ak99ej5ih1pnfn5s535s0e677f",
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:54.351Z",
-            "lastAccessed": "2025-08-11T08:59:54.351Z"
+            "creation": "2025-08-12T07:11:45.219Z",
+            "lastAccessed": "2025-08-12T07:11:45.219Z"
           },
           {
             "key": "HodineCache",
             "value": "%7B%22product_view%22%3A%5B%22141907%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
-            "expires": "2028-01-28T08:59:55.000Z",
+            "expires": "2028-01-29T07:11:45.000Z",
             "maxAge": 77760000,
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:54.351Z",
-            "lastAccessed": "2025-08-11T08:59:54.351Z"
+            "creation": "2025-08-12T07:11:45.219Z",
+            "lastAccessed": "2025-08-12T07:11:45.219Z"
           }
         ]
       },
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:54.138Z",
-      "createdAt": "2025-08-11T08:59:54.138Z",
+      "expiresAt": "2025-08-12T08:01:44.932Z",
+      "createdAt": "2025-08-12T07:11:44.932Z",
       "usageCount": 1,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_0L6tlCod1F",
+      "id": "session_YgMoAK68h8",
       "cookieJar": {
         "version": "tough-cookie@5.1.2",
         "storeType": "MemoryCookieStore",
@@ -965,37 +935,37 @@
         "cookies": [
           {
             "key": "PHPSESSID",
-            "value": "r2fgkcib7gf171ses8h4b5jr8n",
+            "value": "8gg5nl7kqno3tba3j36soh7n0d",
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:54.382Z",
-            "lastAccessed": "2025-08-11T08:59:54.382Z"
+            "creation": "2025-08-12T07:11:45.251Z",
+            "lastAccessed": "2025-08-12T07:11:45.251Z"
           },
           {
             "key": "HodineCache",
             "value": "%7B%22product_view%22%3A%5B%22469695%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
-            "expires": "2028-01-28T08:59:55.000Z",
+            "expires": "2028-01-29T07:11:45.000Z",
             "maxAge": 77760000,
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:54.382Z",
-            "lastAccessed": "2025-08-11T08:59:54.382Z"
+            "creation": "2025-08-12T07:11:45.251Z",
+            "lastAccessed": "2025-08-12T07:11:45.251Z"
           }
         ]
       },
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:54.142Z",
-      "createdAt": "2025-08-11T08:59:54.142Z",
+      "expiresAt": "2025-08-12T08:01:45.056Z",
+      "createdAt": "2025-08-12T07:11:45.056Z",
       "usageCount": 1,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_3eWGbdmWd7",
+      "id": "session_JrnWpXDO3O",
       "cookieJar": {
         "version": "tough-cookie@5.1.2",
         "storeType": "MemoryCookieStore",
@@ -1006,37 +976,37 @@
         "cookies": [
           {
             "key": "PHPSESSID",
-            "value": "tj1dhus454f0rbuqsa0qavk3fg",
+            "value": "7mod00vu5jl5abhc037dlcnmkv",
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:54.593Z",
-            "lastAccessed": "2025-08-11T08:59:54.593Z"
+            "creation": "2025-08-12T07:11:45.276Z",
+            "lastAccessed": "2025-08-12T07:11:45.276Z"
           },
           {
             "key": "HodineCache",
             "value": "%7B%22product_view%22%3A%5B%22141902%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
-            "expires": "2028-01-28T08:59:55.000Z",
+            "expires": "2028-01-29T07:11:45.000Z",
             "maxAge": 77760000,
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:54.593Z",
-            "lastAccessed": "2025-08-11T08:59:54.593Z"
+            "creation": "2025-08-12T07:11:45.276Z",
+            "lastAccessed": "2025-08-12T07:11:45.276Z"
           }
         ]
       },
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:54.458Z",
-      "createdAt": "2025-08-11T08:59:54.458Z",
+      "expiresAt": "2025-08-12T08:01:45.060Z",
+      "createdAt": "2025-08-12T07:11:45.060Z",
       "usageCount": 1,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_f4XcCaDh0j",
+      "id": "session_nFDlf5l0QU",
       "cookieJar": {
         "version": "tough-cookie@5.1.2",
         "storeType": "MemoryCookieStore",
@@ -1047,78 +1017,37 @@
         "cookies": [
           {
             "key": "PHPSESSID",
-            "value": "gh05l4mm1g1p15ei5lje2lgjcv",
+            "value": "hfj3m0l7e0r0cbnrq8kanoun48",
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:54.619Z",
-            "lastAccessed": "2025-08-11T08:59:54.619Z"
-          },
-          {
-            "key": "HodineCache",
-            "value": "%7B%22product_view%22%3A%5B%22432716%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
-            "expires": "2028-01-28T08:59:55.000Z",
-            "maxAge": 77760000,
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:54.619Z",
-            "lastAccessed": "2025-08-11T08:59:54.619Z"
-          }
-        ]
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:54.460Z",
-      "createdAt": "2025-08-11T08:59:54.460Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_EY2RXk49xC",
-      "cookieJar": {
-        "version": "tough-cookie@5.1.2",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": [
-          {
-            "key": "PHPSESSID",
-            "value": "mfnvpa2a61eq69e08t4h41kddh",
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:54.649Z",
-            "lastAccessed": "2025-08-11T08:59:54.649Z"
+            "creation": "2025-08-12T07:11:45.439Z",
+            "lastAccessed": "2025-08-12T07:11:45.439Z"
           },
           {
             "key": "HodineCache",
             "value": "%7B%22product_view%22%3A%5B%22657937%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
-            "expires": "2028-01-28T08:59:55.000Z",
+            "expires": "2028-01-29T07:11:45.000Z",
             "maxAge": 77760000,
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:54.649Z",
-            "lastAccessed": "2025-08-11T08:59:54.649Z"
+            "creation": "2025-08-12T07:11:45.439Z",
+            "lastAccessed": "2025-08-12T07:11:45.439Z"
           }
         ]
       },
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:54.464Z",
-      "createdAt": "2025-08-11T08:59:54.464Z",
+      "expiresAt": "2025-08-12T08:01:45.326Z",
+      "createdAt": "2025-08-12T07:11:45.326Z",
       "usageCount": 1,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_D9iu0UTzCO",
+      "id": "session_0la9mSJKuP",
       "cookieJar": {
         "version": "tough-cookie@5.1.2",
         "storeType": "MemoryCookieStore",
@@ -1129,37 +1058,37 @@
         "cookies": [
           {
             "key": "PHPSESSID",
-            "value": "o8p94rk09lrle3bskgrgs1hvv2",
+            "value": "qgeqdlske00d2f4jaoc3ik09l8",
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:54.729Z",
-            "lastAccessed": "2025-08-11T08:59:54.729Z"
+            "creation": "2025-08-12T07:11:45.524Z",
+            "lastAccessed": "2025-08-12T07:11:45.524Z"
           },
           {
             "key": "HodineCache",
             "value": "%7B%22product_view%22%3A%5B%22753224%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
-            "expires": "2028-01-28T08:59:55.000Z",
+            "expires": "2028-01-29T07:11:45.000Z",
             "maxAge": 77760000,
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:54.729Z",
-            "lastAccessed": "2025-08-11T08:59:54.729Z"
+            "creation": "2025-08-12T07:11:45.524Z",
+            "lastAccessed": "2025-08-12T07:11:45.524Z"
           }
         ]
       },
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:54.466Z",
-      "createdAt": "2025-08-11T08:59:54.466Z",
+      "expiresAt": "2025-08-12T08:01:45.329Z",
+      "createdAt": "2025-08-12T07:11:45.329Z",
       "usageCount": 1,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_VbTJTqPR1d",
+      "id": "session_q7mYRY1YIX",
       "cookieJar": {
         "version": "tough-cookie@5.1.2",
         "storeType": "MemoryCookieStore",
@@ -1170,37 +1099,37 @@
         "cookies": [
           {
             "key": "PHPSESSID",
-            "value": "b11vuqn6brlaa2jl0u9hqrhigt",
+            "value": "kft0i8l0ho1rnmb136mqgnrjnu",
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:54.859Z",
-            "lastAccessed": "2025-08-11T08:59:54.859Z"
+            "creation": "2025-08-12T07:11:45.604Z",
+            "lastAccessed": "2025-08-12T07:11:45.604Z"
           },
           {
             "key": "HodineCache",
             "value": "%7B%22product_view%22%3A%5B%22479080%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
-            "expires": "2028-01-28T08:59:55.000Z",
+            "expires": "2028-01-29T07:11:45.000Z",
             "maxAge": 77760000,
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:54.859Z",
-            "lastAccessed": "2025-08-11T08:59:54.859Z"
+            "creation": "2025-08-12T07:11:45.604Z",
+            "lastAccessed": "2025-08-12T07:11:45.604Z"
           }
         ]
       },
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:54.468Z",
-      "createdAt": "2025-08-11T08:59:54.468Z",
+      "expiresAt": "2025-08-12T08:01:45.332Z",
+      "createdAt": "2025-08-12T07:11:45.332Z",
       "usageCount": 1,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_Jw0RfoAqsU",
+      "id": "session_PVegsy9cEs",
       "cookieJar": {
         "version": "tough-cookie@5.1.2",
         "storeType": "MemoryCookieStore",
@@ -1211,37 +1140,37 @@
         "cookies": [
           {
             "key": "PHPSESSID",
-            "value": "f95jmevqn4r98g6di7r0ig74g3",
+            "value": "eno94kvkhcs1imffrg8qkml3mn",
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:54.828Z",
-            "lastAccessed": "2025-08-11T08:59:54.828Z"
+            "creation": "2025-08-12T07:11:45.548Z",
+            "lastAccessed": "2025-08-12T07:11:45.548Z"
           },
           {
             "key": "HodineCache",
             "value": "%7B%22product_view%22%3A%5B%221613155%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
-            "expires": "2028-01-28T08:59:55.000Z",
+            "expires": "2028-01-29T07:11:45.000Z",
             "maxAge": 77760000,
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:54.828Z",
-            "lastAccessed": "2025-08-11T08:59:54.828Z"
+            "creation": "2025-08-12T07:11:45.548Z",
+            "lastAccessed": "2025-08-12T07:11:45.548Z"
           }
         ]
       },
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:54.469Z",
-      "createdAt": "2025-08-11T08:59:54.469Z",
+      "expiresAt": "2025-08-12T08:01:45.336Z",
+      "createdAt": "2025-08-12T07:11:45.336Z",
       "usageCount": 1,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_5Faw1QYqsy",
+      "id": "session_TIgs2WZLkt",
       "cookieJar": {
         "version": "tough-cookie@5.1.2",
         "storeType": "MemoryCookieStore",
@@ -1252,78 +1181,37 @@
         "cookies": [
           {
             "key": "PHPSESSID",
-            "value": "so5csjfc17rldel3t97cvk6vr4",
+            "value": "fokfb1n19ok86o5tqhleget11u",
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:54.780Z",
-            "lastAccessed": "2025-08-11T08:59:54.780Z"
-          },
-          {
-            "key": "HodineCache",
-            "value": "%7B%22product_view%22%3A%5B%221577959%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
-            "expires": "2028-01-28T08:59:55.000Z",
-            "maxAge": 77760000,
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:54.780Z",
-            "lastAccessed": "2025-08-11T08:59:54.780Z"
-          }
-        ]
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:54.474Z",
-      "createdAt": "2025-08-11T08:59:54.474Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_LZfALAJ6a8",
-      "cookieJar": {
-        "version": "tough-cookie@5.1.2",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": [
-          {
-            "key": "PHPSESSID",
-            "value": "mc87fjmkluvi2kvodsdbp29aau",
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:54.755Z",
-            "lastAccessed": "2025-08-11T08:59:54.755Z"
+            "creation": "2025-08-12T07:11:45.577Z",
+            "lastAccessed": "2025-08-12T07:11:45.577Z"
           },
           {
             "key": "HodineCache",
             "value": "%7B%22product_view%22%3A%5B%221613161%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
-            "expires": "2028-01-28T08:59:55.000Z",
+            "expires": "2028-01-29T07:11:45.000Z",
             "maxAge": 77760000,
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:54.755Z",
-            "lastAccessed": "2025-08-11T08:59:54.755Z"
+            "creation": "2025-08-12T07:11:45.577Z",
+            "lastAccessed": "2025-08-12T07:11:45.577Z"
           }
         ]
       },
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:54.477Z",
-      "createdAt": "2025-08-11T08:59:54.477Z",
+      "expiresAt": "2025-08-12T08:01:45.339Z",
+      "createdAt": "2025-08-12T07:11:45.339Z",
       "usageCount": 1,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_RBb75Y5BIV",
+      "id": "session_hwDdtOdr5a",
       "cookieJar": {
         "version": "tough-cookie@5.1.2",
         "storeType": "MemoryCookieStore",
@@ -1334,37 +1222,37 @@
         "cookies": [
           {
             "key": "PHPSESSID",
-            "value": "adv0bhvp2ltrkqj4mjfklj69oo",
+            "value": "t37hvjf5k0qknropd8m4ml1013",
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:54.804Z",
-            "lastAccessed": "2025-08-11T08:59:54.804Z"
+            "creation": "2025-08-12T07:11:45.497Z",
+            "lastAccessed": "2025-08-12T07:11:45.497Z"
           },
           {
             "key": "HodineCache",
-            "value": "%7B%22product_view%22%3A%5B%221577953%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
-            "expires": "2028-01-28T08:59:55.000Z",
+            "value": "%7B%22product_view%22%3A%5B%22432716%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
+            "expires": "2028-01-29T07:11:45.000Z",
             "maxAge": 77760000,
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:54.804Z",
-            "lastAccessed": "2025-08-11T08:59:54.804Z"
+            "creation": "2025-08-12T07:11:45.497Z",
+            "lastAccessed": "2025-08-12T07:11:45.497Z"
           }
         ]
       },
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:54.478Z",
-      "createdAt": "2025-08-11T08:59:54.478Z",
+      "expiresAt": "2025-08-12T08:01:45.342Z",
+      "createdAt": "2025-08-12T07:11:45.342Z",
       "usageCount": 1,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_nyffSUDJFh",
+      "id": "session_7htN4oDgoY",
       "cookieJar": {
         "version": "tough-cookie@5.1.2",
         "storeType": "MemoryCookieStore",
@@ -1375,1179 +1263,31 @@
         "cookies": [
           {
             "key": "PHPSESSID",
-            "value": "g1j2s373sqh5qgcecue1h0ia29",
+            "value": "6o51cni0t7urepiejetsi9dge4",
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:54.707Z",
-            "lastAccessed": "2025-08-11T08:59:54.707Z"
+            "creation": "2025-08-12T07:11:45.645Z",
+            "lastAccessed": "2025-08-12T07:11:45.645Z"
           },
           {
             "key": "HodineCache",
-            "value": "%7B%22product_view%22%3A%5B%22141901%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
-            "expires": "2028-01-28T08:59:55.000Z",
+            "value": "%7B%22product_view%22%3A%5B%221577959%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
+            "expires": "2028-01-29T07:11:45.000Z",
             "maxAge": 77760000,
             "domain": "b2b.daisan.vn",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-08-11T08:59:54.707Z",
-            "lastAccessed": "2025-08-11T08:59:54.707Z"
+            "creation": "2025-08-12T07:11:45.645Z",
+            "lastAccessed": "2025-08-12T07:11:45.645Z"
           }
         ]
       },
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:54.480Z",
-      "createdAt": "2025-08-11T08:59:54.480Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_6TLCG5yKxs",
-      "cookieJar": {
-        "version": "tough-cookie@5.1.2",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": [
-          {
-            "key": "PHPSESSID",
-            "value": "8f8sma9k7br3bi7gonnov95g1i",
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:54.954Z",
-            "lastAccessed": "2025-08-11T08:59:54.954Z"
-          },
-          {
-            "key": "HodineCache",
-            "value": "%7B%22product_view%22%3A%5B%22479073%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
-            "expires": "2028-01-28T08:59:55.000Z",
-            "maxAge": 77760000,
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:54.954Z",
-            "lastAccessed": "2025-08-11T08:59:54.954Z"
-          }
-        ]
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:54.684Z",
-      "createdAt": "2025-08-11T08:59:54.684Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_tfbHdPKCZD",
-      "cookieJar": {
-        "version": "tough-cookie@5.1.2",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": [
-          {
-            "key": "PHPSESSID",
-            "value": "38rje2g7pdn3qnrprfsu1kj6rj",
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:54.930Z",
-            "lastAccessed": "2025-08-11T08:59:54.930Z"
-          },
-          {
-            "key": "HodineCache",
-            "value": "%7B%22product_view%22%3A%5B%22141904%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
-            "expires": "2028-01-28T08:59:55.000Z",
-            "maxAge": 77760000,
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:54.930Z",
-            "lastAccessed": "2025-08-11T08:59:54.930Z"
-          }
-        ]
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:54.686Z",
-      "createdAt": "2025-08-11T08:59:54.686Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_nbsMK7GStc",
-      "cookieJar": {
-        "version": "tough-cookie@5.1.2",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": [
-          {
-            "key": "PHPSESSID",
-            "value": "r279vkt06tbmc3ufko95h66ilk",
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:54.910Z",
-            "lastAccessed": "2025-08-11T08:59:54.910Z"
-          },
-          {
-            "key": "HodineCache",
-            "value": "%7B%22product_view%22%3A%5B%22753269%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
-            "expires": "2028-01-28T08:59:55.000Z",
-            "maxAge": 77760000,
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:54.910Z",
-            "lastAccessed": "2025-08-11T08:59:54.910Z"
-          }
-        ]
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:54.691Z",
-      "createdAt": "2025-08-11T08:59:54.691Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_VorHsC2F8T",
-      "cookieJar": {
-        "version": "tough-cookie@5.1.2",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": [
-          {
-            "key": "PHPSESSID",
-            "value": "3jhdnm12i0rp2ukv9kqgknfqrd",
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:55.130Z",
-            "lastAccessed": "2025-08-11T08:59:55.130Z"
-          },
-          {
-            "key": "HodineCache",
-            "value": "%7B%22product_view%22%3A%5B%22192613%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
-            "expires": "2028-01-28T08:59:56.000Z",
-            "maxAge": 77760000,
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:55.130Z",
-            "lastAccessed": "2025-08-11T08:59:55.130Z"
-          }
-        ]
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:54.872Z",
-      "createdAt": "2025-08-11T08:59:54.872Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_MdP8XKVkFD",
-      "cookieJar": {
-        "version": "tough-cookie@5.1.2",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": [
-          {
-            "key": "PHPSESSID",
-            "value": "hrg5g0j3iuk6mc67p1tgmb93n3",
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:54.988Z",
-            "lastAccessed": "2025-08-11T08:59:54.988Z"
-          },
-          {
-            "key": "HodineCache",
-            "value": "%7B%22product_view%22%3A%5B%22432720%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
-            "expires": "2028-01-28T08:59:56.000Z",
-            "maxAge": 77760000,
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:54.988Z",
-            "lastAccessed": "2025-08-11T08:59:54.988Z"
-          }
-        ]
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:54.877Z",
-      "createdAt": "2025-08-11T08:59:54.877Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_8Ka947EQAe",
-      "cookieJar": {
-        "version": "tough-cookie@5.1.2",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": [
-          {
-            "key": "PHPSESSID",
-            "value": "sqc52l0dnonsaiqn3ojj0s2gam",
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:55.155Z",
-            "lastAccessed": "2025-08-11T08:59:55.155Z"
-          },
-          {
-            "key": "HodineCache",
-            "value": "%7B%22product_view%22%3A%5B%221575001%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
-            "expires": "2028-01-28T08:59:56.000Z",
-            "maxAge": 77760000,
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:55.155Z",
-            "lastAccessed": "2025-08-11T08:59:55.155Z"
-          }
-        ]
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:54.884Z",
-      "createdAt": "2025-08-11T08:59:54.884Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_HvbqvShwPf",
-      "cookieJar": {
-        "version": "tough-cookie@5.1.2",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": [
-          {
-            "key": "PHPSESSID",
-            "value": "l9vi520kbp2qrhrddk26kta9pf",
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:55.019Z",
-            "lastAccessed": "2025-08-11T08:59:55.019Z"
-          },
-          {
-            "key": "HodineCache",
-            "value": "%7B%22product_view%22%3A%5B%221575009%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
-            "expires": "2028-01-28T08:59:56.000Z",
-            "maxAge": 77760000,
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:55.019Z",
-            "lastAccessed": "2025-08-11T08:59:55.019Z"
-          }
-        ]
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:54.886Z",
-      "createdAt": "2025-08-11T08:59:54.886Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_XE4yErFavo",
-      "cookieJar": {
-        "version": "tough-cookie@5.1.2",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": [
-          {
-            "key": "PHPSESSID",
-            "value": "knhiumdm2gndqij929qarbn3in",
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:55.066Z",
-            "lastAccessed": "2025-08-11T08:59:55.066Z"
-          },
-          {
-            "key": "HodineCache",
-            "value": "%7B%22product_view%22%3A%5B%22479061%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
-            "expires": "2028-01-28T08:59:56.000Z",
-            "maxAge": 77760000,
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:55.066Z",
-            "lastAccessed": "2025-08-11T08:59:55.066Z"
-          }
-        ]
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:54.889Z",
-      "createdAt": "2025-08-11T08:59:54.889Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_ouJjmQa7DW",
-      "cookieJar": {
-        "version": "tough-cookie@5.1.2",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": [
-          {
-            "key": "PHPSESSID",
-            "value": "2nd5hklt09spsta2h5n99t51om",
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:55.040Z",
-            "lastAccessed": "2025-08-11T08:59:55.040Z"
-          },
-          {
-            "key": "HodineCache",
-            "value": "%7B%22product_view%22%3A%5B%221613176%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
-            "expires": "2028-01-28T08:59:56.000Z",
-            "maxAge": 77760000,
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:55.040Z",
-            "lastAccessed": "2025-08-11T08:59:55.040Z"
-          }
-        ]
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:54.892Z",
-      "createdAt": "2025-08-11T08:59:54.892Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_sagZWoBOkz",
-      "cookieJar": {
-        "version": "tough-cookie@5.1.2",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": [
-          {
-            "key": "PHPSESSID",
-            "value": "jvj2tskg7t12u2n6bc95oe3jrg",
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:55.094Z",
-            "lastAccessed": "2025-08-11T08:59:55.094Z"
-          },
-          {
-            "key": "HodineCache",
-            "value": "%7B%22product_view%22%3A%5B%221574997%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
-            "expires": "2028-01-28T08:59:56.000Z",
-            "maxAge": 77760000,
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:55.094Z",
-            "lastAccessed": "2025-08-11T08:59:55.094Z"
-          }
-        ]
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:54.894Z",
-      "createdAt": "2025-08-11T08:59:54.894Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_gijf814CPu",
-      "cookieJar": {
-        "version": "tough-cookie@5.1.2",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": [
-          {
-            "key": "PHPSESSID",
-            "value": "lv60dq7o69289rh5car4f1s7id",
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:55.186Z",
-            "lastAccessed": "2025-08-11T08:59:55.186Z"
-          },
-          {
-            "key": "HodineCache",
-            "value": "%7B%22product_view%22%3A%5B%22192619%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
-            "expires": "2028-01-28T08:59:56.000Z",
-            "maxAge": 77760000,
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:55.186Z",
-            "lastAccessed": "2025-08-11T08:59:55.186Z"
-          }
-        ]
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:54.971Z",
-      "createdAt": "2025-08-11T08:59:54.971Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_gABdsGEded",
-      "cookieJar": {
-        "version": "tough-cookie@5.1.2",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": [
-          {
-            "key": "PHPSESSID",
-            "value": "914ou00j1g0dldcc6h01874pji",
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:55.417Z",
-            "lastAccessed": "2025-08-11T08:59:55.417Z"
-          },
-          {
-            "key": "HodineCache",
-            "value": "%7B%22product_view%22%3A%5B%22141906%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
-            "expires": "2028-01-28T08:59:56.000Z",
-            "maxAge": 77760000,
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:55.417Z",
-            "lastAccessed": "2025-08-11T08:59:55.417Z"
-          }
-        ]
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:55.232Z",
-      "createdAt": "2025-08-11T08:59:55.232Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_KvFucW6lwX",
-      "cookieJar": {
-        "version": "tough-cookie@5.1.2",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": [
-          {
-            "key": "PHPSESSID",
-            "value": "gdf48a7pl5bug0uch85ntaul8s",
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:55.442Z",
-            "lastAccessed": "2025-08-11T08:59:55.442Z"
-          },
-          {
-            "key": "HodineCache",
-            "value": "%7B%22product_view%22%3A%5B%22479085%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
-            "expires": "2028-01-28T08:59:56.000Z",
-            "maxAge": 77760000,
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:55.442Z",
-            "lastAccessed": "2025-08-11T08:59:55.442Z"
-          }
-        ]
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:55.235Z",
-      "createdAt": "2025-08-11T08:59:55.235Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_u0dFj97QX0",
-      "cookieJar": {
-        "version": "tough-cookie@5.1.2",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": [
-          {
-            "key": "PHPSESSID",
-            "value": "c0udi8k7bqt3g92kvsj1fu9h7u",
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:55.549Z",
-            "lastAccessed": "2025-08-11T08:59:55.549Z"
-          },
-          {
-            "key": "HodineCache",
-            "value": "%7B%22product_view%22%3A%5B%22141910%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
-            "expires": "2028-01-28T08:59:56.000Z",
-            "maxAge": 77760000,
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:55.549Z",
-            "lastAccessed": "2025-08-11T08:59:55.549Z"
-          }
-        ]
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:55.237Z",
-      "createdAt": "2025-08-11T08:59:55.237Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_1Mavnk8vJZ",
-      "cookieJar": {
-        "version": "tough-cookie@5.1.2",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": [
-          {
-            "key": "PHPSESSID",
-            "value": "v3cn4gltoqsnavn2j04692pvfv",
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:55.477Z",
-            "lastAccessed": "2025-08-11T08:59:55.477Z"
-          },
-          {
-            "key": "HodineCache",
-            "value": "%7B%22product_view%22%3A%5B%221613128%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
-            "expires": "2028-01-28T08:59:56.000Z",
-            "maxAge": 77760000,
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:55.477Z",
-            "lastAccessed": "2025-08-11T08:59:55.477Z"
-          }
-        ]
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:55.239Z",
-      "createdAt": "2025-08-11T08:59:55.239Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_IoonkUIvKn",
-      "cookieJar": {
-        "version": "tough-cookie@5.1.2",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": [
-          {
-            "key": "PHPSESSID",
-            "value": "1jgseinb9u06bfj2tjet7c6nu5",
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:55.385Z",
-            "lastAccessed": "2025-08-11T08:59:55.385Z"
-          },
-          {
-            "key": "HodineCache",
-            "value": "%7B%22product_view%22%3A%5B%22432967%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
-            "expires": "2028-01-28T08:59:56.000Z",
-            "maxAge": 77760000,
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:55.385Z",
-            "lastAccessed": "2025-08-11T08:59:55.385Z"
-          }
-        ]
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:55.242Z",
-      "createdAt": "2025-08-11T08:59:55.242Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_svho2sbwNf",
-      "cookieJar": {
-        "version": "tough-cookie@5.1.2",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": [
-          {
-            "key": "PHPSESSID",
-            "value": "di8vlq6brug1afk8e86rs4h2gk",
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:55.522Z",
-            "lastAccessed": "2025-08-11T08:59:55.522Z"
-          },
-          {
-            "key": "HodineCache",
-            "value": "%7B%22product_view%22%3A%5B%22350980%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
-            "expires": "2028-01-28T08:59:56.000Z",
-            "maxAge": 77760000,
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:55.522Z",
-            "lastAccessed": "2025-08-11T08:59:55.522Z"
-          }
-        ]
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:55.245Z",
-      "createdAt": "2025-08-11T08:59:55.245Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_Md8LOeehfn",
-      "cookieJar": {
-        "version": "tough-cookie@5.1.2",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": [
-          {
-            "key": "PHPSESSID",
-            "value": "9bqtdpguqgl8k4adgqm3vn6ch1",
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:55.498Z",
-            "lastAccessed": "2025-08-11T08:59:55.498Z"
-          },
-          {
-            "key": "HodineCache",
-            "value": "%7B%22product_view%22%3A%5B%221575005%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
-            "expires": "2028-01-28T08:59:56.000Z",
-            "maxAge": 77760000,
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:55.498Z",
-            "lastAccessed": "2025-08-11T08:59:55.498Z"
-          }
-        ]
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:55.248Z",
-      "createdAt": "2025-08-11T08:59:55.248Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_ggdmSHi1DY",
-      "cookieJar": {
-        "version": "tough-cookie@5.1.2",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": [
-          {
-            "key": "PHPSESSID",
-            "value": "k7u6pangc77e7kdjmtjam5qmcg",
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:55.334Z",
-            "lastAccessed": "2025-08-11T08:59:55.334Z"
-          },
-          {
-            "key": "HodineCache",
-            "value": "%7B%22product_view%22%3A%5B%22435614%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
-            "expires": "2028-01-28T08:59:56.000Z",
-            "maxAge": 77760000,
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:55.334Z",
-            "lastAccessed": "2025-08-11T08:59:55.334Z"
-          }
-        ]
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:55.250Z",
-      "createdAt": "2025-08-11T08:59:55.250Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_zf2dpX3Ic7",
-      "cookieJar": {
-        "version": "tough-cookie@5.1.2",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": [
-          {
-            "key": "PHPSESSID",
-            "value": "545itesfcjgi7rkd4v6bpos7pt",
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:55.359Z",
-            "lastAccessed": "2025-08-11T08:59:55.359Z"
-          },
-          {
-            "key": "HodineCache",
-            "value": "%7B%22product_view%22%3A%5B%22435612%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
-            "expires": "2028-01-28T08:59:56.000Z",
-            "maxAge": 77760000,
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:55.359Z",
-            "lastAccessed": "2025-08-11T08:59:55.359Z"
-          }
-        ]
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:55.251Z",
-      "createdAt": "2025-08-11T08:59:55.251Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_MWjSfLMbaC",
-      "cookieJar": {
-        "version": "tough-cookie@5.1.2",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": [
-          {
-            "key": "PHPSESSID",
-            "value": "j0b6dh5k24tjt5l0e876vtjt2v",
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:55.581Z",
-            "lastAccessed": "2025-08-11T08:59:55.581Z"
-          },
-          {
-            "key": "HodineCache",
-            "value": "%7B%22product_view%22%3A%5B%22411912%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
-            "expires": "2028-01-28T08:59:56.000Z",
-            "maxAge": 77760000,
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:55.581Z",
-            "lastAccessed": "2025-08-11T08:59:55.581Z"
-          }
-        ]
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:55.253Z",
-      "createdAt": "2025-08-11T08:59:55.253Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_fnwJb4gw6y",
-      "cookieJar": {
-        "version": "tough-cookie@5.1.2",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": [
-          {
-            "key": "PHPSESSID",
-            "value": "9pt7f2mdhi7lqqpjb82fsu0mop",
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:55.607Z",
-            "lastAccessed": "2025-08-11T08:59:55.607Z"
-          },
-          {
-            "key": "HodineCache",
-            "value": "%7B%22product_view%22%3A%5B%22435638%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
-            "expires": "2028-01-28T08:59:56.000Z",
-            "maxAge": 77760000,
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:55.607Z",
-            "lastAccessed": "2025-08-11T08:59:55.607Z"
-          }
-        ]
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:55.400Z",
-      "createdAt": "2025-08-11T08:59:55.400Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_fFy2dX8uzx",
-      "cookieJar": {
-        "version": "tough-cookie@5.1.2",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": [
-          {
-            "key": "PHPSESSID",
-            "value": "9nm6imu9a14d9r1kp9dnsdgmep",
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:55.654Z",
-            "lastAccessed": "2025-08-11T08:59:55.654Z"
-          },
-          {
-            "key": "HodineCache",
-            "value": "%7B%22product_view%22%3A%5B%22469725%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
-            "expires": "2028-01-28T08:59:56.000Z",
-            "maxAge": 77760000,
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:55.654Z",
-            "lastAccessed": "2025-08-11T08:59:55.654Z"
-          }
-        ]
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:55.452Z",
-      "createdAt": "2025-08-11T08:59:55.452Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_f7Fwi9t49r",
-      "cookieJar": {
-        "version": "tough-cookie@5.1.2",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": [
-          {
-            "key": "PHPSESSID",
-            "value": "bbl107mm7j6f390pofp5695sgs",
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:55.632Z",
-            "lastAccessed": "2025-08-11T08:59:55.632Z"
-          },
-          {
-            "key": "HodineCache",
-            "value": "%7B%22product_view%22%3A%5B%22141950%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
-            "expires": "2028-01-28T08:59:56.000Z",
-            "maxAge": 77760000,
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:55.632Z",
-            "lastAccessed": "2025-08-11T08:59:55.632Z"
-          }
-        ]
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:55.455Z",
-      "createdAt": "2025-08-11T08:59:55.455Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_oXOBPmQgIl",
-      "cookieJar": {
-        "version": "tough-cookie@5.1.2",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": [
-          {
-            "key": "PHPSESSID",
-            "value": "qela7r0h9t1n9jp1ut6pk83mh1",
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:55.706Z",
-            "lastAccessed": "2025-08-11T08:59:55.706Z"
-          },
-          {
-            "key": "HodineCache",
-            "value": "%7B%22product_view%22%3A%5B%22141908%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
-            "expires": "2028-01-28T08:59:56.000Z",
-            "maxAge": 77760000,
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:55.706Z",
-            "lastAccessed": "2025-08-11T08:59:55.706Z"
-          }
-        ]
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:55.560Z",
-      "createdAt": "2025-08-11T08:59:55.560Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_6IeCpZw6Md",
-      "cookieJar": {
-        "version": "tough-cookie@5.1.2",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": [
-          {
-            "key": "PHPSESSID",
-            "value": "ctr0ucocqfjsl7090eu6d9o77t",
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:55.685Z",
-            "lastAccessed": "2025-08-11T08:59:55.685Z"
-          },
-          {
-            "key": "HodineCache",
-            "value": "%7B%22product_view%22%3A%5B%22435618%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
-            "expires": "2028-01-28T08:59:56.000Z",
-            "maxAge": 77760000,
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:55.685Z",
-            "lastAccessed": "2025-08-11T08:59:55.685Z"
-          }
-        ]
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:55.562Z",
-      "createdAt": "2025-08-11T08:59:55.562Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_Wc6wDlw1NE",
-      "cookieJar": {
-        "version": "tough-cookie@5.1.2",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": [
-          {
-            "key": "PHPSESSID",
-            "value": "0rqqaoahg8sgnsumu1p0eci647",
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:55.740Z",
-            "lastAccessed": "2025-08-11T08:59:55.740Z"
-          },
-          {
-            "key": "HodineCache",
-            "value": "%7B%22product_view%22%3A%5B%221613170%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
-            "expires": "2028-01-28T08:59:56.000Z",
-            "maxAge": 77760000,
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:55.740Z",
-            "lastAccessed": "2025-08-11T08:59:55.740Z"
-          }
-        ]
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:55.590Z",
-      "createdAt": "2025-08-11T08:59:55.590Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_rgNuCBUWey",
-      "cookieJar": {
-        "version": "tough-cookie@5.1.2",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": [
-          {
-            "key": "PHPSESSID",
-            "value": "vl5c3vuj48mvp5c14v2ofu7qef",
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:55.906Z",
-            "lastAccessed": "2025-08-11T08:59:55.906Z"
-          },
-          {
-            "key": "HodineCache",
-            "value": "%7B%22product_view%22%3A%5B%22479077%22%5D%2C%22category_view%22%3A%5B70%5D%7D",
-            "expires": "2028-01-28T08:59:56.000Z",
-            "maxAge": 77760000,
-            "domain": "b2b.daisan.vn",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-08-11T08:59:55.906Z",
-            "lastAccessed": "2025-08-11T08:59:55.906Z"
-          }
-        ]
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-08-11T09:49:55.764Z",
-      "createdAt": "2025-08-11T08:59:55.764Z",
+      "expiresAt": "2025-08-12T08:01:45.364Z",
+      "createdAt": "2025-08-12T07:11:45.364Z",
       "usageCount": 1,
       "maxUsageCount": 50,
       "errorScore": 0
