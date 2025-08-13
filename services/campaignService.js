@@ -4,7 +4,7 @@ const fs = require('fs').promises;
 const path = require('path');
 const { spawn } = require('child_process');
 const portManager = require('./portManager');
-// const crawlDataService = require('./crawlDataService'); // Đã bỏ phần lưu data vào DB
+const crawlDataService = require('./crawlDataService');
 
 // Helper function để kill actor process một cách an toàn
 function killActorProcess(child, reason = 'unknown') {
@@ -864,8 +864,20 @@ async function runActorAsync(campaign, runId, customInput = null, campaignPort =
                     log += `\n❌ [${new Date().toISOString()}] No output files found or error reading output: ${error.message}`;
                 }
 
-                // Bỏ phần lưu dữ liệu vào database
+                // Lưu dữ liệu vào database
                 let savedDataCount = 0;
+                if (output.length > 0) {
+                    try {
+                        console.log(`💾 [${new Date().toISOString()}] Lưu ${output.length} sản phẩm vào database...`);
+                        const savedData = await crawlDataService.saveMultipleCrawlData(output, campaign._id, campaign.actorId._id, 'product');
+                        savedDataCount = savedData.length;
+                        console.log(`✅ [${new Date().toISOString()}] Đã lưu ${savedDataCount} sản phẩm vào database`);
+                        log += `\n💾 [${new Date().toISOString()}] Đã lưu ${savedDataCount} sản phẩm vào database`;
+                    } catch (saveError) {
+                        console.error(`❌ [${new Date().toISOString()}] Lỗi lưu dữ liệu vào database:`, saveError);
+                        log += `\n❌ [${new Date().toISOString()}] Lỗi lưu dữ liệu vào database: ${saveError.message}`;
+                    }
+                }
 
                 // Update campaign result
                 const resultData = {
