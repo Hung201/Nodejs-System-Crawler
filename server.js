@@ -16,6 +16,7 @@ const campaignRoutes = require('./routes/campaigns');
 const crawlDataRoutes = require('./routes/crawlData');
 const logRoutes = require('./routes/logs');
 const dashboardRoutes = require('./routes/dashboard');
+const portRoutes = require('./routes/ports');
 
 const errorHandler = require('./middleware/errorHandler');
 const logger = require('./utils/logger');
@@ -70,6 +71,7 @@ app.use('/api/campaigns', campaignRoutes);
 app.use('/api/crawl-data', crawlDataRoutes);
 app.use('/api/logs', logRoutes);
 app.use('/api/dashboard', dashboardRoutes);
+app.use('/api/ports', portRoutes);
 
 // 404 handler
 app.use('*', (req, res) => {

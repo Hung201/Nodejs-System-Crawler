@@ -3,6 +3,7 @@ const Actor = require('../models/Actor');
 const fs = require('fs').promises;
 const path = require('path');
 const { spawn } = require('child_process');
+const portManager = require('./portManager');
 // const crawlDataService = require('./crawlDataService'); // Đã bỏ phần lưu data vào DB
 
 // Helper function để kill actor process một cách an toàn
@@ -62,6 +63,78 @@ function cleanupAllNodeProcesses() {
                 console.log('✅ Cleaned up all node processes');
             }
         });
+    }
+}
+
+// Helper function để cleanup actor processes trước khi chạy campaign mới
+async function cleanupActorProcesses() {
+    const { exec } = require('child_process');
+    const util = require('util');
+    const execAsync = util.promisify(exec);
+
+    try {
+        if (process.platform === 'win32') {
+            // Windows: Chỉ kill các process có command line chứa "actors_storage" hoặc "main.js"
+            const { stdout } = await execAsync('tasklist /FI "IMAGENAME eq node.exe" /FO CSV');
+            const lines = stdout.split('\n').slice(1);
+
+            let cleanedCount = 0;
+            for (const line of lines) {
+                if (line.trim()) {
+                    const parts = line.split(',');
+                    const pid = parts[1]?.replace(/"/g, '');
+
+                    if (pid && pid !== process.pid.toString()) {
+                        try {
+                            // Kiểm tra command line của process
+                            const { stdout: wmicOutput } = await execAsync(`wmic process where "ProcessId=${pid}" get CommandLine /format:list`);
+                            const commandLine = wmicOutput.split('CommandLine=')[1]?.split('\n')[0] || '';
+
+                            // Chỉ kill nếu là actor process thực sự (có chứa actors_storage hoặc main.js)
+                            if (commandLine.includes('actors_storage') ||
+                                commandLine.includes('main.js') ||
+                                commandLine.includes('node main.js')) {
+                                await execAsync(`taskkill /F /PID ${pid}`);
+                                console.log(`🧹 Cleaned up confirmed actor process PID: ${pid}`);
+                                console.log(`     Command: ${commandLine.substring(0, 100)}...`);
+                                cleanedCount++;
+                            } else {
+                                console.log(`🟢 Keeping process PID: ${pid} - not an actor (likely frontend/backend)`);
+                            }
+                        } catch (error) {
+                            // Process có thể đã tự kết thúc hoặc không có quyền truy cập
+                        }
+                    }
+                }
+            }
+            console.log(`🧹 Cleaned up ${cleanedCount} confirmed actor processes`);
+        } else {
+            // Linux/Mac: Chỉ kill các process chạy main.js trong actors_storage
+            await execAsync('pkill -f "node.*actors_storage.*main.js"');
+            console.log('🧹 Cleaned up actor processes');
+        }
+    } catch (error) {
+        console.log(`⚠️ Cleanup warning: ${error.message}`);
+    }
+}
+
+// Helper function để kiểm tra health của actor process
+function checkActorProcessHealth(child, campaignId) {
+    if (!child) return false;
+
+    // Kiểm tra process có còn sống không
+    if (child.killed) {
+        console.log(`⚠️ Actor process for campaign ${campaignId} has been killed`);
+        return false;
+    }
+
+    // Kiểm tra process có đang chạy không
+    try {
+        process.kill(child.pid, 0); // Signal 0 để kiểm tra process có tồn tại không
+        return true;
+    } catch (error) {
+        console.log(`⚠️ Actor process for campaign ${campaignId} is not responding`);
+        return false;
     }
 }
 
@@ -300,11 +373,23 @@ const runCampaign = async (campaignId, customInput = null) => {
     // Sử dụng custom input nếu có,否则 sử dụng input từ campaign
     const inputToUse = customInput || campaign.input;
 
+    // Cleanup actor processes trước khi chạy để tránh xung đột (có thể tắt bằng DISABLE_AUTO_CLEANUP=true)
+    if (process.env.DISABLE_AUTO_CLEANUP !== 'true') {
+        console.log('🧹 Cleaning up existing actor processes before starting new campaign...');
+        await cleanupActorProcesses();
+    } else {
+        console.log('⚠️ Auto cleanup disabled by DISABLE_AUTO_CLEANUP=true');
+    }
+
+    // Cấp phát port cho campaign
+    const campaignPort = await portManager.allocatePort(campaign._id.toString());
+
     // Update campaign status
     campaign.status = 'running';
     campaign.result.startTime = new Date();
-    campaign.result.log = 'Starting campaign...';
+    campaign.result.log = `🚀 Starting campaign... (${new Date().toISOString()})\n📄 Input: ${JSON.stringify(inputToUse, null, 2)}\n📡 Port: ${campaignPort}`;
     campaign.result.error = null;
+    campaign.result.port = campaignPort;
     await campaign.save();
 
     // Generate run ID
@@ -317,8 +402,8 @@ const runCampaign = async (campaignId, customInput = null) => {
         startTime: new Date()
     });
 
-    // Run actor asynchronously with custom input
-    runActorAsync(campaign, runId, inputToUse);
+    // Run actor asynchronously with custom input and port
+    runActorAsync(campaign, runId, inputToUse, campaignPort);
 
     return {
         campaignId: campaign._id,
@@ -486,7 +571,7 @@ const resetCampaign = async (campaignId) => {
 };
 
 // Helper function để chạy actor
-async function runActorAsync(campaign, runId, customInput = null) {
+async function runActorAsync(campaign, runId, customInput = null, campaignPort = null) {
     try {
         const actor = campaign.actorId;
         const actorPath = path.join(process.cwd(), 'actors_storage', actor.userId.toString(), actor._id.toString());
@@ -555,17 +640,31 @@ async function runActorAsync(campaign, runId, customInput = null) {
         console.log(`📁 Actor path: ${actorPath}`);
         console.log(`📄 Input file: ${inputPath}`);
 
+        // Tạo environment variables với port
+        const env = {
+            ...process.env,
+            NODE_ENV: 'production',
+            CAMPAIGN_PORT: campaignPort || '5000'
+        };
+
         const child = spawn('node', ['main.js'], {
             cwd: actorWorkingDir,
             stdio: ['pipe', 'pipe', 'pipe'],
-            env: { ...process.env, NODE_ENV: 'production' }
+            env: env
         });
 
         console.log(`🔄 Actor process started with PID: ${child.pid}`);
+        console.log(`🚀 [${new Date().toISOString()}] Campaign started - Actor PID: ${child.pid}`);
+        console.log(`📁 Working directory: ${actorWorkingDir}`);
+        console.log(`📄 Input file: ${inputPath}`);
+        console.log(`📡 Campaign port: ${campaignPort}`);
+        console.log(`⏰ Timeout: 5 minutes`);
+        console.log(`🔄 Starting CheerioCrawler...`);
 
         let log = '';
         let startTime = Date.now();
         let lastLogUpdate = Date.now();
+        let lastOutputTime = Date.now();
 
         // Add timeout for actor process (5 minutes)
         const timeout = setTimeout(() => {
@@ -574,45 +673,97 @@ async function runActorAsync(campaign, runId, customInput = null) {
             reject(new Error('Actor process timeout after 5 minutes'));
         }, 5 * 60 * 1000);
 
+        // Add hang detection (no output for 2 minutes)
+        const hangDetection = setInterval(() => {
+            const now = Date.now();
+            const timeSinceLastOutput = now - lastOutputTime;
+
+            if (timeSinceLastOutput > 2 * 60 * 1000) { // 2 minutes
+                console.log(`⚠️ Actor process seems hung - no output for ${Math.floor(timeSinceLastOutput / 1000)} seconds`);
+                console.log('🔄 Attempting to restart actor process...');
+
+                clearInterval(hangDetection);
+                killActorProcess(child, 'hang_detection');
+
+                // Thêm log vào campaign
+                log += `\n⚠️ [${new Date().toISOString()}] Actor process hung - no output for ${Math.floor(timeSinceLastOutput / 1000)} seconds`;
+                campaign.result.log = log;
+                campaign.save().catch(err => console.error('Error updating campaign log:', err));
+
+                reject(new Error(`Actor process hung - no output for ${Math.floor(timeSinceLastOutput / 1000)} seconds`));
+            }
+        }, 30 * 1000); // Check every 30 seconds
+
         child.stdout.on('data', (data) => {
             const output = data.toString();
             log += output;
 
-            // Log real-time output từ actor
-            console.log(`[Actor Output] ${output.trim()}`);
+            // Update last output time for hang detection
+            lastOutputTime = Date.now();
+
+            // Log real-time output từ actor với timestamp
+            const timestamp = new Date().toISOString();
+            console.log(`[${timestamp}] [Actor Output] ${output.trim()}`);
+
+            // Debug: Log tất cả output để xem actor có output gì
+            console.log(`🔍 [DEBUG] Raw output from actor: "${output.trim()}"`);
+
+            // Thêm log vào campaign để tracking
+            log += `\n🔍 [${timestamp}] Actor output: ${output.trim()}`;
+
+            // Thêm log chi tiết vào campaign để tracking
+            if (output.includes('🎯 Added product to scrapedData')) {
+                const match = output.match(/Total: (\d+)/);
+                const count = match ? match[1] : 'unknown';
+                log += `\n🎯 [${timestamp}] Đã thêm sản phẩm vào scrapedData. Tổng số: ${count}`;
+            }
 
             // Detect khi actor bắt đầu lấy sản phẩm
             if (output.includes('🎯 Added product to scrapedData')) {
                 console.log('🎯 Actor đang lấy sản phẩm...');
-            }
-
-            // Detect khi actor tìm thấy link sản phẩm
-            if (output.includes('Tìm thấy') && output.includes('link sản phẩm')) {
-                console.log('🔗 Actor tìm thấy link sản phẩm...');
-            }
-
-            // Detect khi actor lấy xong dữ liệu sản phẩm
-            if (output.includes('Đã lấy xong dữ liệu sản phẩm')) {
-                console.log('✅ Actor đã lấy xong 1 sản phẩm...');
+                const match = output.match(/Total: (\d+)/);
+                const count = match ? match[1] : 'unknown';
+                log += `\n🎯 [${new Date().toISOString()}] Đã thêm sản phẩm vào scrapedData. Tổng số: ${count}`;
             }
 
             // Detect khi actor sắp lưu file hung.json
-            if (output.includes('About to save data to hung.json')) {
+            if (output.includes('🎯 About to save data to hung.json')) {
                 console.log('💾 Actor sắp lưu data vào hung.json...');
+                log += `\n💾 [${timestamp}] Actor sắp lưu data vào hung.json...`;
             }
 
             // Detect khi actor lưu thành công hung.json
-            if (output.includes('Successfully saved') && output.includes('products to hung.json')) {
+            if (output.includes('✅ Data save attempt completed')) {
                 console.log('🎉 Actor đã lưu thành công data vào hung.json!');
+                log += `\n🎉 [${timestamp}] Actor đã lưu thành công data vào hung.json!`;
             }
 
             // Detect khi actor sắp exit
-            if (output.includes('About to exit actor')) {
+            if (output.includes('🚪 About to exit actor')) {
                 console.log('🚪 Actor sắp kết thúc...');
+                log += `\n🚪 [${timestamp}] Actor sắp kết thúc...`;
+            }
+
+            // Detect khi CheerioCrawler xử lý request
+            if (output.includes('INFO CheerioCrawler:')) {
+                console.log(`📊 [CheerioCrawler] ${output.trim()}`);
+                log += `\n📊 [${timestamp}] CheerioCrawler: ${output.trim()}`;
+            }
+
+            // Detect khi crawler hoàn thành
+            if (output.includes('All requests from the queue have been processed')) {
+                console.log(`🏁 [Complete] ${output.trim()}`);
+                log += `\n🏁 [${timestamp}] Crawler completed: ${output.trim()}`;
+            }
+
+            // Detect thống kê cuối cùng
+            if (output.includes('Final request statistics:')) {
+                console.log(`📈 [Stats] ${output.trim()}`);
+                log += `\n📈 [${timestamp}] Final stats: ${output.trim()}`;
             }
 
             // Detect khi actor đã lưu xong data và sắp hoàn thành
-            if (output.includes('Successfully saved') && output.includes('products to hung.json')) {
+            if (output.includes('✅ Data save attempt completed')) {
                 console.log('🎉 Actor đã lưu thành công data vào hung.json!');
                 // Đợi 2 giây rồi kill process để đảm bảo actor có thời gian exit gracefully
                 setTimeout(() => {
@@ -623,9 +774,9 @@ async function runActorAsync(campaign, runId, customInput = null) {
                 }, 2000);
             }
 
-            // Update campaign log mỗi 5 giây
+            // Update campaign log mỗi 2 giây để đảm bảo không bỏ lỡ log
             const now = Date.now();
-            if (now - lastLogUpdate > 5000) {
+            if (now - lastLogUpdate > 2000) {
                 campaign.result.log = log;
                 campaign.save().catch(err => console.error('Error updating campaign log:', err));
                 lastLogUpdate = now;
@@ -635,7 +786,12 @@ async function runActorAsync(campaign, runId, customInput = null) {
         child.stderr.on('data', (data) => {
             const error = data.toString();
             log += error;
-            console.log(`[Actor Error] ${error.trim()}`);
+            const timestamp = new Date().toISOString();
+            console.log(`[${timestamp}] [Actor Error] ${error.trim()}`);
+            log += `\n⚠️ [${timestamp}] Actor Error: ${error.trim()}`;
+
+            // Debug: Log tất cả error để xem actor có error gì
+            console.log(`🔍 [DEBUG] Raw error from actor: "${error.trim()}"`);
         });
 
         child.on('error', (error) => {
@@ -647,10 +803,12 @@ async function runActorAsync(campaign, runId, customInput = null) {
 
         child.on('exit', (code, signal) => {
             console.log(`🚪 Actor process exited with code: ${code}, signal: ${signal}`);
+            log += `\n🚪 [${new Date().toISOString()}] Actor process exited with code: ${code}, signal: ${signal}`;
 
             // Nếu process bị kill bởi signal, log thông tin
             if (signal) {
                 console.log(`⚠️ Actor process was terminated by signal: ${signal}`);
+                log += `\n⚠️ [${new Date().toISOString()}] Actor process was terminated by signal: ${signal}`;
             }
 
             // Cleanup timeout nếu process exit sớm
@@ -659,8 +817,13 @@ async function runActorAsync(campaign, runId, customInput = null) {
 
         child.on('close', async (code) => {
             clearTimeout(timeout); // Clear timeout when process closes
+            clearInterval(hangDetection); // Clear hang detection when process closes
             const endTime = Date.now();
             const duration = endTime - startTime;
+
+            console.log(`\n🏁 [${new Date().toISOString()}] Actor process closed with code: ${code}`);
+            console.log(`⏱️ Total duration: ${Math.round(duration / 1000)} seconds`);
+            console.log(`📊 Processing campaign results...`);
 
             try {
                 // Đọc kết quả từ file hung.json hoặc dataset
@@ -676,9 +839,11 @@ async function runActorAsync(campaign, runId, customInput = null) {
                         } else {
                             output = [data];
                         }
-                        console.log(`Đọc được ${output.length} sản phẩm từ hung.json`);
+                        console.log(`📖 [${new Date().toISOString()}] Đọc được ${output.length} sản phẩm từ hung.json`);
+                        log += `\n📖 [${new Date().toISOString()}] Đọc được ${output.length} sản phẩm từ hung.json`;
                     } catch (error) {
-                        console.log('Không tìm thấy hung.json trong src/, thử đọc từ dataset');
+                        console.log(`⚠️ [${new Date().toISOString()}] Không tìm thấy hung.json trong src/, thử đọc từ dataset`);
+                        log += `\n⚠️ [${new Date().toISOString()}] Không tìm thấy hung.json trong src/, thử đọc từ dataset`;
 
                         // Fallback: đọc từ dataset
                         const datasetFiles = await fs.readdir(datasetPath);
@@ -695,7 +860,8 @@ async function runActorAsync(campaign, runId, customInput = null) {
                         }
                     }
                 } catch (error) {
-                    console.log('No output files found or error reading output');
+                    console.log(`❌ [${new Date().toISOString()}] No output files found or error reading output: ${error.message}`);
+                    log += `\n❌ [${new Date().toISOString()}] No output files found or error reading output: ${error.message}`;
                 }
 
                 // Bỏ phần lưu dữ liệu vào database
@@ -714,19 +880,50 @@ async function runActorAsync(campaign, runId, customInput = null) {
                 if (code === 0) {
                     campaign.status = 'completed';
                     campaign.result.error = null;
-                    console.log('✅ Campaign completed successfully');
+                    console.log(`✅ [${new Date().toISOString()}] Campaign completed successfully!`);
+                    console.log(`📊 [${new Date().toISOString()}] Total products scraped: ${output.length}`);
+                    console.log(`⏱️ [${new Date().toISOString()}] Total duration: ${Math.round(duration / 1000)} seconds`);
+                    log += `\n✅ [${new Date().toISOString()}] Campaign completed successfully!`;
+                    log += `\n📊 [${new Date().toISOString()}] Total products scraped: ${output.length}`;
+                    log += `\n⏱️ [${new Date().toISOString()}] Total duration: ${Math.round(duration / 1000)} seconds`;
                 } else {
                     campaign.status = 'failed';
                     campaign.result.error = `Actor exited with code ${code}`;
-                    console.log(`❌ Campaign failed with exit code: ${code}`);
+                    console.log(`❌ [${new Date().toISOString()}] Campaign failed with exit code: ${code}`);
+                    log += `\n❌ [${new Date().toISOString()}] Campaign failed with exit code: ${code}`;
+                }
+
+                // Giải phóng port khi campaign hoàn thành
+                const releasedPort = portManager.releasePort(campaign._id.toString());
+                if (releasedPort) {
+                    console.log(`📡 [${new Date().toISOString()}] Released port ${releasedPort} from campaign ${campaign._id}`);
+                    log += `\n📡 [${new Date().toISOString()}] Released port ${releasedPort} from campaign ${campaign._id}`;
                 }
 
                 // Luôn kill process actor sau khi hoàn thành (thành công hoặc thất bại)
                 killActorProcess(child, code === 0 ? 'completed' : 'failed');
 
+                // Tự động cleanup actor processes sau khi hoàn thành
+                if (process.env.DISABLE_AUTO_CLEANUP !== 'true') {
+                    console.log(`🧹 [${new Date().toISOString()}] Auto-cleaning up actor processes after completion...`);
+                    try {
+                        await cleanupActorProcesses();
+                        console.log(`✅ [${new Date().toISOString()}] Actor processes cleanup completed`);
+                        log += `\n🧹 [${new Date().toISOString()}] Auto-cleaned up actor processes after completion`;
+                    } catch (cleanupError) {
+                        console.log(`⚠️ [${new Date().toISOString()}] Cleanup warning: ${cleanupError.message}`);
+                        log += `\n⚠️ [${new Date().toISOString()}] Cleanup warning: ${cleanupError.message}`;
+                    }
+                } else {
+                    console.log(`⚠️ [${new Date().toISOString()}] Auto cleanup disabled by DISABLE_AUTO_CLEANUP=true`);
+                }
+
+                log += `\n💾 [${new Date().toISOString()}] Updating campaign result to database...`;
                 await campaign.updateResult(resultData);
+                log += `\n✅ [${new Date().toISOString()}] Campaign result updated successfully!`;
 
                 // Update run history
+                log += `\n📝 [${new Date().toISOString()}] Updating run history...`;
                 const lastRun = campaign.runHistory[campaign.runHistory.length - 1];
                 lastRun.status = campaign.status;
                 lastRun.endTime = new Date();
@@ -738,9 +935,11 @@ async function runActorAsync(campaign, runId, customInput = null) {
                     lastRun.error = campaign.result.error;
                 }
                 await campaign.save();
+                log += `\n✅ [${new Date().toISOString()}] Run history updated successfully!`;
 
             } catch (error) {
                 console.error('Error updating campaign result:', error);
+                log += `\n❌ [${new Date().toISOString()}] Error updating campaign result: ${error.message}`;
 
                 // Update campaign as failed
                 campaign.status = 'failed';
@@ -753,9 +952,30 @@ async function runActorAsync(campaign, runId, customInput = null) {
 
         child.on('error', async (error) => {
             console.error('Error running actor:', error);
+            log += `\n❌ [${new Date().toISOString()}] Runtime error running actor: ${error.message}`;
+
+            // Giải phóng port khi có lỗi
+            const releasedPort = portManager.releasePort(campaign._id.toString());
+            if (releasedPort) {
+                console.log(`📡 [${new Date().toISOString()}] Released port ${releasedPort} from campaign ${campaign._id} due to error`);
+                log += `\n📡 [${new Date().toISOString()}] Released port ${releasedPort} from campaign ${campaign._id} due to error`;
+            }
 
             // Kill process actor khi có lỗi runtime
             killActorProcess(child, 'runtime_error');
+
+            // Cleanup actor processes khi có lỗi
+            if (process.env.DISABLE_AUTO_CLEANUP !== 'true') {
+                console.log(`🧹 [${new Date().toISOString()}] Auto-cleaning up actor processes after error...`);
+                try {
+                    await cleanupActorProcesses();
+                    console.log(`✅ [${new Date().toISOString()}] Actor processes cleanup completed after error`);
+                } catch (cleanupError) {
+                    console.log(`⚠️ [${new Date().toISOString()}] Cleanup warning after error: ${cleanupError.message}`);
+                }
+            } else {
+                console.log(`⚠️ [${new Date().toISOString()}] Auto cleanup disabled by DISABLE_AUTO_CLEANUP=true`);
+            }
 
             campaign.status = 'failed';
             campaign.result.error = error.message;
@@ -766,10 +986,31 @@ async function runActorAsync(campaign, runId, customInput = null) {
 
     } catch (error) {
         console.error('Error in runActorAsync:', error);
+        log += `\n❌ [${new Date().toISOString()}] Setup error in runActorAsync: ${error.message}`;
+
+        // Giải phóng port khi có lỗi setup
+        const releasedPort = portManager.releasePort(campaign._id.toString());
+        if (releasedPort) {
+            console.log(`📡 [${new Date().toISOString()}] Released port ${releasedPort} from campaign ${campaign._id} due to setup error`);
+            log += `\n📡 [${new Date().toISOString()}] Released port ${releasedPort} from campaign ${campaign._id} due to setup error`;
+        }
 
         // Kill process nếu có lỗi trong quá trình setup
         if (typeof child !== 'undefined' && child) {
             killActorProcess(child, 'setup_error');
+        }
+
+        // Cleanup actor processes khi có lỗi setup
+        if (process.env.DISABLE_AUTO_CLEANUP !== 'true') {
+            console.log(`🧹 [${new Date().toISOString()}] Auto-cleaning up actor processes after setup error...`);
+            try {
+                await cleanupActorProcesses();
+                console.log(`✅ [${new Date().toISOString()}] Actor processes cleanup completed after setup error`);
+            } catch (cleanupError) {
+                console.log(`⚠️ [${new Date().toISOString()}] Cleanup warning after setup error: ${cleanupError.message}`);
+            }
+        } else {
+            console.log(`⚠️ [${new Date().toISOString()}] Auto cleanup disabled by DISABLE_AUTO_CLEANUP=true`);
         }
 
         campaign.status = 'failed';
