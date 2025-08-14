@@ -252,7 +252,69 @@ const cleanupProcesses = async (req, res) => {
     }
 };
 
+// @desc    Run multiple campaigns simultaneously
+// @route   POST /api/campaigns/run-multiple
+// @access  Private
+const runMultipleCampaigns = async (req, res) => {
+    try {
+        const { campaignIds, customInputs } = req.body;
 
+        if (!campaignIds || !Array.isArray(campaignIds) || campaignIds.length === 0) {
+            return res.status(400).json({
+                success: false,
+                error: 'Danh sách campaign IDs là bắt buộc và phải là array'
+            });
+        }
+
+        if (campaignIds.length > 10) {
+            return res.status(400).json({
+                success: false,
+                error: 'Tối đa chỉ được chạy 10 campaigns cùng lúc'
+            });
+        }
+
+        const result = await campaignService.runMultipleCampaigns(campaignIds, customInputs || {});
+        res.json(result);
+    } catch (error) {
+        console.error('Error running multiple campaigns:', error);
+        res.status(500).json({
+            success: false,
+            error: error.message || 'Lỗi server khi chạy nhiều campaigns'
+        });
+    }
+};
+
+// @desc    Get all running campaigns status
+// @route   GET /api/campaigns/running/status
+// @access  Private
+const getRunningCampaigns = async (req, res) => {
+    try {
+        const result = await campaignService.getRunningCampaigns();
+        res.json(result);
+    } catch (error) {
+        console.error('Error getting running campaigns:', error);
+        res.status(500).json({
+            success: false,
+            error: error.message || 'Lỗi server khi lấy trạng thái campaigns đang chạy'
+        });
+    }
+};
+
+// @desc    Stop all running campaigns
+// @route   POST /api/campaigns/running/stop-all
+// @access  Private
+const stopAllRunningCampaigns = async (req, res) => {
+    try {
+        const result = await campaignService.stopAllRunningCampaigns();
+        res.json(result);
+    } catch (error) {
+        console.error('Error stopping all running campaigns:', error);
+        res.status(500).json({
+            success: false,
+            error: error.message || 'Lỗi server khi dừng tất cả campaigns'
+        });
+    }
+};
 
 module.exports = {
     getAllCampaigns,
@@ -265,5 +327,8 @@ module.exports = {
     cancelCampaign,
     resetCampaign,
     deleteCampaign,
-    cleanupProcesses
+    cleanupProcesses,
+    runMultipleCampaigns,
+    getRunningCampaigns,
+    stopAllRunningCampaigns
 };

@@ -1032,12 +1032,166 @@ async function runActorAsync(campaign, runId, customInput = null, campaignPort =
     }
 }
 
+// Run multiple campaigns simultaneously
+const runMultipleCampaigns = async (campaignIds, customInputs = {}) => {
+    const results = [];
+    const errors = [];
+
+    console.log(`🚀 Starting ${campaignIds.length} campaigns simultaneously...`);
+
+    // Validate all campaigns first
+    for (const campaignId of campaignIds) {
+        try {
+            const campaign = await Campaign.findById(campaignId).populate('actorId');
+            if (!campaign) {
+                errors.push({
+                    campaignId,
+                    error: 'Không tìm thấy campaign'
+                });
+                continue;
+            }
+
+            if (campaign.status === 'running') {
+                errors.push({
+                    campaignId,
+                    error: 'Campaign đang chạy'
+                });
+                continue;
+            }
+        } catch (error) {
+            errors.push({
+                campaignId,
+                error: error.message
+            });
+        }
+    }
+
+    // If there are validation errors, return them
+    if (errors.length > 0) {
+        return {
+            success: false,
+            message: 'Một số campaign không thể chạy',
+            errors,
+            results: []
+        };
+    }
+
+    // Run all campaigns in parallel
+    const runPromises = campaignIds.map(async (campaignId) => {
+        try {
+            const customInput = customInputs[campaignId] || null;
+            const result = await runCampaign(campaignId, customInput);
+            return {
+                campaignId,
+                success: true,
+                data: result
+            };
+        } catch (error) {
+            return {
+                campaignId,
+                success: false,
+                error: error.message
+            };
+        }
+    });
+
+    const runResults = await Promise.all(runPromises);
+
+    // Separate successful and failed runs
+    const successfulRuns = runResults.filter(r => r.success);
+    const failedRuns = runResults.filter(r => !r.success);
+
+    console.log(`✅ Successfully started ${successfulRuns.length} campaigns`);
+    if (failedRuns.length > 0) {
+        console.log(`❌ Failed to start ${failedRuns.length} campaigns`);
+    }
+
+    return {
+        success: true,
+        message: `Đã khởi chạy ${successfulRuns.length}/${campaignIds.length} campaigns`,
+        totalCampaigns: campaignIds.length,
+        successfulRuns: successfulRuns.length,
+        failedRuns: failedRuns.length,
+        results: runResults
+    };
+};
+
+// Get running campaigns status
+const getRunningCampaigns = async () => {
+    try {
+        const runningCampaigns = await Campaign.find({ status: 'running' })
+            .populate('actorId', 'name type')
+            .populate('createdBy', 'name email')
+            .sort({ 'result.startTime': -1 });
+
+        const campaignsWithPorts = runningCampaigns.map(campaign => {
+            const port = portManager.getCampaignPort(campaign._id.toString());
+            return {
+                ...campaign.toObject(),
+                port: port || null
+            };
+        });
+
+        return {
+            success: true,
+            data: {
+                totalRunning: campaignsWithPorts.length,
+                campaigns: campaignsWithPorts
+            }
+        };
+    } catch (error) {
+        return {
+            success: false,
+            error: error.message
+        };
+    }
+};
+
+// Stop all running campaigns
+const stopAllRunningCampaigns = async () => {
+    try {
+        const runningCampaigns = await Campaign.find({ status: 'running' });
+        const results = [];
+
+        for (const campaign of runningCampaigns) {
+            try {
+                await cancelCampaign(campaign._id);
+                results.push({
+                    campaignId: campaign._id,
+                    success: true,
+                    message: 'Campaign đã được hủy'
+                });
+            } catch (error) {
+                results.push({
+                    campaignId: campaign._id,
+                    success: false,
+                    error: error.message
+                });
+            }
+        }
+
+        return {
+            success: true,
+            message: `Đã hủy ${results.filter(r => r.success).length}/${runningCampaigns.length} campaigns`,
+            results
+        };
+    } catch (error) {
+        return {
+            success: false,
+            error: error.message
+        };
+    }
+};
+
 module.exports = {
     getAllCampaigns,
     getCampaignById,
     createCampaign,
     updateCampaign,
     runCampaign,
+    runMultipleCampaigns,
+    getRunningCampaigns,
+    stopAllRunningCampaigns,
     getCampaignStatus,
     cancelCampaign,
     resetCampaign,

@@ -40,6 +40,9 @@ const campaignValidation = [
 // Get all campaigns
 router.get('/', auth, campaignController.getAllCampaigns);
 
+// Get all running campaigns (phải đặt trước /:id để tránh conflict)
+router.get('/running/status', auth, campaignController.getRunningCampaigns);
+
 // Get campaigns by actor (phải đặt trước /:id để tránh conflict)
 router.get('/actor/:actorId', auth, campaignController.getCampaignsByActor);
 
@@ -69,5 +72,14 @@ router.delete('/:id', auth, authorize('admin'), campaignController.deleteCampaig
 
 // Emergency cleanup all node processes
 router.post('/cleanup', auth, authorize('admin'), campaignController.cleanupProcesses);
+
+// Run multiple campaigns simultaneously
+router.post('/run-multiple', auth, authorize('admin', 'editor'), campaignController.runMultipleCampaigns);
+
+// Get all running campaigns
+router.get('/running/status', auth, campaignController.getRunningCampaigns);
+
+// Stop all running campaigns
+router.post('/running/stop-all', auth, authorize('admin', 'editor'), campaignController.stopAllRunningCampaigns);
 
 module.exports = router;
