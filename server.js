@@ -17,6 +17,8 @@ const crawlDataRoutes = require('./routes/crawlData');
 const logRoutes = require('./routes/logs');
 const dashboardRoutes = require('./routes/dashboard');
 const portRoutes = require('./routes/ports');
+const templateRoutes = require('./routes/templates');
+const platformRoutes = require('./routes/platforms');
 
 const errorHandler = require('./middleware/errorHandler');
 const logger = require('./utils/logger');
@@ -72,6 +74,8 @@ app.use('/api/crawl-data', crawlDataRoutes);
 app.use('/api/logs', logRoutes);
 app.use('/api/dashboard', dashboardRoutes);
 app.use('/api/ports', portRoutes);
+app.use('/api/templates', templateRoutes);
+app.use('/api/platforms', platformRoutes);
 
 // 404 handler
 app.use('*', (req, res) => {
