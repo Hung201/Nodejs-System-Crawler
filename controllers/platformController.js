@@ -6,15 +6,26 @@ const getAllPlatforms = async (req, res) => {
         const filters = {
             type: req.query.type,
             isActive: req.query.isActive === 'true' ? true : req.query.isActive === 'false' ? false : undefined,
-            search: req.query.search
+            search: req.query.search,
+            includeStats: req.query.includeStats === 'true'
         };
 
-        const platforms = await platformService.getAllPlatforms(req.user.userId, filters);
+        const result = await platformService.getAllPlatforms(req.user.userId, filters);
 
-        res.json({
-            success: true,
-            data: platforms
-        });
+        // Nếu có thống kê, trả về cả platforms và statistics
+        if (result.statistics) {
+            res.json({
+                success: true,
+                data: result.platforms,
+                statistics: result.statistics
+            });
+        } else {
+            // Trả về như cũ nếu không có thống kê
+            res.json({
+                success: true,
+                data: result
+            });
+        }
     } catch (error) {
         res.status(500).json({
             success: false,
