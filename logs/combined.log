@@ -8507,3 +8507,33 @@
 {"level":"info","message":"::1 - - [15/Aug/2025:07:49:01 +0000] \"GET /api/platforms? HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-15 14:49:01"}
 {"level":"info","message":"::1 - - [15/Aug/2025:07:49:01 +0000] \"GET /api/platforms?includeStats=true HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-15 14:49:01"}
 {"level":"info","message":"::1 - - [15/Aug/2025:07:49:02 +0000] \"GET /api/platforms/types/available HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-15 14:49:02"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-15 15:31:09"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-15 15:31:09"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-15 15:31:09"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-15 15:32:45"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-15 15:32:45"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-15 15:32:45"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-15 15:32:46"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-15 15:32:46"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-15 15:32:46"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-15 15:34:37"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-15 15:34:37"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-15 15:34:37"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-15 15:36:59"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-15 15:36:59"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-15 15:36:59"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-15 15:37:00"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-15 15:37:00"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-15 15:37:00"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-15 15:37:29"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-15 15:37:29"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-15 15:37:29"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-15 15:37:31"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-15 15:37:31"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-15 15:37:31"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-15 15:38:16"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-15 15:38:16"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-15 15:38:16"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-15 15:38:22"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-15 15:38:22"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-15 15:38:22"}
