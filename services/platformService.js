@@ -1,8 +1,8 @@
 const Platform = require('../models/Platform');
 
-// Get all platforms for a user
+// Get all platforms for a user with statistics
 const getAllPlatforms = async (userId, filters = {}) => {
-    const { type, isActive, search } = filters;
+    const { type, isActive, search, includeStats = false } = filters;
 
     // Build filter
     const filter = { userId };
@@ -19,7 +19,23 @@ const getAllPlatforms = async (userId, filters = {}) => {
         .sort({ createdAt: -1 })
         .lean();
 
-    return platforms;
+    // Nếu không yêu cầu thống kê, chỉ trả về platforms
+    if (!includeStats) {
+        return platforms;
+    }
+
+    // Tính toán thống kê
+    const stats = {
+        totalPlatforms: platforms.length,
+        activePlatforms: platforms.filter(p => p.isActive).length,
+        successfulConnections: platforms.filter(p => p.testStatus === 'success').length,
+        failedConnections: platforms.filter(p => p.testStatus === 'error').length
+    };
+
+    return {
+        platforms,
+        statistics: stats
+    };
 };
 
 // Get platform by ID
