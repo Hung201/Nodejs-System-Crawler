@@ -1,19 +1,28 @@
 const express = require('express');
 const { auth } = require('../middleware/auth');
+const {
+  getStats,
+  getChartData,
+  getDataStatus,
+  getRecentData,
+  getDetailedStats
+} = require('../controllers/dashboardController');
 
 const router = express.Router();
 
-// Placeholder routes - will be implemented later
-router.get('/stats', auth, (req, res) => {
-  res.json({ message: 'Dashboard stats - to be implemented' });
-});
+// Lấy thống kê tổng quan dashboard
+router.get('/stats', auth, getStats);
 
-router.get('/recent-data', auth, (req, res) => {
-  res.json({ message: 'Recent data - to be implemented' });
-});
+// Lấy dữ liệu biểu đồ (7 ngày qua)
+router.get('/chart-data', auth, getChartData);
 
-router.get('/chart-data', auth, (req, res) => {
-  res.json({ message: 'Chart data - to be implemented' });
-});
+// Lấy trạng thái dữ liệu
+router.get('/data-status', auth, getDataStatus);
+
+// Lấy dữ liệu gần đây
+router.get('/recent-data', auth, getRecentData);
+
+// Lấy thống kê chi tiết
+router.get('/detailed-stats', auth, getDetailedStats);
 
 module.exports = router; 
