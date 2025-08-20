@@ -8802,3 +8802,666 @@
 {"level":"info","message":"::1 - - [18/Aug/2025:08:18:10 +0000] \"GET /api/dashboard/chart-data?period=7d HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:18:10"}
 {"level":"info","message":"::1 - - [18/Aug/2025:08:18:10 +0000] \"GET /api/dashboard/stats HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:18:10"}
 {"level":"info","message":"::1 - - [18/Aug/2025:08:18:10 +0000] \"GET /api/dashboard/detailed-stats HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:18:10"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:20:46 +0000] \"GET /api/platforms? HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:20:46"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:20:46 +0000] \"GET /api/platforms?includeStats=true HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:20:46"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:20:47 +0000] \"GET /api/platforms/types/available HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:20:47"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:22:30 +0000] \"GET /api/logs?search=&status=&actor= HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:22:30"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:26:46 +0000] \"POST /api/auth/login HTTP/1.1\" 200 441 \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:26:46"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:26:46 +0000] \"GET /api/dashboard/chart-data?period=7d HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:26:46"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:26:46 +0000] \"GET /api/dashboard/stats HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:26:46"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:26:46 +0000] \"GET /api/dashboard/detailed-stats HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:26:46"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:26:50 +0000] \"GET /api/data?search=&status=&type=&source=&page=1&limit=20 HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:26:50"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:26:54 +0000] \"GET /api/dashboard/chart-data?period=7d HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:26:54"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:26:54 +0000] \"GET /api/dashboard/detailed-stats HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:26:54"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:26:54 +0000] \"GET /api/dashboard/stats HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:26:54"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:26:58 +0000] \"GET /api/logs?search=&status=&actor= HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:26:58"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:27:02 +0000] \"GET /api/dashboard/chart-data?period=7d HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:27:02"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:27:02 +0000] \"GET /api/dashboard/detailed-stats HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:27:02"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:27:02 +0000] \"GET /api/dashboard/stats HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:27:02"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:27:10 +0000] \"GET /api/platforms? HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:27:10"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:27:10 +0000] \"GET /api/platforms?includeStats=true HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:27:10"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:27:11 +0000] \"GET /api/platforms/types/available HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:27:11"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:27:13 +0000] \"GET /api/dashboard/chart-data?period=7d HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:27:13"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:27:13 +0000] \"GET /api/dashboard/detailed-stats HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:27:13"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:27:13 +0000] \"GET /api/dashboard/stats HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:27:13"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:27:16 +0000] \"GET /api/platforms? HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:27:16"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:27:17 +0000] \"GET /api/platforms?includeStats=true HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:27:17"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:27:18 +0000] \"GET /api/platforms/types/available HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:27:18"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:27:25 +0000] \"GET /api/dashboard/chart-data?period=7d HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:27:25"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:27:25 +0000] \"GET /api/dashboard/detailed-stats HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:27:25"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:27:25 +0000] \"GET /api/dashboard/stats HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:27:25"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:29:13 +0000] \"GET /api/dashboard/chart-data?period=7d HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:29:13"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:29:13 +0000] \"GET /api/dashboard/stats HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:29:13"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:29:13 +0000] \"GET /api/dashboard/detailed-stats HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:29:13"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:29:25 +0000] \"GET /api/dashboard/chart-data?period=7d HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:29:25"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:29:25 +0000] \"GET /api/dashboard/stats HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:29:25"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:29:25 +0000] \"GET /api/dashboard/detailed-stats HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:29:25"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:29:51 +0000] \"GET /api/dashboard/chart-data?period=7d HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:29:51"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:29:51 +0000] \"GET /api/dashboard/stats HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:29:51"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:29:51 +0000] \"GET /api/dashboard/detailed-stats HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:29:51"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:30:21 +0000] \"GET /api/data?search=&status=&type=&source=&page=1&limit=20 HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:30:21"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:30:22 +0000] \"GET /api/dashboard/chart-data?period=7d HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:30:22"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:30:22 +0000] \"GET /api/dashboard/stats HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:30:22"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:30:22 +0000] \"GET /api/dashboard/detailed-stats HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:30:22"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:30:25 +0000] \"GET /api/data?search=&status=&type=&source=&page=1&limit=20 HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:30:25"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:30:27 +0000] \"GET /api/dashboard/chart-data?period=7d HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:30:27"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:30:27 +0000] \"GET /api/dashboard/stats HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:30:27"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:30:27 +0000] \"GET /api/dashboard/detailed-stats HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:30:27"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:30:29 +0000] \"GET /api/dashboard/chart-data?period=7d HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:30:29"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:30:29 +0000] \"GET /api/dashboard/stats HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:30:29"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:30:29 +0000] \"GET /api/dashboard/detailed-stats HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:30:29"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:30:46 +0000] \"POST /api/auth/login HTTP/1.1\" 200 441 \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:30:46"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:30:46 +0000] \"GET /api/dashboard/chart-data?period=7d HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:30:46"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:30:46 +0000] \"GET /api/dashboard/detailed-stats HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:30:46"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:30:46 +0000] \"GET /api/dashboard/stats HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:30:46"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:30:50 +0000] \"GET /api/data?search=&status=&type=&source=&page=1&limit=20 HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:30:50"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:30:51 +0000] \"GET /api/dashboard/chart-data?period=7d HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:30:51"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:30:51 +0000] \"GET /api/dashboard/stats HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:30:51"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:30:51 +0000] \"GET /api/dashboard/detailed-stats HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:30:51"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:30:52 +0000] \"GET /api/logs?search=&status=&actor= HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:30:52"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:30:53 +0000] \"GET /api/dashboard/chart-data?period=7d HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:30:53"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:30:53 +0000] \"GET /api/dashboard/detailed-stats HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:30:53"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:30:53 +0000] \"GET /api/dashboard/stats HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:30:53"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:30:56 +0000] \"GET /api/campaigns HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:30:56"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:30:57 +0000] \"GET /api/campaigns HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:30:57"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:30:57 +0000] \"GET /api/platforms? HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:30:57"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:30:58 +0000] \"GET /api/platforms?includeStats=true HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:30:58"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:30:59 +0000] \"GET /api/dashboard/chart-data?period=7d HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:30:59"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:30:59 +0000] \"GET /api/dashboard/stats HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:30:59"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:30:59 +0000] \"GET /api/dashboard/detailed-stats HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:30:59"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:31:07 +0000] \"POST /api/auth/login HTTP/1.1\" 200 468 \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:31:07"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:31:07 +0000] \"GET /api/dashboard/chart-data?period=7d HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:31:07"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:31:07 +0000] \"GET /api/dashboard/detailed-stats HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:31:07"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:31:07 +0000] \"GET /api/dashboard/stats HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:31:07"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:31:20 +0000] \"GET /api/logs?search=&status=&actor= HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:31:20"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:43:43 +0000] \"GET /api/actors?search=&status= HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:43:43"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:43:48 +0000] \"GET /api/campaigns HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:43:48"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:43:48 +0000] \"GET /api/campaigns HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:43:48"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:43:55 +0000] \"GET /api/logs?search=&status=&actor= HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:43:55"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:43:59 +0000] \"GET /api/dashboard/chart-data?period=7d HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:43:59"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:43:59 +0000] \"GET /api/dashboard/stats HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:43:59"}
+{"level":"info","message":"::1 - - [18/Aug/2025:08:43:59 +0000] \"GET /api/dashboard/detailed-stats HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-18 15:43:59"}
+{"level":"info","message":"::1 - - [19/Aug/2025:01:33:38 +0000] \"GET /api/actors?search=&status= HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-19 08:33:38"}
+{"level":"info","message":"::1 - - [19/Aug/2025:01:43:22 +0000] \"GET /api/actors?search=&status= HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-19 08:43:22"}
+{"level":"info","message":"::1 - - [19/Aug/2025:01:43:54 +0000] \"GET /api/actors?search=&status= HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-19 08:43:54"}
+{"level":"info","message":"::1 - - [19/Aug/2025:01:44:00 +0000] \"GET /api/actors?search=&status= HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-19 08:44:00"}
+{"level":"info","message":"::1 - - [19/Aug/2025:01:49:47 +0000] \"GET /api/actors?search=&status= HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-19 08:49:47"}
+{"level":"info","message":"::1 - - [19/Aug/2025:01:51:00 +0000] \"GET /api/actors?search=&status= HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-19 08:51:00"}
+{"level":"info","message":"::1 - - [19/Aug/2025:01:52:43 +0000] \"GET /api/actors?search=&status= HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-19 08:52:43"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-19 08:56:56"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-19 08:56:56"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-19 08:56:56"}
+{"level":"info","message":"::1 - - [19/Aug/2025:01:58:46 +0000] \"GET /api/actors?search=&status= HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-19 08:58:46"}
+{"level":"info","message":"::1 - - [19/Aug/2025:02:05:16 +0000] \"GET /api/actors?search=&status= HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-19 09:05:16"}
+{"level":"info","message":"::1 - - [19/Aug/2025:02:06:48 +0000] \"GET /api/actors?search=&status= HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-19 09:06:48"}
+{"level":"info","message":"::1 - - [19/Aug/2025:02:06:49 +0000] \"GET /api/actors/689464ac10595b979c15002a HTTP/1.1\" 200 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-19 09:06:49"}
+{"level":"info","message":"::1 - - [19/Aug/2025:02:06:55 +0000] \"GET /api/actors?search=&status= HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-19 09:06:55"}
+{"level":"info","message":"::1 - - [19/Aug/2025:02:12:43 +0000] \"GET /api/actors?search=&status= HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-19 09:12:43"}
+{"level":"info","message":"::1 - - [19/Aug/2025:02:14:11 +0000] \"GET /api/actors?search=&status= HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-19 09:14:11"}
+{"level":"info","message":"::1 - - [19/Aug/2025:02:16:15 +0000] \"GET /api/actors?search=&status= HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-19 09:16:15"}
+{"level":"info","message":"::1 - - [19/Aug/2025:02:17:00 +0000] \"GET /api/actors?search=&status= HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-19 09:17:00"}
+{"level":"info","message":"::1 - - [19/Aug/2025:02:17:05 +0000] \"GET /api/actors?search=&status= HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-19 09:17:05"}
+{"level":"info","message":"::1 - - [19/Aug/2025:02:17:10 +0000] \"GET /api/actors?search=&status= HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-19 09:17:10"}
+{"level":"info","message":"::1 - - [19/Aug/2025:06:04:55 +0000] \"GET /api/actors?search=&status= HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-19 13:04:55"}
+{"level":"info","message":"::1 - - [19/Aug/2025:06:08:00 +0000] \"GET /api/actors?search=&status= HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-19 13:08:00"}
+{"level":"info","message":"::1 - - [19/Aug/2025:06:08:07 +0000] \"GET /api/actors?search=&status= HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-19 13:08:07"}
+{"level":"info","message":"::1 - - [19/Aug/2025:06:08:23 +0000] \"GET /api/actors?search=&status= HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-19 13:08:23"}
+{"level":"info","message":"::1 - - [19/Aug/2025:06:08:43 +0000] \"GET /api/actors?search=&status= HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-19 13:08:43"}
+{"level":"info","message":"::1 - - [19/Aug/2025:06:08:47 +0000] \"GET /api/actors?search=&status= HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-19 13:08:47"}
+{"level":"info","message":"::1 - - [19/Aug/2025:06:10:21 +0000] \"GET /api/actors?search=&status= HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-19 13:10:21"}
+{"level":"info","message":"::1 - - [19/Aug/2025:06:10:24 +0000] \"GET /api/platforms? HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-19 13:10:24"}
+{"level":"info","message":"::1 - - [19/Aug/2025:06:10:24 +0000] \"GET /api/platforms?includeStats=true HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-19 13:10:24"}
+{"level":"info","message":"::1 - - [19/Aug/2025:06:10:25 +0000] \"GET /api/platforms/types/available HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-19 13:10:25"}
+{"level":"info","message":"::1 - - [19/Aug/2025:06:15:30 +0000] \"GET /api/platforms? HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-19 13:15:30"}
+{"level":"info","message":"::1 - - [19/Aug/2025:06:15:30 +0000] \"GET /api/platforms?includeStats=true HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-19 13:15:30"}
+{"level":"info","message":"::1 - - [19/Aug/2025:06:15:31 +0000] \"GET /api/platforms/types/available HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-19 13:15:31"}
+{"level":"info","message":"::1 - - [19/Aug/2025:06:23:02 +0000] \"GET /api/actors?search=&status= HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-19 13:23:02"}
+{"level":"info","message":"::1 - - [19/Aug/2025:06:23:23 +0000] \"GET /api/actors?search=&status= HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-19 13:23:23"}
+{"level":"info","message":"::1 - - [19/Aug/2025:06:24:06 +0000] \"GET /api/actors?search=&status= HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-19 13:24:06"}
+{"level":"info","message":"::1 - - [19/Aug/2025:06:24:07 +0000] \"GET /api/actors?search=&status= HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-19 13:24:07"}
+{"level":"info","message":"::1 - - [19/Aug/2025:06:24:39 +0000] \"GET /api/actors?search=&status= HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-19 13:24:39"}
+{"level":"info","message":"::1 - - [19/Aug/2025:06:24:43 +0000] \"GET /api/actors?search=&status= HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-19 13:24:43"}
+{"level":"info","message":"::1 - - [19/Aug/2025:06:26:10 +0000] \"GET /api/actors?search=&status= HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-19 13:26:10"}
+{"level":"info","message":"::1 - - [19/Aug/2025:06:26:14 +0000] \"GET /api/actors?search=&status= HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-19 13:26:14"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-19 13:44:20"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-19 13:44:20"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-19 13:44:20"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-19 13:44:27"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-19 13:44:27"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-19 13:44:27"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-19 13:45:24"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-19 13:45:24"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-19 13:45:24"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-19 13:45:36"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-19 13:45:36"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-19 13:45:36"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-19 13:46:45"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-19 13:46:45"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-19 13:46:45"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-19 13:46:46"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-19 13:46:46"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-19 13:46:46"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-19 13:47:02"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-19 13:47:02"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-19 13:47:02"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-19 13:47:54"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-19 13:47:54"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-19 13:47:54"}
+{"level":"info","message":"::1 - - [19/Aug/2025:06:49:16 +0000] \"GET /api/actors?search=&status= HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-19 13:49:16"}
+{"level":"info","message":"::1 - - [19/Aug/2025:06:49:19 +0000] \"GET /api/actors?search=&status= HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-19 13:49:19"}
+{"level":"info","message":"::1 - - [19/Aug/2025:06:54:36 +0000] \"GET /api/actors?search=&status= HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-19 13:54:36"}
+{"level":"info","message":"::1 - - [19/Aug/2025:06:56:24 +0000] \"GET /api/actors?search=&status= HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-19 13:56:24"}
+{"level":"info","message":"::1 - - [19/Aug/2025:06:57:38 +0000] \"GET /api/actors?search=&status=&type= HTTP/1.1\" 200 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-19 13:57:38"}
+{"level":"info","message":"::1 - - [19/Aug/2025:06:58:28 +0000] \"GET /api/actors?search=&status=&type= HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-19 13:58:28"}
+{"level":"info","message":"::1 - - [19/Aug/2025:06:58:30 +0000] \"GET /api/actors?search=&status=&type= HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-19 13:58:30"}
+{"level":"info","message":"::1 - - [19/Aug/2025:06:58:48 +0000] \"GET /api/actors?search=&status=&type= HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-19 13:58:48"}
+{"level":"info","message":"::1 - - [19/Aug/2025:06:58:52 +0000] \"GET /api/actors?search=&status=&type= HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-19 13:58:52"}
+{"level":"info","message":"::1 - - [19/Aug/2025:07:00:17 +0000] \"GET /api/actors?search=&status=&type= HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-19 14:00:17"}
+{"level":"info","message":"::1 - - [19/Aug/2025:07:00:26 +0000] \"POST /api/actors HTTP/1.1\" 400 135 \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-19 14:00:26"}
+{"level":"info","message":"::1 - - [19/Aug/2025:07:00:34 +0000] \"GET /api/actors?search=&status=&type= HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-19 14:00:34"}
+{"level":"info","message":"::1 - - [19/Aug/2025:07:03:19 +0000] \"GET /api/actors?search=&status=&type= HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-19 14:03:19"}
+{"level":"info","message":"::1 - - [19/Aug/2025:07:03:22 +0000] \"GET /api/platforms? HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-19 14:03:22"}
+{"level":"info","message":"::1 - - [19/Aug/2025:07:03:23 +0000] \"GET /api/platforms?includeStats=true HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-19 14:03:23"}
+{"level":"info","message":"::1 - - [19/Aug/2025:07:03:24 +0000] \"GET /api/platforms/types/available HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-19 14:03:24"}
+{"level":"info","message":"::1 - - [19/Aug/2025:07:03:29 +0000] \"GET /api/actors?search=&status=&type= HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-19 14:03:29"}
+{"level":"info","message":"::1 - - [19/Aug/2025:07:03:38 +0000] \"GET /api/actors?search=a&status=&type= HTTP/1.1\" 200 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-19 14:03:38"}
+{"level":"info","message":"::1 - - [19/Aug/2025:07:03:41 +0000] \"GET /api/actors?search=&status=&type= HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-19 14:03:41"}
+{"level":"info","message":"::1 - - [19/Aug/2025:07:03:54 +0000] \"GET /api/actors?search=&status= HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-19 14:03:54"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-19 14:04:35"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-19 14:04:35"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-19 14:04:35"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-19 14:04:39"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-19 14:04:39"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-19 14:04:39"}
+{"level":"info","message":"::1 - - [19/Aug/2025:07:04:40 +0000] \"GET /api/actors?search=&status= HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-19 14:04:40"}
+{"level":"info","message":"::1 - - [20/Aug/2025:01:28:42 +0000] \"GET /api/actors?search=&status= HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-20 08:28:42"}
+{"level":"info","message":"::1 - - [20/Aug/2025:01:28:45 +0000] \"GET /api/campaigns HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-20 08:28:45"}
+{"level":"info","message":"::1 - - [20/Aug/2025:01:28:45 +0000] \"GET /api/campaigns HTTP/1.1\" 304 - \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36\"","timestamp":"2025-08-20 08:28:45"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 08:36:58"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 08:36:58"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 08:36:58"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 08:37:33"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 08:37:33"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 08:37:33"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 08:38:46"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 08:38:46"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 08:38:46"}
+{"level":"info","message":"::1 - - [20/Aug/2025:01:41:23 +0000] \"POST /api/actors/upload HTTP/1.1\" 404 27 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-20 08:41:23"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 08:43:22"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 08:43:22"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 08:43:22"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 08:43:25"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 08:43:25"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 08:43:25"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 08:43:26"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 08:43:26"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 08:43:26"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 08:43:27"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 08:43:27"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 08:43:27"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 08:45:44"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 08:45:44"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 08:45:44"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 08:45:45"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 08:45:45"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 08:45:45"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 08:46:26"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 08:46:26"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 08:46:26"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 08:46:28"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 08:46:28"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 08:46:28"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 08:46:35"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 08:46:35"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 08:46:35"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 08:47:50"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 08:47:50"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 08:47:50"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 08:48:05"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 08:48:05"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 08:48:05"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 08:48:26"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 08:48:26"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 08:48:26"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 08:48:31"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 08:48:31"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 08:48:31"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 08:48:36"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 08:48:36"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 08:48:36"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 08:49:01"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 08:49:01"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 08:49:01"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 08:49:02"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 08:49:02"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 08:49:02"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 08:49:09"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 08:49:09"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 08:49:09"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 08:49:10"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 08:49:10"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 08:49:10"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 08:53:04"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 08:53:04"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 08:53:04"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 08:53:08"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 08:53:08"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 08:53:08"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 08:55:02"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 08:55:02"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 08:55:02"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 08:55:13"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 08:55:13"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 08:55:13"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 08:55:51"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 08:55:51"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 08:55:51"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 08:56:01"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 08:56:01"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 08:56:01"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 08:59:28"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 08:59:28"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 08:59:28"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:00:06"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:00:06"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:00:06"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:02:10"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:02:10"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:02:10"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:02:14"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:02:14"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:02:14"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:02:36"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:02:36"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:02:36"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:02:40"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:02:40"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:02:40"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:02:47"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:02:47"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:02:47"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:10:45"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:10:45"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:10:45"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:10:58"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:10:58"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:10:58"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:11:16"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:11:16"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:11:16"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:11:34"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:11:34"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:11:34"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:11:41"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:11:41"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:11:41"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:12:28"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:12:28"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:12:28"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:12:29"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:12:29"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:12:29"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:13:32"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:13:32"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:13:32"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:15:09"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:15:09"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:15:09"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:15:13"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:15:13"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:15:13"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:16:23"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:16:23"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:16:23"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:16:30"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:16:30"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:16:30"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:16:31"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:16:31"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:16:31"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:16:51"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:16:51"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:16:51"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:16:52"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:16:52"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:16:52"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:17:12"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:17:12"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:17:12"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:17:14"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:17:14"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:17:14"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:17:20"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:17:20"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:17:20"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:17:21"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:17:21"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:17:21"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:18:06"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:18:06"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:18:06"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:18:07"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:18:07"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:18:07"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:18:20"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:18:20"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:18:20"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:19:27"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:19:27"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:19:27"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:20:11"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:20:11"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:20:11"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:20:34"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:20:34"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:20:34"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:20:41"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:20:41"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:20:41"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:20:52"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:20:52"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:20:52"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:20:53"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:20:53"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:20:53"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:21:33"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:21:33"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:21:33"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:21:34"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:21:34"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:21:34"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:21:44"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:21:44"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:21:44"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:23:25"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:23:25"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:23:25"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:23:26"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:23:26"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:23:26"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:23:39"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:23:39"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:23:39"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:24:12 +0000] \"POST /api/actors/from-folder HTTP/1.1\" 401 45 \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-20 09:24:12"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:24:29 +0000] \"GET /api/platforms?includeStats=true HTTP/1.1\" 200 537 \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-20 09:24:29"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:24:39 +0000] \"POST /api/actors/from-folder HTTP/1.1\" 500 64 \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-20 09:24:39"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:27:50"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:27:50"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:27:50"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:27:57"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:27:57"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:27:58"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:28:05"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:28:05"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:28:05"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:28:13"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:28:13"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:28:13"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:28:19"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:28:19"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:28:19"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:28:25"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:28:25"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:28:25"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:28:31"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:28:31"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:28:31"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:28:37"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:28:37"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:28:37"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:28:43"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:28:43"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:28:43"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:29:27"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:29:27"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:29:27"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:29:28"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:29:28"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:29:28"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:29:41"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:29:41"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:29:41"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:32:05 +0000] \"POST /api/actors/from-folder HTTP/1.1\" 500 174 \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-20 09:32:05"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:32:45"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:32:45"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:32:45"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:33:06"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:33:06"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:33:06"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:33:23"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:33:23"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:33:23"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:33:30"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:33:30"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:33:30"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:33:36"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:33:36"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:33:36"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:33:43"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:33:43"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:33:43"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:33:49"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:33:49"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:33:49"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:33:56"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:33:56"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:33:56"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:34:03"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:34:03"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:34:03"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:35:17"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:35:17"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:35:17"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:35:26"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:35:26"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:35:26"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:35:27"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:35:27"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:35:27"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:35:45"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:35:45"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:35:45"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:36:34 +0000] \"POST /api/actors/from-folder HTTP/1.1\" 200 227 \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-20 09:36:34"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:37:50"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:37:50"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:37:50"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:38:36"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:38:36"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:38:36"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:38:37"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:38:37"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:38:37"}
+{"level":"error","message":"Auth middleware error: invalid signature","name":"JsonWebTokenError","stack":"JsonWebTokenError: invalid signature\n    at D:\\system-craw\\backend\\node_modules\\jsonwebtoken\\verify.js:171:19\n    at getSecret (D:\\system-craw\\backend\\node_modules\\jsonwebtoken\\verify.js:97:14)\n    at module.exports [as verify] (D:\\system-craw\\backend\\node_modules\\jsonwebtoken\\verify.js:101:10)\n    at auth (D:\\system-craw\\backend\\middleware\\auth.js:18:25)\n    at Layer.handle [as handle_request] (D:\\system-craw\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (D:\\system-craw\\backend\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at Route.dispatch (D:\\system-craw\\backend\\node_modules\\express\\lib\\router\\route.js:114:3)\n    at Layer.handle [as handle_request] (D:\\system-craw\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at D:\\system-craw\\backend\\node_modules\\express\\lib\\router\\index.js:284:15\n    at param (D:\\system-craw\\backend\\node_modules\\express\\lib\\router\\index.js:365:14)","timestamp":"2025-08-20 09:39:04"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:39:04 +0000] \"POST /api/actors/68a534b2ab88595f6f4007b5/run HTTP/1.1\" 401 26 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-20 09:39:04"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:39:09"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:39:09"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:39:09"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:39:10"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:39:10"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:39:10"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:39:22 +0000] \"POST /api/auth/login HTTP/1.1\" 200 438 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-20 09:39:22"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:39:28"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:39:28"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:39:28"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:39:39"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:39:39"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:39:39"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:40:01"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:40:01"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:40:01"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:40:44 +0000] \"POST /api/actors/68a534b2ab88595f6f4007b5/run HTTP/1.1\" 200 163 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-20 09:40:44"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:40:46 +0000] \"GET /api/actors/68a534b2ab88595f6f4007b5 HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-20 09:40:46"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:40:50 +0000] \"GET /api/actors/68a534b2ab88595f6f4007b5 HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-20 09:40:50"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:41:00"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:41:00"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:41:00"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:42:09"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:42:09"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:42:09"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:42:37 +0000] \"POST /api/actors/68a534b2ab88595f6f4007b5/run HTTP/1.1\" 400 91 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-20 09:42:37"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:43:03"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:43:03"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:43:03"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:43:04"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:43:04"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:43:04"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:43:41 +0000] \"GET /api/actors/68a534b2ab88595f6f4007b5 HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-20 09:43:41"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:43:41 +0000] \"POST /api/actors/68a534b2ab88595f6f4007b5/build HTTP/1.1\" 200 91 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-20 09:43:41"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:43:44 +0000] \"GET /api/actors/68a534b2ab88595f6f4007b5 HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-20 09:43:44"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:43:44 +0000] \"POST /api/actors/68a534b2ab88595f6f4007b5/run HTTP/1.1\" 200 163 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-20 09:43:44"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:43:46 +0000] \"GET /api/actors/68a534b2ab88595f6f4007b5 HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-20 09:43:46"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:43:51 +0000] \"GET /api/actors/68a534b2ab88595f6f4007b5 HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-20 09:43:51"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:44:03"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:44:03"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:44:03"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:46:50 +0000] \"GET /api/actors/68a534b2ab88595f6f4007b5 HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-20 09:46:50"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:46:50 +0000] \"POST /api/actors/68a534b2ab88595f6f4007b5/run HTTP/1.1\" 200 163 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-20 09:46:50"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:46:52 +0000] \"GET /api/actors/68a534b2ab88595f6f4007b5 HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-20 09:46:52"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:46:57 +0000] \"GET /api/actors/68a534b2ab88595f6f4007b5 HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-20 09:46:57"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:49:49"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:49:49"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:49:49"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:49:50"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:49:50"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:49:50"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:49:59 +0000] \"POST /api/actors/68a534b2ab88595f6f4007b5/run HTTP/1.1\" 200 176 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-20 09:49:59"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:50:00 +0000] \"GET /api/actors/68a534b2ab88595f6f4007b5 HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-20 09:50:00"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:50:01 +0000] \"GET /api/actors/68a534b2ab88595f6f4007b5 HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-20 09:50:01"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:50:02 +0000] \"GET /api/actors/68a534b2ab88595f6f4007b5 HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-20 09:50:02"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:50:03 +0000] \"GET /api/actors/68a534b2ab88595f6f4007b5 HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-20 09:50:03"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:50:04 +0000] \"GET /api/actors/68a534b2ab88595f6f4007b5 HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-20 09:50:04"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:50:04 +0000] \"GET /api/actors/68a534b2ab88595f6f4007b5 HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-20 09:50:04"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:50:04 +0000] \"GET /api/actors/68a534b2ab88595f6f4007b5/logs HTTP/1.1\" 404 27 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-20 09:50:04"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:50:13"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:50:13"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:50:13"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:50:59"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:50:59"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:50:59"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:51:06"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:51:06"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:51:06"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:51:20"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:51:20"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:51:20"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:51:36 +0000] \"POST /api/actors/68a534b2ab88595f6f4007b5/run HTTP/1.1\" 200 176 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-20 09:51:36"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:51:37 +0000] \"GET /api/actors/68a534b2ab88595f6f4007b5 HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-20 09:51:37"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:51:38 +0000] \"GET /api/actors/68a534b2ab88595f6f4007b5 HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-20 09:51:38"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:51:39 +0000] \"GET /api/actors/68a534b2ab88595f6f4007b5 HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-20 09:51:39"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:51:40 +0000] \"GET /api/actors/68a534b2ab88595f6f4007b5 HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-20 09:51:40"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:51:41 +0000] \"GET /api/actors/68a534b2ab88595f6f4007b5 HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-20 09:51:41"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:51:41 +0000] \"GET /api/actors/68a534b2ab88595f6f4007b5 HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-20 09:51:41"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:51:41 +0000] \"GET /api/actors/68a534b2ab88595f6f4007b5/logs HTTP/1.1\" 200 912 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-20 09:51:41"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:51:51"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:51:51"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:51:51"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:52:54"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:52:54"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:52:54"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:53:04 +0000] \"POST /api/actors/68a534b2ab88595f6f4007b5/run HTTP/1.1\" 200 176 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-20 09:53:04"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:53:05"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:53:05"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:53:05"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:53:05 +0000] \"GET /api/actors/68a534b2ab88595f6f4007b5 HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-20 09:53:05"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:53:06 +0000] \"GET /api/actors/68a534b2ab88595f6f4007b5 HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-20 09:53:06"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:53:07 +0000] \"GET /api/actors/68a534b2ab88595f6f4007b5 HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-20 09:53:07"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:53:08 +0000] \"GET /api/actors/68a534b2ab88595f6f4007b5 HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-20 09:53:08"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:53:09 +0000] \"GET /api/actors/68a534b2ab88595f6f4007b5 HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-20 09:53:09"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:53:10 +0000] \"GET /api/actors/68a534b2ab88595f6f4007b5 HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-20 09:53:10"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:53:11 +0000] \"GET /api/actors/68a534b2ab88595f6f4007b5 HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-20 09:53:11"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:53:12 +0000] \"GET /api/actors/68a534b2ab88595f6f4007b5 HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-20 09:53:12"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:53:13 +0000] \"GET /api/actors/68a534b2ab88595f6f4007b5 HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-20 09:53:13"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:53:14 +0000] \"GET /api/actors/68a534b2ab88595f6f4007b5 HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-20 09:53:14"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:53:14 +0000] \"GET /api/actors/68a534b2ab88595f6f4007b5 HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-20 09:53:14"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:53:14 +0000] \"GET /api/actors/68a534b2ab88595f6f4007b5/logs HTTP/1.1\" 200 898 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-20 09:53:14"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:53:41"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:53:41"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:53:41"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:53:42"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:53:42"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:53:42"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:55:44 +0000] \"POST /api/actors/68a534b2ab88595f6f4007b5/run HTTP/1.1\" 200 179 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-20 09:55:44"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:55:44"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:55:44"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:55:44"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:55:45 +0000] \"GET /api/actors/68a534b2ab88595f6f4007b5 HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-20 09:55:45"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:55:45 +0000] \"GET /api/actors/68a534b2ab88595f6f4007b5/logs HTTP/1.1\" 200 898 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-20 09:55:45"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:55:51"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:55:51"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:55:51"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:56:02"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:56:02"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:56:02"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:56:12"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:56:12"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:56:12"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:56:22"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:56:22"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:56:22"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:56:30"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:56:30"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:56:30"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:57:29"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:57:29"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:57:29"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:57:38"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:57:38"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:57:38"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:57:40"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:57:40"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:57:40"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:57:57 +0000] \"GET /api/actors HTTP/1.1\" 401 45 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-20 09:57:57"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:58:26"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:58:26"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:58:26"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:59:05 +0000] \"POST /api/actors/68a534b2ab88595f6f4007b5/run HTTP/1.1\" 200 179 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-20 09:59:05"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:59:06 +0000] \"GET /api/actors/68a534b2ab88595f6f4007b5 HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-20 09:59:06"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:59:07 +0000] \"GET /api/actors/68a534b2ab88595f6f4007b5 HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-20 09:59:07"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:59:08 +0000] \"GET /api/actors/68a534b2ab88595f6f4007b5 HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-20 09:59:08"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:59:09 +0000] \"GET /api/actors/68a534b2ab88595f6f4007b5 HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-20 09:59:09"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:59:10 +0000] \"GET /api/actors/68a534b2ab88595f6f4007b5 HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-20 09:59:10"}
+{"level":"info","message":"::1 - - [20/Aug/2025:02:59:10 +0000] \"GET /api/actors/68a534b2ab88595f6f4007b5/logs HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-20 09:59:10"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 09:59:24"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 09:59:24"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 09:59:24"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 10:01:03"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 10:01:03"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 10:01:03"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 10:01:14"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 10:01:14"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 10:01:14"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 10:01:22"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 10:01:22"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 10:01:22"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 10:01:45"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 10:01:45"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 10:01:45"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 10:01:47"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 10:01:47"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 10:01:47"}
+{"level":"info","message":"::1 - - [20/Aug/2025:03:02:24 +0000] \"GET /api/actors/68a534b2ab88595f6f4007b5/results HTTP/1.1\" 200 - \"-\" \"axios/1.11.0\"","timestamp":"2025-08-20 10:02:24"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 10:02:44"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 10:02:44"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 10:02:44"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 10:06:27"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 10:06:27"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 10:06:27"}
+{"level":"info","message":"::1 - - [20/Aug/2025:03:07:20 +0000] \"GET /api/actors/68a534b2ab88595f6f4007b5/results HTTP/1.1\" 200 - \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-20 10:07:20"}
+{"level":"info","message":"::1 - - [20/Aug/2025:03:09:30 +0000] \"POST /api/actors/68a534b2ab88595f6f4007b5/run HTTP/1.1\" 200 119 \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-20 10:09:30"}
+{"level":"info","message":"::1 - - [20/Aug/2025:03:11:13 +0000] \"POST /api/actors/68a534b2ab88595f6f4007b5 HTTP/1.1\" 404 27 \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-20 10:11:13"}
+{"level":"info","message":"::1 - - [20/Aug/2025:03:11:22 +0000] \"GET /api/actors/68a534b2ab88595f6f4007b5 HTTP/1.1\" 200 - \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-20 10:11:22"}
+{"level":"info","message":"::1 - - [20/Aug/2025:03:12:37 +0000] \"GET /api/actors/68a534b2ab88595f6f4007b5/logs HTTP/1.1\" 200 - \"-\" \"PostmanRuntime/7.45.0\"","timestamp":"2025-08-20 10:12:37"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 10:14:52"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 10:14:52"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 10:14:52"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 10:14:54"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 10:14:54"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 10:14:54"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 10:15:09"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 10:15:09"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 10:15:09"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-08-20 10:15:11"}
+{"level":"info","message":"Environment: development","timestamp":"2025-08-20 10:15:11"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-08-20 10:15:11"}
+{"level":"info","message":"::1 - - [20/Aug/2025:03:15:55 +0000] \"POST /api/campaigns HTTP/1.1\" 201 800 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-20 10:15:55"}
+{"level":"info","message":"::1 - - [20/Aug/2025:03:15:56 +0000] \"POST /api/campaigns/68a53deb4ae0e3972d60357b/run HTTP/1.1\" 200 171 \"-\" \"axios/1.11.0\"","timestamp":"2025-08-20 10:15:56"}

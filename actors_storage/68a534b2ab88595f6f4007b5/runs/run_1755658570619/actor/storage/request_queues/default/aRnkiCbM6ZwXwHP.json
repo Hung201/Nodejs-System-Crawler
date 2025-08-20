@@ -1,0 +1,9 @@
+{
+	"id": "aRnkiCbM6ZwXwHP",
+	"json": "{\"id\":\"aRnkiCbM6ZwXwHP\",\"url\":\"https://www.bing.com/search?q=g%E1%BA%A1ch%20%E1%BB%91p%20l%C3%A1t%20gi%C3%A1%20r%E1%BA%BB&setlang=vi-VN&cc=VN\",\"loadedUrl\":\"https://www.bing.com/search?q=g%E1%BA%A1ch%20%E1%BB%91p%20l%C3%A1t%20gi%C3%A1%20r%E1%BA%BB&setlang=vi-VN&cc=VN\",\"uniqueKey\":\"https://www.bing.com/search?cc=VN&q=g%E1%BA%A1ch+%E1%BB%91p+l%C3%A1t+gi%C3%A1+r%E1%BA%BB&setlang=vi-VN\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"searchTerm\":\"gạch ốp lát giá rẻ\",\"page\":1,\"searchEngine\":\"bing\",\"maxResults\":10,\"__crawlee\":{\"state\":4}},\"handledAt\":\"2025-08-18T06:15:49.903Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://www.bing.com/search?cc=VN&q=g%E1%BA%A1ch+%E1%BB%91p+l%C3%A1t+gi%C3%A1+r%E1%BA%BB&setlang=vi-VN",
+	"url": "https://www.bing.com/search?q=g%E1%BA%A1ch%20%E1%BB%91p%20l%C3%A1t%20gi%C3%A1%20r%E1%BA%BB&setlang=vi-VN&cc=VN"
+}

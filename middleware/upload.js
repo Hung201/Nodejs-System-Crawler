@@ -56,7 +56,7 @@ const upload = multer({
     storage: storage,
     fileFilter: fileFilter,
     limits: {
-        fileSize: 50 * 1024 * 1024, // 50MB max
+        fileSize: 200 * 1024 * 1024, // 50MB max
         files: 1 // Chỉ cho phép 1 file
     }
 });

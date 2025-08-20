@@ -68,6 +68,13 @@ router.post('/',
   actorController.createActor
 );
 
+// Add actor from local folder path
+router.post('/from-folder',
+  auth,
+  authorize('admin', 'editor'),
+  actorController.addActorFromFolder
+);
+
 // Get actor by ID
 router.get('/:id', auth, actorController.getActorById);
 
@@ -85,6 +92,12 @@ router.post('/:id/run', auth, authorize('admin', 'editor'), actorController.runA
 
 // Get actor runs history
 router.get('/:id/runs', auth, actorController.getActorRuns);
+
+// Get actor logs
+router.get('/:id/logs', auth, actorController.getActorLogs);
+
+// Get actor results (scraped data)
+router.get('/:id/results', auth, actorController.getActorResults);
 
 // Update actor source code
 router.put('/:id/source', auth, authorize('admin', 'editor'), actorController.updateActorSource);

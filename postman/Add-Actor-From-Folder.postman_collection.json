@@ -1,0 +1,295 @@
+{
+    "info": {
+        "_postman_id": "64f8a1b2-c3d4-e5f6-a7b8-c9d0e1f2a3b4",
+        "name": "Add Actor From Folder API",
+        "description": "Collection để test API thêm actor từ folder cục bộ",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Auth",
+            "item": [
+                {
+                    "name": "Login",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"email\": \"admin@example.com\",\n  \"password\": \"password123\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/auth/login",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "auth",
+                                "login"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Add Actor From Folder",
+            "item": [
+                {
+                    "name": "Add Actor Success",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{auth_token}}"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"folderPath\": \"D:\\\\google-search-craw\",\n  \"name\": \"google-search-crawler-v1\",\n  \"description\": \"Google Search Crawler imported from local folder\",\n  \"type\": \"web-scraping\",\n  \"category\": \"web-scraping\",\n  \"visibility\": \"private\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/actors/from-folder",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "actors",
+                                "from-folder"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Add Actor - Missing Required Fields",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{auth_token}}"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"folderPath\": \"D:\\\\google-search-craw\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/actors/from-folder",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "actors",
+                                "from-folder"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Add Actor - Duplicate Name",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{auth_token}}"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"folderPath\": \"D:\\\\google-search-craw\",\n  \"name\": \"google-search-crawler-v1\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/actors/from-folder",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "actors",
+                                "from-folder"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Add Actor - Folder Not Found",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{auth_token}}"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"folderPath\": \"D:\\\\non-existent-folder\",\n  \"name\": \"test-actor\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/actors/from-folder",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "actors",
+                                "from-folder"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Add Actor - No Token",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"folderPath\": \"D:\\\\google-search-craw\",\n  \"name\": \"test-actor\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/actors/from-folder",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "actors",
+                                "from-folder"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Verify Results",
+            "item": [
+                {
+                    "name": "Get All Actors",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{auth_token}}"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}/api/actors",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "actors"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get Actor By ID",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{auth_token}}"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}/api/actors/{{actor_id}}",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "actors",
+                                "{{actor_id}}"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Download Actor File",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{auth_token}}"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}/api/actors/{{actor_id}}/download",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "actors",
+                                "{{actor_id}}",
+                                "download"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        }
+    ],
+    "variable": [
+        {
+            "key": "base_url",
+            "value": "http://localhost:5000"
+        },
+        {
+            "key": "auth_token",
+            "value": "your_jwt_token_here"
+        },
+        {
+            "key": "actor_id",
+            "value": "actor_id_from_response"
+        }
+    ]
+}
