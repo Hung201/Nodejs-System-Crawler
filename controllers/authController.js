@@ -1,4 +1,5 @@
 const authService = require('../services/authService');
+const passwordResetService = require('../services/passwordResetService');
 const logger = require('../utils/logger');
 
 // Register user
@@ -83,10 +84,89 @@ const changePassword = async (req, res) => {
   }
 };
 
+// Gửi mã xác nhận quên mật khẩu
+const forgotPassword = async (req, res) => {
+  try {
+    const { email } = req.body;
+    const result = await passwordResetService.sendPasswordResetToken(email);
+    res.json({
+      success: true,
+      message: result.message,
+      data: { email: result.email }
+    });
+  } catch (error) {
+    logger.error('Forgot password error:', error);
+    res.status(400).json({
+      success: false,
+      error: error.message || 'Không thể gửi mã xác nhận'
+    });
+  }
+};
+
+// Xác thực mã xác nhận
+const verifyResetCode = async (req, res) => {
+  try {
+    const { email, token } = req.body;
+    const result = await passwordResetService.verifyResetToken(email, token);
+    res.json({
+      success: true,
+      message: result.message,
+      data: { email: result.email, token: result.token }
+    });
+  } catch (error) {
+    logger.error('Verify reset code error:', error);
+    res.status(400).json({
+      success: false,
+      error: error.message || 'Mã xác nhận không hợp lệ'
+    });
+  }
+};
+
+// Đặt lại mật khẩu
+const resetPassword = async (req, res) => {
+  try {
+    const { email, token, newPassword } = req.body;
+    const result = await passwordResetService.resetPassword(email, token, newPassword);
+    res.json({
+      success: true,
+      message: result.message,
+      data: { email: result.email }
+    });
+  } catch (error) {
+    logger.error('Reset password error:', error);
+    res.status(400).json({
+      success: false,
+      error: error.message || 'Không thể đặt lại mật khẩu'
+    });
+  }
+};
+
+// Kiểm tra trạng thái token
+const checkTokenStatus = async (req, res) => {
+  try {
+    const { email, token } = req.query;
+    const result = await passwordResetService.checkTokenStatus(email, token);
+    res.json({
+      success: true,
+      data: result
+    });
+  } catch (error) {
+    logger.error('Check token status error:', error);
+    res.status(500).json({
+      success: false,
+      error: 'Có lỗi xảy ra khi kiểm tra token'
+    });
+  }
+};
+
 module.exports = {
   register,
   login,
   getProfile,
   updateProfile,
-  changePassword
+  changePassword,
+  forgotPassword,
+  verifyResetCode,
+  resetPassword,
+  checkTokenStatus
 }; 

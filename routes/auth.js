@@ -33,11 +33,44 @@ const registerValidation = [
     .withMessage('Role không hợp lệ')
 ];
 
+const forgotPasswordValidation = [
+  body('email')
+    .isEmail()
+    .withMessage('Email không hợp lệ')
+];
+
+const verifyResetCodeValidation = [
+  body('email')
+    .isEmail()
+    .withMessage('Email không hợp lệ'),
+  body('token')
+    .isLength({ min: 1 })
+    .withMessage('Mã xác nhận là bắt buộc')
+];
+
+const resetPasswordValidation = [
+  body('email')
+    .isEmail()
+    .withMessage('Email không hợp lệ'),
+  body('token')
+    .isLength({ min: 1 })
+    .withMessage('Mã xác nhận là bắt buộc'),
+  body('newPassword')
+    .isLength({ min: 6 })
+    .withMessage('Mật khẩu mới phải có ít nhất 6 ký tự')
+];
+
 // Routes
 router.post('/register', registerValidation, validate, authController.register);
 router.post('/login', loginValidation, validate, authController.login);
 router.get('/profile', auth, authController.getProfile);
 router.put('/profile', auth, authController.updateProfile);
 router.put('/change-password', auth, authController.changePassword);
+
+// Password reset routes
+router.post('/forgot-password', forgotPasswordValidation, validate, authController.forgotPassword);
+router.post('/verify-reset-code', verifyResetCodeValidation, validate, authController.verifyResetCode);
+router.post('/reset-password', resetPasswordValidation, validate, authController.resetPassword);
+router.get('/check-token-status', authController.checkTokenStatus);
 
 module.exports = router; 

@@ -44,6 +44,12 @@ const userSchema = new mongoose.Schema({
   updatedBy: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User'
+  },
+  passwordChangedAt: {
+    type: Date
+  },
+  lastLogin: {
+    type: Date
   }
 }, {
   timestamps: true

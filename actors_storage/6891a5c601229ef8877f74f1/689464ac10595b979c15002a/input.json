@@ -1,6 +1,6 @@
 {
-  "paginationPattern": "?page=",
   "url": "https://b2b.daisan.vn/products/gach-op-tuong",
+  "paginationPattern": "?page=",
   "pageStart": 1,
   "pageEnd": 2,
   "productLinkSelector": ".list-item-img a",

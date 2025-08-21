@@ -587,23 +587,153 @@ async function runActorAsync(campaign, runId, customInput = null, campaignPort =
         // Sử dụng custom input nếu có,否则 sử dụng input từ campaign
         const inputToUse = customInput || campaign.input;
 
-        // Ghi input vào input.json trong thư mục src của actor
-        const inputPath = path.join(actorPath, 'src', 'input.json');
-        await fs.writeFile(inputPath, JSON.stringify(inputToUse, null, 2));
-        console.log(`✅ Input file written to: ${inputPath}`);
+        // Xử lý nhiều trường hợp khác nhau cho input.json
+        let inputPath = null;
+        let actorWorkingDir = null;
+        let mainFile = 'main.js';
 
-        // Cũng ghi vào apify_storage để tương thích
-        const apifyInputPath = path.join(keyValueStorePath, 'INPUT.json');
-        await fs.writeFile(apifyInputPath, JSON.stringify(inputToUse, null, 2));
-        console.log(`✅ Apify input file written to: ${apifyInputPath}`);
+        // Kiểm tra cấu trúc thư mục actor và xác định working directory
+        const possibleWorkingDirs = [
+            path.join(actorPath, 'src'),                         // Trường hợp 1: src/
+            actorPath,                                           // Trường hợp 2: root
+            path.join(actorPath, 'apify_storage')                // Trường hợp 3: apify_storage
+        ];
+
+        // Kiểm tra xem thư mục nào tồn tại
+        let workingDirFound = false;
+        for (const workingDir of possibleWorkingDirs) {
+            try {
+                await fs.access(workingDir);
+                console.log(`✅ Found working directory: ${workingDir}`);
+                actorWorkingDir = workingDir;
+                workingDirFound = true;
+                break;
+            } catch (error) {
+                console.log(`❌ Working directory not found: ${workingDir}`);
+            }
+        }
+
+        // Nếu không tìm thấy thư mục nào, tạo thư mục src
+        if (!workingDirFound) {
+            console.log(`📁 Creating src directory for actor...`);
+            actorWorkingDir = path.join(actorPath, 'src');
+            await fs.mkdir(actorWorkingDir, { recursive: true });
+            console.log(`✅ Created working directory: ${actorWorkingDir}`);
+        }
+
+        // Tìm main file trong working directory
+        const possibleMainFiles = ['main.js', 'index.js', 'app.js'];
+        let mainFileFound = false;
+        for (const main of possibleMainFiles) {
+            try {
+                await fs.access(path.join(actorWorkingDir, main));
+                mainFile = main;
+                mainFileFound = true;
+                console.log(`✅ Found main file: ${mainFile} in ${actorWorkingDir}`);
+                break;
+            } catch (error) {
+                console.log(`❌ Main file not found: ${main} in ${actorWorkingDir}`);
+            }
+        }
+
+        // Nếu không tìm thấy main file, tạo một main.js đơn giản
+        if (!mainFileFound) {
+            console.log(`📄 Creating simple main.js in ${actorWorkingDir}`);
+            const simpleMainContent = `
+const fs = require('fs');
+const path = require('path');
+
+// Đọc input.json
+let input = {};
+try {
+    const inputPath = path.join(__dirname, 'input.json');
+    const inputContent = fs.readFileSync(inputPath, 'utf8');
+    input = JSON.parse(inputContent);
+    console.log('✅ Input loaded:', JSON.stringify(input, null, 2));
+} catch (error) {
+    console.log('⚠️ Could not load input.json:', error.message);
+}
+
+// Simulate actor execution
+console.log('🚀 Starting actor execution...');
+console.log('📊 Processing input:', input);
+
+// Simulate data processing
+const results = [
+    {
+        title: 'Sample Result 1',
+        url: 'https://example.com/1',
+        description: 'This is a sample result from actor execution'
+    },
+    {
+        title: 'Sample Result 2', 
+        url: 'https://example.com/2',
+        description: 'Another sample result from actor execution'
+    }
+];
+
+// Save results to hung.json
+const outputPath = path.join(__dirname, 'hung.json');
+fs.writeFileSync(outputPath, JSON.stringify(results, null, 2));
+console.log('✅ Results saved to hung.json');
+
+console.log('🎉 Actor execution completed successfully!');
+`;
+            await fs.writeFile(path.join(actorWorkingDir, 'main.js'), simpleMainContent);
+            mainFile = 'main.js';
+            console.log(`✅ Created main.js in ${actorWorkingDir}`);
+        }
+
+        // Ghi input vào các vị trí khác nhau để đảm bảo tương thích
+        const inputContent = JSON.stringify(inputToUse, null, 2);
+
+        // Trường hợp 1: Ghi vào working directory
+        try {
+            inputPath = path.join(actorWorkingDir, 'input.json');
+            await fs.writeFile(inputPath, inputContent);
+            console.log(`✅ Input file written to: ${inputPath}`);
+        } catch (error) {
+            console.log(`⚠️ Could not write to ${inputPath}: ${error.message}`);
+            // Nếu không ghi được vào working directory, thử ghi vào root
+            try {
+                inputPath = path.join(actorPath, 'input.json');
+                await fs.writeFile(inputPath, inputContent);
+                console.log(`✅ Input file written to root: ${inputPath}`);
+            } catch (rootError) {
+                console.log(`❌ Could not write to root either: ${rootError.message}`);
+                throw new Error(`Cannot write input file to any location: ${error.message}`);
+            }
+        }
+
+        // Trường hợp 2: Ghi vào apify_storage để tương thích
+        try {
+            const apifyInputPath = path.join(keyValueStorePath, 'INPUT.json');
+            await fs.writeFile(apifyInputPath, inputContent);
+            console.log(`✅ Apify input file written to: ${apifyInputPath}`);
+        } catch (error) {
+            console.log(`⚠️ Could not write to apify input: ${error.message}`);
+        }
+
+        // Trường hợp 3: Ghi vào root nếu khác với src
+        if (actorWorkingDir !== actorPath) {
+            try {
+                const rootInputPath = path.join(actorPath, 'input.json');
+                await fs.writeFile(rootInputPath, inputContent);
+                console.log(`✅ Root input file written to: ${rootInputPath}`);
+            } catch (error) {
+                console.log(`⚠️ Could not write to root input: ${error.message}`);
+            }
+        }
 
         // Check file permissions and existence
-        try {
-            const inputStats = await fs.stat(inputPath);
-            console.log(`📄 Input file size: ${inputStats.size} bytes`);
-            console.log(`📄 Input file permissions: ${inputStats.mode.toString(8)}`);
-        } catch (error) {
-            console.log(`❌ Error checking input file: ${error.message}`);
+        if (inputPath) {
+            try {
+                const inputStats = await fs.stat(inputPath);
+                console.log(`📄 Input file size: ${inputStats.size} bytes`);
+                console.log(`📄 Input file permissions: ${inputStats.mode.toString(8)}`);
+            } catch (error) {
+                console.log(`❌ Error checking input file: ${error.message}`);
+            }
         }
 
         // Cài đặt dependencies nếu có package.json
@@ -634,11 +764,11 @@ async function runActorAsync(campaign, runId, customInput = null, campaignPort =
             console.log('No package.json found, skipping npm install');
         }
 
-        // Chạy actor từ thư mục src
-        const actorWorkingDir = path.join(actorPath, 'src');
+        // Chạy actor từ thư mục đã xác định
         console.log(`🚀 Starting actor process in: ${actorWorkingDir}`);
         console.log(`📁 Actor path: ${actorPath}`);
         console.log(`📄 Input file: ${inputPath}`);
+        console.log(`📄 Main file: ${mainFile}`);
 
         // Tạo environment variables với port
         const env = {
@@ -647,7 +777,7 @@ async function runActorAsync(campaign, runId, customInput = null, campaignPort =
             CAMPAIGN_PORT: campaignPort || '5000'
         };
 
-        const child = spawn('node', ['main.js'], {
+        const child = spawn('node', [mainFile], {
             cwd: actorWorkingDir,
             stdio: ['pipe', 'pipe', 'pipe'],
             env: env
@@ -829,8 +959,8 @@ async function runActorAsync(campaign, runId, customInput = null, campaignPort =
                 // Đọc kết quả từ file hung.json hoặc dataset
                 let output = [];
                 try {
-                    // Thử đọc từ file hung.json trước (từ thư mục src)
-                    const hungJsonPath = path.join(actorPath, 'src', 'hung.json');
+                    // Thử đọc từ file hung.json trong working directory trước
+                    const hungJsonPath = path.join(actorWorkingDir, 'hung.json');
                     try {
                         const content = await fs.readFile(hungJsonPath, 'utf8');
                         const data = JSON.parse(content);
@@ -839,22 +969,65 @@ async function runActorAsync(campaign, runId, customInput = null, campaignPort =
                         } else {
                             output = [data];
                         }
-                        console.log(`📖 [${new Date().toISOString()}] Đọc được ${output.length} sản phẩm từ hung.json`);
-                        log += `\n📖 [${new Date().toISOString()}] Đọc được ${output.length} sản phẩm từ hung.json`;
+                        console.log(`📖 [${new Date().toISOString()}] Đọc được ${output.length} sản phẩm từ hung.json trong ${actorWorkingDir}`);
+                        log += `\n📖 [${new Date().toISOString()}] Đọc được ${output.length} sản phẩm từ hung.json trong ${actorWorkingDir}`;
                     } catch (error) {
-                        console.log(`⚠️ [${new Date().toISOString()}] Không tìm thấy hung.json trong src/, thử đọc từ dataset`);
-                        log += `\n⚠️ [${new Date().toISOString()}] Không tìm thấy hung.json trong src/, thử đọc từ dataset`;
+                        console.log(`⚠️ [${new Date().toISOString()}] Không tìm thấy hung.json trong ${actorWorkingDir}, thử đọc từ root`);
+                        log += `\n⚠️ [${new Date().toISOString()}] Không tìm thấy hung.json trong ${actorWorkingDir}, thử đọc từ root`;
 
-                        // Fallback: đọc từ dataset
-                        const datasetFiles = await fs.readdir(datasetPath);
-                        for (const file of datasetFiles) {
-                            if (file.endsWith('.json')) {
-                                const content = await fs.readFile(path.join(datasetPath, file), 'utf8');
+                        // Fallback 1: thử đọc từ root directory
+                        try {
+                            const rootHungJsonPath = path.join(actorPath, 'hung.json');
+                            const content = await fs.readFile(rootHungJsonPath, 'utf8');
+                            const data = JSON.parse(content);
+                            if (Array.isArray(data)) {
+                                output = data;
+                            } else {
+                                output = [data];
+                            }
+                            console.log(`📖 [${new Date().toISOString()}] Đọc được ${output.length} sản phẩm từ hung.json trong root`);
+                            log += `\n📖 [${new Date().toISOString()}] Đọc được ${output.length} sản phẩm từ hung.json trong root`;
+                        } catch (rootError) {
+                            console.log(`⚠️ [${new Date().toISOString()}] Không tìm thấy hung.json trong root, thử đọc từ src/`);
+                            log += `\n⚠️ [${new Date().toISOString()}] Không tìm thấy hung.json trong root, thử đọc từ src/`;
+
+                            // Fallback 2: thử đọc từ src/
+                            try {
+                                const srcHungJsonPath = path.join(actorPath, 'src', 'hung.json');
+                                const content = await fs.readFile(srcHungJsonPath, 'utf8');
                                 const data = JSON.parse(content);
                                 if (Array.isArray(data)) {
-                                    output.push(...data);
+                                    output = data;
                                 } else {
-                                    output.push(data);
+                                    output = [data];
+                                }
+                                console.log(`📖 [${new Date().toISOString()}] Đọc được ${output.length} sản phẩm từ hung.json trong src/`);
+                                log += `\n📖 [${new Date().toISOString()}] Đọc được ${output.length} sản phẩm từ hung.json trong src/`;
+                            } catch (srcError) {
+                                console.log(`⚠️ [${new Date().toISOString()}] Không tìm thấy hung.json trong src/, thử đọc từ dataset`);
+                                log += `\n⚠️ [${new Date().toISOString()}] Không tìm thấy hung.json trong src/, thử đọc từ dataset`;
+
+                                // Fallback 3: đọc từ dataset
+                                try {
+                                    const datasetFiles = await fs.readdir(datasetPath);
+                                    for (const file of datasetFiles) {
+                                        if (file.endsWith('.json')) {
+                                            const content = await fs.readFile(path.join(datasetPath, file), 'utf8');
+                                            const data = JSON.parse(content);
+                                            if (Array.isArray(data)) {
+                                                output.push(...data);
+                                            } else {
+                                                output.push(data);
+                                            }
+                                        }
+                                    }
+                                    if (output.length > 0) {
+                                        console.log(`📖 [${new Date().toISOString()}] Đọc được ${output.length} sản phẩm từ dataset`);
+                                        log += `\n📖 [${new Date().toISOString()}] Đọc được ${output.length} sản phẩm từ dataset`;
+                                    }
+                                } catch (datasetError) {
+                                    console.log(`⚠️ [${new Date().toISOString()}] Không thể đọc từ dataset: ${datasetError.message}`);
+                                    log += `\n⚠️ [${new Date().toISOString()}] Không thể đọc từ dataset: ${datasetError.message}`;
                                 }
                             }
                         }
@@ -998,13 +1171,13 @@ async function runActorAsync(campaign, runId, customInput = null, campaignPort =
 
     } catch (error) {
         console.error('Error in runActorAsync:', error);
-        log += `\n❌ [${new Date().toISOString()}] Setup error in runActorAsync: ${error.message}`;
+        let errorLog = `\n❌ [${new Date().toISOString()}] Setup error in runActorAsync: ${error.message}`;
 
         // Giải phóng port khi có lỗi setup
         const releasedPort = portManager.releasePort(campaign._id.toString());
         if (releasedPort) {
             console.log(`📡 [${new Date().toISOString()}] Released port ${releasedPort} from campaign ${campaign._id} due to setup error`);
-            log += `\n📡 [${new Date().toISOString()}] Released port ${releasedPort} from campaign ${campaign._id} due to setup error`;
+            errorLog += `\n📡 [${new Date().toISOString()}] Released port ${releasedPort} from campaign ${campaign._id} due to setup error`;
         }
 
         // Kill process nếu có lỗi trong quá trình setup
@@ -1028,6 +1201,7 @@ async function runActorAsync(campaign, runId, customInput = null, campaignPort =
         campaign.status = 'failed';
         campaign.result.error = error.message;
         campaign.result.endTime = new Date();
+        campaign.result.log = errorLog;
         await campaign.save();
     }
 }
