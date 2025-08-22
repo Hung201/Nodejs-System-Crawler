@@ -1,5 +1,7 @@
 const Actor = require('../models/Actor');
 const fileSystemService = require('./fileSystemService');
+const fs = require('fs').promises;
+const path = require('path');
 
 // Get all actors with pagination and filters
 const getAllActors = async (filters) => {
@@ -314,6 +316,26 @@ const getActorStats = async () => {
         byType: typeStats
     };
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 module.exports = {
     getAllActors,

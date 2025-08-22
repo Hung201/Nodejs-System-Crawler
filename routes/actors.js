@@ -68,47 +68,12 @@ router.post('/',
   actorController.createActor
 );
 
-// Add actor from local folder path
-router.post('/from-folder',
-  auth,
-  authorize('admin', 'editor'),
-  actorController.addActorFromFolder
-);
+
 
 // Get actor by ID
 router.get('/:id', auth, actorController.getActorById);
 
-// Download actor file
-router.get('/:id/download', auth, actorController.downloadActorFile);
 
-// Build actor
-router.post('/:id/build', auth, authorize('admin', 'editor'), actorController.buildActor);
-
-// Get actor build history
-router.get('/:id/builds', auth, actorController.getActorBuilds);
-
-// Run actor
-router.post('/:id/run', auth, authorize('admin', 'editor'), actorController.runActor);
-
-// Get actor runs history
-router.get('/:id/runs', auth, actorController.getActorRuns);
-
-// Get actor logs
-router.get('/:id/logs', auth, actorController.getActorLogs);
-
-// Get actor results (scraped data)
-router.get('/:id/results', auth, actorController.getActorResults);
-
-// Update actor source code
-router.put('/:id/source', auth, authorize('admin', 'editor'), actorController.updateActorSource);
-
-// Source code file management
-router.post('/:id/source/file', auth, authorize('admin', 'editor'), actorController.saveSourceFile);
-router.get('/:id/source/file', auth, authorize('admin', 'editor'), actorController.getSourceFile);
-router.get('/:id/source/files', auth, authorize('admin', 'editor'), actorController.getSourceFiles);
-
-// Streaming execution
-router.post('/:id/run/stream', auth, authorize('admin', 'editor'), actorController.runActorStream);
 
 // Update actor
 router.put('/:id', auth, authorize('admin', 'editor'), actorValidation, actorController.updateActor);
