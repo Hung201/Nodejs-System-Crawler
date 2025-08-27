@@ -32,7 +32,7 @@ app.use(compression());
 // CORS configuration
 app.use(cors({
   origin: process.env.NODE_ENV === 'production'
-    ? ['https://yourdomain.com']
+    ? [process.env.FRONTEND_URL]
     : ['http://localhost:3000', 'http://localhost:3001'],
   credentials: true
 }));
